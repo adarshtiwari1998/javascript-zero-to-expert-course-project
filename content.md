@@ -22,3 +22,4 @@
 - ATOM
 - BRACKETS
 - VS CODE (recommended)
+- Notepad++
