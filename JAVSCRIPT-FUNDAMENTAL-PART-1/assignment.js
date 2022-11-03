@@ -23,3 +23,15 @@ console.log(typeof country);
 console.log(typeof language);
 
 */
+
+language = "Hindi";
+// console.log(language);
+
+const country = "India";
+const continent = "Asia";
+const isIsland = false;
+
+isIsland = true; // assignment type error to constant variable
+
+console.log(country, continent, isIsland);
+
