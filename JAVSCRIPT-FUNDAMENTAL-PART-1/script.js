@@ -1,3 +1,5 @@
+/*
+
 let js = "amazing";
 // if (js === "amazing");
 // alert("JavaScript is Fun");
@@ -7,23 +9,38 @@ console.log(40 + 8 + 23 - 10); // here all mathematical operator and values and 
 console.log("Adarsh"); //So here Adarsh is the value
 console.log(23); // so here 23 is the value, so here we pass the literal value
 
+*/
+
 /****************** VARIABLE DECLARATION IN JAVASCRIPT ******************/
+
+/* 
 
 let firstName = "Shubh"; // here firstName is the variable and Adarsh is the value, so here we use this variable name multiple times in our code
 console.log(firstName);
 console.log(firstName);
 console.log(firstName);
 
+*/
+
 /* CONVENTION AND RULES FOR NAMING VARIABLE */
 // We should'n gives random names in variables
 
 /* 1. Camel Case  > this is the kind of standard of how javaScript works but still the otherwase for naming variable */
 // let firstName = "Adarsh";
+
+/*
+
 let first = "Adarsh";
 let firstNamePerson = "Adarsh"; // subsequent letter written in uppercase under variable name
 
-/* Other ways for naming variable */
-let first_name_person = "Adarsh"; // this ways for naming variable is very popular in other language like Ruby
+*/
+
+/*
+
+Other ways for naming variable */
+/* let first_name_person = "Adarsh"; // this ways for naming variable is very popular in other language like Ruby
+
+*/
 
 /* Some conventions and hard rules for not writing variable in this form like */
 // let 3years = 3;     // variable name cannot start with the numbers
@@ -31,15 +48,29 @@ let first_name_person = "Adarsh"; // this ways for naming variable is very popul
 
 // Note: variable name can only contain numbers, letters, underscore and the dollar sign
 // let Adarsh&Tiwari = "Adarsh";  // this will be not allowed'
+
+/*
+
 let Adarsh$tiwari = "Adarsh"; // this will be allowed
+
+*/
 
 /* Error coming when we try to declare variable with reserved javascript keywords like */
 //let new = 27; // error coming because new is the reserved keyword in javascript
+
+/* 
+
 let $new = 33; // this variable name is allow because we start the variable name with dollor sign
 let name = "Adarsh"; // this variable name is allow but it causes some problem because [name] is a convention and it is not a legal so we start the name as firstName like this
+
+*/
+
 //let firstName = "Adarsh";
 
 // let Person = "Adarsh"; // this variable name is allow but again it is a convention and it is not a legal it is just that we use this kind of variable name with an uppercase letter for specific usecase in javascript which is object oriented programming. For now never do this but insted we should write like this
+
+/* 
+
 let person = "Adarsh";
 
 let PI = 3.1415; // this value are constant so this are never change, so here are the convention of writing this in uppercase. So real constand writing in uppercase like this
@@ -50,11 +81,18 @@ let myCurrentJob = "Freelancer"; // this approach is lot better and looks clean 
 let job1 = "Programmer";
 let job2 = "Freelancer"; // this approach is only showcase your job you are doing
 
+
+*/
+
 /* WHAT IS VARIABLE ?
   Its is a box which is actually store a value. So we gives us a box name and into that box we can store a value. And later in the code we can reference this variable over and over again. For Example
 */
 
+/* 
+
 console.log(myFirstJob);
+
+*/
 
 /******************  DATA TYPE IN JAVASCRIPT ******************/
 
@@ -62,6 +100,8 @@ console.log(myFirstJob);
 
 // true;
 // console.log(true); // we can also store a boolean in variables
+
+/*
 
 let javaScriptIsFun = true; //variable declartion should be happen before the log because javscript programs are executed from top to bottom
 console.log(javaScriptIsFun); //here we created a nice and descripted a variable name holding a boolean value Note: a value that holds a datatype and not a variable because i could now actually go and change this to value to a anothe type.
@@ -97,3 +137,50 @@ console.log(typeof year);
 
 // error in typeof in javascript
 console.log(typeof null); // typeof null is an object not undefined it is an error in javascript and this doesn't make any sence at all so this is regarded as a bug in javasript, however this bug is never corrected for legacy reasons. But null is not a object is should be return a null as undefined.
+
+*/
+
+/******************  3 DIFFERENT WAYS OF DECLARING VARIABLE IN JAVASCRIPT ******************/
+
+// 1.
+// we use let keywords to declare a variable that can change later, means during the execution of the program
+
+let age = 24;
+age = 25; // reassigning the value to a variable, we mutate the age variable in this case. That the term you will hear all the time in the javaScript world, So when we need the mutate a variable, that the perfect use case for using let. And that also counts for the case that we want to declare empty variable.
+console.log(age);
+
+// we use const keyword to declare a variable that are not supposed to change at any ppint in the future, So the value in the const variable cannot be changed.
+
+// 2.
+const birthYear = 1998;
+// birthYear = 1999;.  // it should not work, we get type error, it is an immutable variable, So a variable that cannot be mutated.
+console.log(birthYear);
+
+// We cannot declare empty const variables
+
+// const job; // when using const, we need basically an initial value
+// console.log(job)
+
+// The best practice to writing clean code, I always recommend to use const by default and let when you are really sure that the variable needs to change at some point in the future. For exampe birthYear that is never supposed ti change so you should alwayse use const.
+
+// Good practice to have a litle variable mutation or variable changes as possible. Because chaning variables introduces a potential to create bugs. SO basically errors in the code. So again by defualt alwayse just use const and let when you sure the that value of the variable needs to change at some point in your code. Declaring variable as const ways as much as possible.
+
+// 3. Var Keyword
+
+// but this one should actually be completely avoided. However we should know how it works for legacy reason, you see this in the older code basis or some older tutorials.
+
+// var is basically old way of defining variables prior to ES6. It works as pretty much as same as let
+
+var job = "Coder";
+job = "Consultant"; // it basically allowed to mutate this job variable when we use var keyword.
+
+console.log(job);
+
+// Although the var and let looking similar but below the surface they're actually pretty different. Also there are many differences between let, const, var
+
+// let is blocked scoped and var is function scoped
+
+// we should basically never use var
+
+lastName = "Tripathi"; // javascript will happily execute this script even without us declaring a variable, However this is actually a pretty terrible idea because it does'nt create a variable in the current so-called scope. Instead javascript will create a property on the global object. We should alwayse properly declare a variables. Never write this variable like this without really declaring it
+console.log(lastName);
