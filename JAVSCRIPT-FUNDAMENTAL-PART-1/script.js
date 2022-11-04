@@ -197,6 +197,8 @@ console.log(lastName);
 
 //////////////// MATH OPERATOR
 
+/*
+
 const now = 2037;
 
 const ageAdarsh = now - 1991;  // we can use the variables to stop the repetitive value by using variable
@@ -254,6 +256,31 @@ console.log(ageAdarsh > ageShubh); // ageAdarsh is either greater than ageShubh 
 const fullAge = ageShubh >= 18;
 
 console.log(now - 1991 > now - 2018); // how javascript knows that if it should do the math first ot if it should do the comparison first
+
+*/
+
+
+const now = 2037;
+
+const ageAdarsh = now - 1991; // we can use the variables to stop the repetitive value by using variable
+const ageShubh = now - 2018;
+// console.log(ageAdarsh, ageShubh);
+
+console.log(now - 1991 > now - 2018);  // minus precendence is higher than greater than precedence, so minus operator is run first and after greater than operator
+
+console.log(25 - 10 - 5) // precedence from left to right 
+
+let x, y; // value undefined
+
+x = y = 25 -10 - 5  // minus is higher precedence so it actually work from left to right, so after minus operation we actually ended with x = y = 10, x = 10, right to left precedence
+console.log(x, y);
+
+// GROUPING OPERATOR
+
+const averageAge = (ageAdarsh + ageShubh) / 2; // grouping precedence is higher than divide
+console.log(ageAdarsh, ageShubh, averageAge)
+
+
 
 
 
