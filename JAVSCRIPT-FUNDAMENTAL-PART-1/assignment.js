@@ -93,31 +93,31 @@ m tall.
 ////////// TEST DATA 1
 
 // STEP 1
-const massMark = 78;
-const heightMark = 1.69;
-const massJohn = 92;
-const heightJohn = 1.95;
-// STEP 2
-const BMIMark = massMark / heightMark ** 2;
-const BMIJohn = massJohn / (heightJohn * heightJohn);
-// STEP 3
-const markHigherBMI = BMIMark > BMIJohn;
-console.log(BMIMark, BMIJohn, markHigherBMI);
+// const massMark = 78;
+// const heightMark = 1.69;
+// const massJohn = 92;
+// const heightJohn = 1.95;
+// // STEP 2
+// const BMIMark = massMark / heightMark ** 2;
+// const BMIJohn = massJohn / (heightJohn * heightJohn);
+// // STEP 3
+// const markHigherBMI = BMIMark > BMIJohn;
+// console.log(BMIMark, BMIJohn, markHigherBMI);
 
 
 /////////// TEST DATA 2
 
 // STEP 1
-const massMark1 = 95;
-const heightMark1 = 1.88;
-const massJohn1 = 85;
-const heightJohn1 = 1.76;
-// STEP 2
-const BMIMark1 = massMark1 / heightMark1 ** 2;
-const BMIJohn1 = massJohn1 / (heightJohn1 * heightJohn1);
-// STEP 3
-const markHigherBMI1 = BMIMark1 > BMIJohn1;
-console.log(BMIMark1, BMIJohn1, markHigherBMI1);
+// const massMark1 = 95;
+// const heightMark1 = 1.88;
+// const massJohn1 = 85;
+// const heightJohn1 = 1.76;
+// // STEP 2
+// const BMIMark1 = massMark1 / heightMark1 ** 2;
+// const BMIJohn1 = massJohn1 / (heightJohn1 * heightJohn1);
+// // STEP 3
+// const markHigherBMI1 = BMIMark1 > BMIJohn1;
+// console.log(BMIMark1, BMIJohn1, markHigherBMI1);
 
 
 

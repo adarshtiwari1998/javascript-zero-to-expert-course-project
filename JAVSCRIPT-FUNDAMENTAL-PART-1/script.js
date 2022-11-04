@@ -260,26 +260,65 @@ console.log(now - 1991 > now - 2018); // how javascript knows that if it should 
 */
 
 
-const now = 2037;
+// const now = 2037;
 
-const ageAdarsh = now - 1991; // we can use the variables to stop the repetitive value by using variable
-const ageShubh = now - 2018;
-// console.log(ageAdarsh, ageShubh);
+// const ageAdarsh = now - 1991; // we can use the variables to stop the repetitive value by using variable
+// const ageShubh = now - 2018;
+// // console.log(ageAdarsh, ageShubh);
 
-console.log(now - 1991 > now - 2018);  // minus precendence is higher than greater than precedence, so minus operator is run first and after greater than operator
+// console.log(now - 1991 > now - 2018);  // minus precendence is higher than greater than precedence, so minus operator is run first and after greater than operator
 
-console.log(25 - 10 - 5) // precedence from left to right 
+// console.log(25 - 10 - 5) // precedence from left to right 
 
-let x, y; // value undefined
+// let x, y; // value undefined
 
-x = y = 25 -10 - 5  // minus is higher precedence so it actually work from left to right, so after minus operation we actually ended with x = y = 10, x = 10, right to left precedence
-console.log(x, y);
+// x = y = 25 -10 - 5  // minus is higher precedence so it actually work from left to right, so after minus operation we actually ended with x = y = 10, x = 10, right to left precedence
+// console.log(x, y);
 
 // GROUPING OPERATOR
 
-const averageAge = (ageAdarsh + ageShubh) / 2; // grouping precedence is higher than divide
-console.log(ageAdarsh, ageShubh, averageAge)
+// const averageAge = (ageAdarsh + ageShubh) / 2; // grouping precedence is higher than divide
+// console.log(ageAdarsh, ageShubh, averageAge)
 
+
+/******************  STRINGS AND TEMPLATE LITERALS JAVASCRIPT ******************/
+
+const firstName = "Adarsh";
+const job = "coder";
+const birthYear = 1999;
+const year = 2022;
+
+const bio =  // we use + sign to concanate a string
+"I'm " + firstName +
+', a ' + (year - birthYear) +
+' years old ' + job + '!';
+console.log(bio)
+
+// ES6 - template literals assemble multiple pieces into one final strings
+
+
+const bioNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`; // this is much easierw way to writing a string
+console.log(bioNew); 
+
+// Now we kow how template strings works in javascript, especially in ES6
+
+console.log(`We can use backticks for any regular strings....`); // we can use backticks for any regular strings by not adding any of these placeholder like this ${}
+
+
+// Great use case for using template literals is to create multi line strings
+
+
+// multi line strings before ES6 so we have to write like this
+console.log('String with \n\ multiple \n\ lines')
+
+// but with template strings after ES6 we can easily do
+console.log(`String
+with 
+multiple
+line
+`)  // it is very useful to create multi line html elements to insert them onto a page dynamically.
+
+// whenever you need a multi line strings always use the template literals becoz it is lot cleaner
 
 
 
