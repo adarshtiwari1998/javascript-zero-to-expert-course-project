@@ -281,44 +281,93 @@ console.log(now - 1991 > now - 2018); // how javascript knows that if it should 
 // console.log(ageAdarsh, ageShubh, averageAge)
 
 
-/******************  STRINGS AND TEMPLATE LITERALS JAVASCRIPT ******************/
+/******************  STRINGS AND TEMPLATE LITERALS IN JAVASCRIPT ******************/
 
-const firstName = "Adarsh";
-const job = "coder";
-const birthYear = 1999;
-const year = 2022;
+// const firstName = "Adarsh";
+// const job = "coder";
+// const birthYear = 1999;
+// const year = 2022;
 
-const bio =  // we use + sign to concanate a string
-"I'm " + firstName +
-', a ' + (year - birthYear) +
-' years old ' + job + '!';
-console.log(bio)
+// const bio =  // we use + sign to concanate a string
+// "I'm " + firstName +
+// ', a ' + (year - birthYear) +
+// ' years old ' + job + '!';
+// console.log(bio)
 
-// ES6 - template literals assemble multiple pieces into one final strings
-
-
-const bioNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`; // this is much easierw way to writing a string
-console.log(bioNew); 
-
-// Now we kow how template strings works in javascript, especially in ES6
-
-console.log(`We can use backticks for any regular strings....`); // we can use backticks for any regular strings by not adding any of these placeholder like this ${}
+// // ES6 - template literals assemble multiple pieces into one final strings
 
 
-// Great use case for using template literals is to create multi line strings
+// const bioNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`; // this is much easierw way to writing a string
+// console.log(bioNew); 
+
+// // Now we kow how template strings works in javascript, especially in ES6
+
+// console.log(`We can use backticks for any regular strings....`); // we can use backticks for any regular strings by not adding any of these placeholder like this ${}
 
 
-// multi line strings before ES6 so we have to write like this
-console.log('String with \n\ multiple \n\ lines')
+// // Great use case for using template literals is to create multi line strings
 
-// but with template strings after ES6 we can easily do
-console.log(`String
-with 
-multiple
-line
-`)  // it is very useful to create multi line html elements to insert them onto a page dynamically.
 
-// whenever you need a multi line strings always use the template literals becoz it is lot cleaner
+// // multi line strings before ES6 so we have to write like this
+// console.log('String with \n\ multiple \n\ lines')
+
+// // but with template strings after ES6 we can easily do
+// console.log(`String
+// with 
+// multiple
+// line
+// `)  // it is very useful to create multi line html elements to insert them onto a page dynamically.
+
+// // whenever you need a multi line strings always use the template literals becoz it is lot cleaner.
+
+
+/******************  IF / ELSE STATEMENTS IN JAVASCRIPT ******************/
+
+
+// EXAMPLE 1 
+
+const licenseAge = 19;
+// const isOldEnough = licenseAge >= 18;
+
+if (licenseAge >= 18) {
+   console.log("Adarsh, 😊 you are eligible for taking driving license 🚗...");
+}
+else { // this else block is optional, javscript is takes you to next line after the if statement in case that the condition is false
+  const yearsLeft = 18 - licenseAge;
+  console.log(
+    `"Sorry! 😔 Adarsh, you are not eligible for taking driving license ❌. Wait another ${yearsLeft} years :)"`
+  );
+}
+
+
+// if else statement is the most important things in programming. we take decisions with code all the time which is essentially what we did here, so we can execute certain parts of our program based on certain conditions.
+
+
+// if else structure is also called the control structure. And it is called a control structure because this structure actuallu allows us to have more control over the way that our code is executed.
+
+// the whole code does not execute in  a linera way, so javscript does not execute all of this code in a linearly. Instead we can now control blocks of code that should execute and blocks that should not execute.
+
+// And again that gives us a lot more control over how our code works and that's why is called a control structure
+
+
+
+// EXAMPLE 2
+/// let's create a variable conditionally and not use console.log
+
+const birthYear = 1920;
+
+let century;
+
+if (birthYear <= 1900) {
+    century = 19;
+} else if (birthYear <= 2000) {
+  century = 20;
+} else {  // else block is actually be optional, so if you don't have any else block then simply no code will be executed.
+  century = 21;
+}
+
+console.log(century);
+
 
 
 

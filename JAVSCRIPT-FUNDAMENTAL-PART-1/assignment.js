@@ -121,24 +121,24 @@ m tall.
 
 
 // TEMPLATE LITERALS CODING CHALLENGE
-let language = "Hindi";
-let country = "India";
-let continent = "Asia";
+// let language = "Hindi";
+// let country = "India";
+// let continent = "Asia";
 
-let population = 100000;
-console.log(population / 2);
-population++;
-console.log(population);
+// let population = 100000;
+// console.log(population / 2);
+// population++;
+// console.log(population);
 
-const finland = 60000000;
-console.log(population > finland);
+// const finland = 60000000;
+// console.log(population > finland);
 
-console.log(population < 3300000);
+// console.log(population < 3300000);
 
-const description = `
-${country} is in ${continent} and its ${population} million people speak ${language}
-`
-console.log(description)
+// const description = `
+// ${country} is in ${continent} and its ${population} million people speak ${language}
+// `
+// console.log(description)
 
 
 
