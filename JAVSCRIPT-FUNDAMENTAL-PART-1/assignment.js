@@ -24,6 +24,8 @@ console.log(typeof language);
 
 */
 
+/*
+
 language = "Hindi";
 // console.log(language);
 
@@ -35,3 +37,4 @@ isIsland = true; // assignment type error to constant variable
 
 console.log(country, continent, isIsland);
 
+*/

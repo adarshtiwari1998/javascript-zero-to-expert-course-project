@@ -145,9 +145,12 @@ console.log(typeof null); // typeof null is an object not undefined it is an err
 // 1.
 // we use let keywords to declare a variable that can change later, means during the execution of the program
 
+/*
+
 let age = 24;
 age = 25; // reassigning the value to a variable, we mutate the age variable in this case. That the term you will hear all the time in the javaScript world, So when we need the mutate a variable, that the perfect use case for using let. And that also counts for the case that we want to declare empty variable.
 console.log(age);
+
 
 // we use const keyword to declare a variable that are not supposed to change at any ppint in the future, So the value in the const variable cannot be changed.
 
@@ -155,6 +158,7 @@ console.log(age);
 const birthYear = 1998;
 // birthYear = 1999;.  // it should not work, we get type error, it is an immutable variable, So a variable that cannot be mutated.
 console.log(birthYear);
+
 
 // We cannot declare empty const variables
 
@@ -184,3 +188,74 @@ console.log(job);
 
 lastName = "Tripathi"; // javascript will happily execute this script even without us declaring a variable, However this is actually a pretty terrible idea because it does'nt create a variable in the current so-called scope. Instead javascript will create a property on the global object. We should alwayse properly declare a variables. Never write this variable like this without really declaring it
 console.log(lastName);
+
+*/
+
+/******************  OPERATORS IN JAVASCRIPT ******************/
+
+// MINUS OPERATOR TO SOLVE A VERY SIMPLE PROBELM OF AGE CALCULATOR
+
+//////////////// MATH OPERATOR
+
+const now = 2037;
+
+const ageAdarsh = now - 1991;  // we can use the variables to stop the repetitive value by using variable
+const ageShubh = now - 2018
+console.log(ageAdarsh, ageShubh);
+
+console.log(ageAdarsh * 2, ageAdarsh / 10, 2 ** 3);  // here we are creating two value , and here we are using exponitation operator
+
+// 2 ** 2 means 2 to the power of 3 = 2 * 2 * 2
+
+// PLUS OPERATOR
+
+
+const firstName = "Adarsh";
+const lastName = "Tripathi";
+
+console.log(firstName + ' ' + lastName);  // concatenation of strings which is called template strings
+
+// TYPEOF OPERATOR
+
+const isCountry = true;
+
+console.log(typeof isCountry);  // it given the type of the value
+
+/////////////////////// ASSIGNMENT OPERATOR
+
+let x = 10 + 5; // this equal = sign is itself a operator, here we have the two operator, plus and equal operator, in this case x will be assigned 15 because plus operator is executed before the assignment operator. That's based on couple of rules about operator proceedings. So at this point x is 15
+
+x += 10;  // x = x + 10, [output is 25], so here we are reassigning the x value, So thats why we are using the let keywords here
+
+x *= 4; // x = x * 4, so the output will be [100]
+
+x++; // x = x + 1, output is 101
+
+x--; // x = x - 1, output is 100
+x--; // x = x - 1, output is 99
+
+console.log(x); // Output shown here
+
+
+////////////////// COMPARISON OPERATORS 
+
+// we use comparison operators to produce boolean values.
+
+console.log(ageAdarsh > ageShubh); // ageAdarsh is either greater than ageShubh or not, and if it greater than the result if this should be true, and if it's not than the resukt should be just false, Indeed the result of this will be true, So it is basically asking the operator, and the operator is essentially reply with yes or no, yes means true or no means false.
+
+// it is very useful later when we start taking decisions with our code based on conditions like this
+
+//  > , <, >=, <=
+
+//console.log(ageShubh >= 18); // greater than equal to operator
+
+// we can also store these result in the variable if you need them later in our code
+
+const fullAge = ageShubh >= 18;
+
+console.log(now - 1991 > now - 2018); // how javascript knows that if it should do the math first ot if it should do the comparison first
+
+
+
+
+
