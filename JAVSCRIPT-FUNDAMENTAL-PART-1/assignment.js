@@ -142,6 +142,21 @@ m tall.
 
 
 
+// IF / ELSE STATEMENT CODING CHALLENGE 
+
+const country = "India";
+const population = 140;
+
+if (population > 33) {
+  console.log(`${country} Population is above average`)
+} else {
+  console.log(`${country} population is ${33 - population} million below average`)
+}
+
+
+
+
+
 
 
 
