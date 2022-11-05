@@ -144,15 +144,72 @@ m tall.
 
 // IF / ELSE STATEMENT CODING CHALLENGE 
 
-const country = "India";
-const population = 140;
+// const country = "India";
+// const population = 140;
 
-if (population > 33) {
-  console.log(`${country} Population is above average`)
+// if (population > 33) {
+//   console.log(`${country} Population is above average`)
+// } else {
+//   console.log(`${country} population is ${33 - population} million below average`)
+// }
+
+// Coding Challenge #2
+
+/* 
+Coding Challenge #2
+Use the BMI example from Challenge #1, and the code you already wrote, and
+improve it.
+Your tasks:
+1. Print a nice output to the console, saying who has the higher BMI. The message
+is either "Adarsh's BMI is higher than Shubh!" or "Shubh BMI is higher than Adarsh!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Adarsh's
+BMI (28.3) is higher than Shubh's (23.9)!"
+Hint: Use an if/else statement �
+ */
+
+// IF / ELSE STATEMENT CODING CHALLENGE #2
+
+/////////// PART 1
+// TEST DATA 1
+
+const massAdarsh = 78;
+const heightAdarsh = 1.69;
+const massShubh = 92;
+const heightShubh = 1.95;
+// STEP 2
+const BMIAdarsh = massAdarsh / heightAdarsh ** 2;
+const BMIShubh = massShubh / (heightShubh * heightShubh);
+// STEP 3
+// const markHigherBMI = BMIAdarsh > BMIShubh;
+// console.log(BMIAdarsh, BMIShubh, markHigherBMI);
+console.log(BMIAdarsh, BMIShubh);
+
+if (BMIAdarsh > BMIShubh) {
+  // it is very common to write the condition directly
+  console.log(`Adarsh's BMI ${BMIAdarsh} is higher than Shubh! ${BMIShubh}`);
 } else {
-  console.log(`${country} population is ${33 - population} million below average`)
+  console.log(`Shubh BMI ${BMIShubh} is higher than Adarsh's! ${BMIAdarsh}`);
 }
 
+// TEST DATA 2
+
+const massAdarsh1 = 95;
+const heightAdarsh1 = 1.88;
+const massShubh1 = 85;
+const heightShubh1 = 1.76;
+// STEP 2
+const BMIAdarsh1 = massAdarsh1 / heightAdarsh1 ** 2;
+const BMIShubh1 = massShubh1 / (heightShubh1 * heightShubh1);
+// STEP 3
+// const markHigherBMI1 = BMIMark1 > BMIJohn1;
+// console.log(BMIMark1, BMIJohn1, markHigherBMI1);
+console.log(BMIAdarsh1, BMIShubh1)
+if (BMIAdarsh1 > BMIShubh1) {
+  // it is very common to write the condition directly
+  console.log(`Adarsh's BMI (${BMIAdarsh1}) is higher than Shubh! (${BMIShubh})`);
+} else {
+  console.log(`Shubh BMI (${BMIShubh1}) is higher than Adarsh's! (${BMIAdarsh})`);
+}
 
 
 
