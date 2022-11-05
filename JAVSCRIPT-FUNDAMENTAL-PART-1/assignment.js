@@ -172,44 +172,44 @@ Hint: Use an if/else statement �
 /////////// PART 1
 // TEST DATA 1
 
-const massAdarsh = 78;
-const heightAdarsh = 1.69;
-const massShubh = 92;
-const heightShubh = 1.95;
-// STEP 2
-const BMIAdarsh = massAdarsh / heightAdarsh ** 2;
-const BMIShubh = massShubh / (heightShubh * heightShubh);
-// STEP 3
-// const markHigherBMI = BMIAdarsh > BMIShubh;
-// console.log(BMIAdarsh, BMIShubh, markHigherBMI);
-console.log(BMIAdarsh, BMIShubh);
+// const massAdarsh = 78;
+// const heightAdarsh = 1.69;
+// const massShubh = 92;
+// const heightShubh = 1.95;
+// // STEP 2
+// const BMIAdarsh = massAdarsh / heightAdarsh ** 2;
+// const BMIShubh = massShubh / (heightShubh * heightShubh);
+// // STEP 3
+// // const markHigherBMI = BMIAdarsh > BMIShubh;
+// // console.log(BMIAdarsh, BMIShubh, markHigherBMI);
+// console.log(BMIAdarsh, BMIShubh);
 
-if (BMIAdarsh > BMIShubh) {
-  // it is very common to write the condition directly
-  console.log(`Adarsh's BMI ${BMIAdarsh} is higher than Shubh! ${BMIShubh}`);
-} else {
-  console.log(`Shubh BMI ${BMIShubh} is higher than Adarsh's! ${BMIAdarsh}`);
-}
+// if (BMIAdarsh > BMIShubh) {
+//   // it is very common to write the condition directly
+//   console.log(`Adarsh's BMI ${BMIAdarsh} is higher than Shubh! ${BMIShubh}`);
+// } else {
+//   console.log(`Shubh BMI ${BMIShubh} is higher than Adarsh's! ${BMIAdarsh}`);
+// }
 
-// TEST DATA 2
+// // TEST DATA 2
 
-const massAdarsh1 = 95;
-const heightAdarsh1 = 1.88;
-const massShubh1 = 85;
-const heightShubh1 = 1.76;
-// STEP 2
-const BMIAdarsh1 = massAdarsh1 / heightAdarsh1 ** 2;
-const BMIShubh1 = massShubh1 / (heightShubh1 * heightShubh1);
-// STEP 3
-// const markHigherBMI1 = BMIMark1 > BMIJohn1;
-// console.log(BMIMark1, BMIJohn1, markHigherBMI1);
-console.log(BMIAdarsh1, BMIShubh1)
-if (BMIAdarsh1 > BMIShubh1) {
-  // it is very common to write the condition directly
-  console.log(`Adarsh's BMI (${BMIAdarsh1}) is higher than Shubh! (${BMIShubh})`);
-} else {
-  console.log(`Shubh BMI (${BMIShubh1}) is higher than Adarsh's! (${BMIAdarsh})`);
-}
+// const massAdarsh1 = 95;
+// const heightAdarsh1 = 1.88;
+// const massShubh1 = 85;
+// const heightShubh1 = 1.76;
+// // STEP 2
+// const BMIAdarsh1 = massAdarsh1 / heightAdarsh1 ** 2;
+// const BMIShubh1 = massShubh1 / (heightShubh1 * heightShubh1);
+// // STEP 3
+// // const markHigherBMI1 = BMIMark1 > BMIJohn1;
+// // console.log(BMIMark1, BMIJohn1, markHigherBMI1);
+// console.log(BMIAdarsh1, BMIShubh1)
+// if (BMIAdarsh1 > BMIShubh1) {
+//   // it is very common to write the condition directly
+//   console.log(`Adarsh's BMI (${BMIAdarsh1}) is higher than Shubh! (${BMIShubh})`);
+// } else {
+//   console.log(`Shubh BMI (${BMIShubh1}) is higher than Adarsh's! (${BMIAdarsh})`);
+// }
 
 
 

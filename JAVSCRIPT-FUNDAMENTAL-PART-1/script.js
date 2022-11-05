@@ -326,6 +326,8 @@ console.log(now - 1991 > now - 2018); // how javascript knows that if it should 
 
 // EXAMPLE 1 
 
+/*
+
 const licenseAge = 19;
 // const isOldEnough = licenseAge >= 18;
 
@@ -339,6 +341,7 @@ else { // this else block is optional, javscript is takes you to next line after
   );
 }
 
+*/
 
 // if else statement is the most important things in programming. we take decisions with code all the time which is essentially what we did here, so we can execute certain parts of our program based on certain conditions.
 
@@ -354,6 +357,8 @@ else { // this else block is optional, javscript is takes you to next line after
 // EXAMPLE 2
 /// let's create a variable conditionally and not use console.log
 
+/*
+
 const birthYear = 1920;
 
 let century;
@@ -367,6 +372,117 @@ if (birthYear <= 1900) {
 }
 
 console.log(century);
+
+*/
+
+
+
+/******************  Type Conversion and Coercion ******************/
+
+// In javascript there is type conversion and type coercion there are sound similar but are different
+
+// Type conversion is when we manuaLly convert from one type to another on the other hand type coercion when javascript automatically converts types behind the scene from us, that necessary from some situation but it happens implicitly, completely hidden from us.
+
+
+// TYPE CONVERSION - when we explicitly want to convert from one type to another.
+
+const inputYear = "1991"; // input fields usually coming comes as strings, the input fields coming from the user interface is a string with the value 1991, but now we can do some calculations with this but they don't really work
+console.log(inputYear + 18); // output is 199118
+// Remember when we have a string and we add something to the string it will basically concatenate the strings, so we can't accept that this actually adds 18 this number here becoz it is a string.
+
+// we need a way to fixing this of converting this string to a number.
+console.log(Number(inputYear), inputYear) // first one is a number and second one is a string
+console.log(Number(inputYear) + 18) // the way to convert a string to a number by using the built in number function. So we write number, parenthesis and then variables. This will now convert a number, the 18 will be added so output is 2009
+
+// We can basically convert the strings to a number by using this function, which we execute using this parenthesis here.
+
+// But now what we are trying to convert a number that is something inpossible to convert
+
+console.log(Number("Adarsh")); // output is NaN (Not a number)
+console.log(typeof NaN); // output is number, NaN is actually means an invalid number
+
+// we get not a number when a operation involving number fails to give is a new number.
+
+
+
+// Convert strings to number
+
+console.log(String(23), 23); // first one has the value is string type and second one has the number type
+
+// remember that the value is white in console which means it is a string, 
+
+
+// Javascript can only convert 2 to 3 types, So we can convert to a number, to a string, to a boolean.
+
+// But we can not convert something to undefined or to null or to boolean and thats because boolean behave in special way, and that we have discuss in next section for so called truthy and falsy values
+
+
+// TYPE COERCION - javscript convert implictly automatically from one type to another
+
+// whenever an operator is dealing with two values that have different type
+
+console.log("I am " + 24 + " years old!"); // this produce a string that is I am 24 years old, 
+
+// But how does this actually works? because 24 is a number, so we have different types here, we have string, a number and another string. And it works this way because of type coercion. In javascript the + plus operator that we used here trigger a coercion to strings. So whenever there is an operation between a string and a number, the number will be converted to string. So thanks to type coercion writing this would be exactly the same as writing this
+
+console.log("I am " + "24" + " years old!"); // again the plus operator will convert a number to strings. And the same actually happens in template literals. It also take all the number value and also converts them to strings.
+
+// No if javascript did not have automatic type coercion like many other language don't then we would have to manually do this like we just learned before
+
+// then we would have to do string 23 then this would be the only way that this would work
+
+console.log("I am " + String(23) + " years old!");
+
+// but javascript have type coercion and so this will happen completely automatically behind the scene
+
+// Now actually all operator do type coercion to string let me show you
+
+console.log("23" - "10" - 3); // output is 10, now this time javascript converted the strings to number and indeed that's why we get 10 because 23 - 10 is 13 and 13 - 3 is 10.  
+
+// It means the minus operator actually trigger the opposite conversion, So in this case strings are converted to a number and not the other way around instead we use the plus operator so what do you thnk is gonna happen
+
+console.log("23" + "10" + 3); // output is 23103, then the three is converted to a string and then the three strings are concatenated.
+
+console.log("23" * "2"); // output 46, because both of them are now converted to numbers, becuase that the only way that the multiplier operator can work
+
+console.log("23" / "2"); // output is 11.5,
+
+
+
+// GUESS THE OUTPUT GAME
+
+let n = "1" + 1;  // turned out to string 11
+n = n - 1;  // 11 - 1 = 10 so n is 10
+console.log(n);  // output is 10
+
+let j = 2 + 5 + 9 + "11";
+console.log(j); // output is 1611
+
+let m = 2 + 4 - 9 + "12";
+console.log(m); // output is -312
+
+
+let h = "10" - "4" - "3" - 2 + "5";
+console.log(h); // output is 15
+
+
+let g = "20" / "5" * "3" - "2" + "5";
+console.log(g); // output is 105!
+
+
+// Note: Now, many people don't like type coercion and think that it's a bad practice to rely on type coercion.
+
+// One reason for that, is that type coercion can in fact introduce many unexpected bugs into our program. 
+
+// However it only happens when we don't really know what we're doing, so when we don't know about the stuff that showed you above, because if you know, then it's way easier to avoid these errors
+
+// Coercion is actually a great mechanism, that is gonna allow us to write a lot less code and also to write more readable code
+
+// Take some more time to think how type coercion work and then embrace these into your code.
+
+
+
+
 
 
 
