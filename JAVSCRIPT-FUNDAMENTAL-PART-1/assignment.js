@@ -212,6 +212,27 @@ Hint: Use an if/else statement �
 // }
 
 
+// TYPE CONVERSION AND TYPE COERCION CHALLENGE
+
+let typeConversion1 = "9" - "5";
+console.log(typeConversion1); // output is 4
+
+let typeConversion2 = "19" - "13" + "17";
+console.log(typeConversion2); // output is 617
+
+let typeConversion3 = "19" / "13" + "17";  
+console.log(typeConversion3); // output is 1.46148461538461517
+
+let typeConversion4 = "123" < 57;
+console.log(typeConversion4); // output is false
+
+let typeConversion5 = 5 + 6 + "4" + 9 - 4 - 2;
+console.log(typeConversion5); // output is 1143
+
+
+
+
+
 
 
 

@@ -386,6 +386,9 @@ console.log(century);
 
 // TYPE CONVERSION - when we explicitly want to convert from one type to another.
 
+
+/*
+
 const inputYear = "1991"; // input fields usually coming comes as strings, the input fields coming from the user interface is a string with the value 1991, but now we can do some calculations with this but they don't really work
 console.log(inputYear + 18); // output is 199118
 // Remember when we have a string and we add something to the string it will basically concatenate the strings, so we can't accept that this actually adds 18 this number here becoz it is a string.
@@ -448,8 +451,11 @@ console.log("23" * "2"); // output 46, because both of them are now converted to
 console.log("23" / "2"); // output is 11.5,
 
 
+*/
 
 // GUESS THE OUTPUT GAME
+
+/*
 
 let n = "1" + 1;  // turned out to string 11
 n = n - 1;  // 11 - 1 = 10 so n is 10
@@ -468,6 +474,9 @@ console.log(h); // output is 15
 
 let g = "20" / "5" * "3" - "2" + "5";
 console.log(g); // output is 105!
+
+
+*/
 
 
 // Note: Now, many people don't like type coercion and think that it's a bad practice to rely on type coercion.
