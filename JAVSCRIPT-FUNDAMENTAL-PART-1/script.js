@@ -490,9 +490,79 @@ console.log(g); // output is 105!
 // Take some more time to think how type coercion work and then embrace these into your code.
 
 
+/******************  TRUTHY AND FALSY VALUES IN JAVASCRIPT ******************/
 
 
+// Falsy values are values that are nit exactly false, but will become false when we try to convert them into boolean.
 
+// In javascript there are only falsy values, 5 falsy values are:
+// 0, " ", undefined, null, NaN, false itself is already false so we don't need to include it in the list of falsy values.
+
+// so all of these falsy values will be converted to false when we attempt to convert them to a boolean, they're not exactly false initially, but they will become when converted to a boolean. so that's the defination of falsy value.
+
+// Everything else are our so-called truthy values, So values that will be converted to true, for example any number that is not xero or any string that is not an empty string will be converted to true, when we attempt to convert them to a boolean. 
+
+console.log(Boolean(0));  // false
+console.log(Boolean(undefined));  // false
+console.log(Boolean("Adarsh"));  // any string which is not empty string is called truthy value
+console.log(Boolean("")); // empty string output -> false
+console.log(Boolean(null)); // false
+console.log(Boolean(NaN)); // false
+console.log(Boolean({})); // any object is also a truthy value
+
+
+// but never use this function in practice. This was just to show you the concept of truthy and falsy value.
+
+// But in practice the conversion to boolean is always implicit, not explicit, 
+
+// In other words is always type coercion that javascript automatically doing behind the scenes
+
+// But when exactly does javscript do type coercion to boolean, well it happens in two scenerios, First when using logical operator, and second in a logical context like for example, in the condition of an if else statement.
+
+// Let see how type coercion work in if else statement 
+
+const money = 0; // 0 is falsy value so the else block here is executed
+if (money) {
+  console.log("Don't spend it all!")
+}  else {
+  console.log("You should get a job 🧑‍💻")
+}
+
+const money1 = 100; // 100 is truthy value so the condition is true so if block here is executed
+if (money1) {
+  console.log("Don't spend it all!");
+} else {
+  console.log("You should get a job 🧑‍💻");
+}
+
+
+let height; // undefined is falsy value, so in this case the else block here is executed
+
+if (height) { // here this height variable in this logical context will automatically be converted to a boolean. And since height is undefined and undefined is falsy value, so height right here will be false, so therefore the else block will be executed
+  console.log("YAY!, 🥳 Height is defined");
+} else {
+  console.log("Height is undefined");
+}
+
+// but now we assign something to it, no matter what it is, then we will get the other result
+
+let height1 = 100; // here undefined is truthy value because we assign the number into variable, so here if block is executed
+if (height1) {
+  console.log("YAY!, Height is defined");
+} else {
+  console.log("Height is undefined");
+}
+
+// However, with this, we can actually run into a problem. So let's say that the height is zero for some reason, and that is perfectly a valid number, but watch what happens when we run the this code
+
+let height2 = 0; // now we get again, the falsy value because zero is also a falsy value, and this one is also trigger the else block, and here the else block is executed
+if (height2) {
+  console.log("YAY!, Height is defined");
+} else {
+  console.log("Height is undefined");
+}
+
+// But in this case, that't actually not what we want. so this is a kind a bug or wrror in the application, because in this if else statement we didn't account for this scenerio., we only accounted the scenerio that the height is either defined or not, but we didn't think of the height being zero, but right now we get height is undefined, even though that't not true. so this is just an illustrate an example, that there can be a problems using this approach. However we can fix this by using logical operator
 
 
 

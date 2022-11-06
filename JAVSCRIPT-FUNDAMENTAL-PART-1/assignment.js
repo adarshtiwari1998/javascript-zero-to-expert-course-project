@@ -213,6 +213,7 @@ Hint: Use an if/else statement �
 
 
 // TYPE CONVERSION AND TYPE COERCION CHALLENGE
+/*
 
 let typeConversion1 = "9" - "5";
 console.log(typeConversion1); // output is 4
@@ -228,6 +229,8 @@ console.log(typeConversion4); // output is false
 
 let typeConversion5 = 5 + 6 + "4" + 9 - 4 - 2;
 console.log(typeConversion5); // output is 1143
+
+*/
 
 
 
