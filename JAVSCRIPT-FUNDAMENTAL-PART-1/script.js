@@ -492,6 +492,7 @@ console.log(g); // output is 105!
 
 /******************  TRUTHY AND FALSY VALUES IN JAVASCRIPT ******************/
 
+/*
 
 // Falsy values are values that are nit exactly false, but will become false when we try to convert them into boolean.
 
@@ -563,6 +564,153 @@ if (height2) {
 }
 
 // But in this case, that't actually not what we want. so this is a kind a bug or wrror in the application, because in this if else statement we didn't account for this scenerio., we only accounted the scenerio that the height is either defined or not, but we didn't think of the height being zero, but right now we get height is undefined, even though that't not true. so this is just an illustrate an example, that there can be a problems using this approach. However we can fix this by using logical operator
+
+*/
+
+
+/******************  EQUALITY OPERATOR: == vs. === IN JAVASCRIPT ******************/
+
+const age = 18; 
+if (age === 18) { // now to check if the age is exactly 18, we use the triple equal operator
+  console.log("YAY!, your age is 18")
+} else {
+  console.log("YAY!, your age is not 18")
+}
+
+
+// Now, whenever or if block only has one line, so we actually don't need two curly braces. So we don't need to create this block if you only have one line, So we can omit this and only write this one line of code
+
+const age1 = "18"; // = this is asignment operator 
+if (age1 === 18) {// === this is comparison operator
+console.log("YAY!, You just became an adult (strict)");
+}
+
+// well just like comparison operator, the equality operaotr will return a true of false value. so in boolean value, only in this case true will only be the resilt of this operator, in case that both side are exactly the same.
+
+// === this one is called the strict equality operator, It's strict because it does not perform type coercion, because it only return true when both values are exactly the same
+
+// On the other hand, there's also the loose equality operator, which is only two equals, and the loose equality operator actually does type coercion
+
+// == does the coersion operator
+
+const age2 = "18"; // = this is asignment operator
+if (age2 === 18) {
+  // === this is comparison operator
+  console.log("YAY!, You just became an adult (strict)");
+}
+
+if (age2 == 18) { // only this line of code will be executed
+  // === this is comparison operator
+  console.log("YAY!, You just became an adult (loose)");
+}
+
+// "18" == 18 return 18, well this "18" will be converted to a number then the number 18 is the same as this number 18. 
+
+// with the loose equality operator 18 to string is the same as 18 the number, because 18 the string will be converted to 18 the number.
+
+// the loose equality operator is full of weired rules and behanviors, if this use this can introdcue many hard to find bugs into our code
+
+// As a gerneral rule of clean code avoid the loose equality operator as much as you can, so when camparing values always use strict eqality operator with the three equal signs
+
+// === this is must most javascript developer advice you to do, so it's a good rule for sure, even if you actually need type conversion in that case it's better to convert the value manually before the comparison then relying on the double equal operator.
+
+// so always default to the triple equal operator, and pretend that this one does'nt even exist.
+
+
+/////////////// EXAMPLE 1
+
+// there is a pretty simple way og getting a value from any webpage we can do that by using  the prompt function
+/*
+
+prompt("What your favourite number!"); // basically all this here will create a value, but we need to store the input nuber somewhere so let's create a variable for this
+
+const favourite = prompt("What your favourite number?"); // so in this favourite variable where the value that we put into that form will be stored
+console.log(typeof favourite); // but it printed in white that mean that it is a string
+
+if (favourite == 23) { // loose equality operator, and this one will do type coercion, right now we have here 23 is a string '23' == 23, so '23' this one will be converted to a number then the number 23  is equal to 23
+  console.log("Hey, 23 is an amazing number!");
+}
+
+if (favourite === 23) { // it should not log
+  console.log("Hey, 23 is an amazing number!");
+}
+// now we an convert the string to a number
+// so now we can actually wrap all that in number function, that is used to convert
+
+
+*/
+
+/*
+ const favourite = Number(prompt("What your favourite number?")); // here string is converted to a number, so right now favourite gonna be a number, and then it should be back at working with triple === operator 
+ console.log(favourite);
+ console.log(typeof favourite); 
+ if (favourite === 23) { // 23 === 23, so ofcourse is true here, so then this line of code will execute and run
+   console.log("Hey, 23 is an amazing number!");
+ }
+
+ */
+
+ //but if we input the number 22 so this condition is false
+
+
+ // so we are going to the next point so, we can add more condition to an if else statement
+
+ // so far we can also add else if block like this
+
+ const favourite = Number(prompt("What your favourite number?")); // here string is converted to a number, so right now favourite gonna be a number, and then it should be back at working with triple === operator
+ console.log(favourite);
+ console.log(typeof favourite);
+ if (favourite === 23) {
+   // 23 === 23, so ofcourse is true here, so then this line of code will execute and run
+   console.log("Hey, 23 is an amazing number!");
+ } else if (favourite === 7) {
+   console.log("Hey, 7 is an amazing number!");
+ } else if (favourite === 13) {
+  console.log("Hey, 18 is an lucky number of virat kohli")
+ } else if (favourite === 18) {
+  console.log("Hey, 18 is an lucky number of Adarsh")
+ } else if (favourite === 83) {
+  console.log("Hey, 83 is an lucky number of Rohit Sharma")
+ } else {
+  console.log("Sorry, number is not 23 or 7 or 13 or 18 or 83");
+ }
+
+ // so here the first check if the number is 23 here, then if it's not it will of course go to the next block which is this one, then it will check this condition. Well if the number is 7 now then run this code, and then at the end, we can also add the else block
+
+ // we can keep adding else if block as long as we want
+
+ // now we are not going immediately into an else block once the initial conditon is false, now the other condition will be check one after another
+
+
+ // There is also an operator for different, which is does opposite for equal
+
+ // let now we check favourite is different from 23 so we use the exclamanation mark
+
+ if (favourite !== 23) { // ! and == double equal which is the strict version and there's also the loose version which is this one != with just one equal but just as before always use the strict version. so if the number is not 23 so we log this message in console
+   console.log("Why not 23?")
+ } else if (favourite !== 7) {
+   console.log("Why not 7?");
+ }
+
+
+ // so sometimes we need the different operator and sometimes we need the equality operator just choose whatever we need to solve the particluar problem
+
+ // both case we make sure to use the stric version of the operator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
