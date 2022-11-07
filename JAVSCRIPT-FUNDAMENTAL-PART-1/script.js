@@ -570,6 +570,9 @@ if (height2) {
 
 /******************  EQUALITY OPERATOR: == vs. === IN JAVASCRIPT ******************/
 
+
+/*
+
 const age = 18; 
 if (age === 18) { // now to check if the age is exactly 18, we use the triple equal operator
   console.log("YAY!, your age is 18")
@@ -585,6 +588,8 @@ if (age1 === 18) {// === this is comparison operator
 console.log("YAY!, You just became an adult (strict)");
 }
 
+*/
+
 // well just like comparison operator, the equality operaotr will return a true of false value. so in boolean value, only in this case true will only be the resilt of this operator, in case that both side are exactly the same.
 
 // === this one is called the strict equality operator, It's strict because it does not perform type coercion, because it only return true when both values are exactly the same
@@ -592,6 +597,8 @@ console.log("YAY!, You just became an adult (strict)");
 // On the other hand, there's also the loose equality operator, which is only two equals, and the loose equality operator actually does type coercion
 
 // == does the coersion operator
+
+/*
 
 const age2 = "18"; // = this is asignment operator
 if (age2 === 18) {
@@ -603,6 +610,8 @@ if (age2 == 18) { // only this line of code will be executed
   // === this is comparison operator
   console.log("YAY!, You just became an adult (loose)");
 }
+
+*/
 
 // "18" == 18 return 18, well this "18" will be converted to a number then the number 18 is the same as this number 18. 
 
@@ -657,6 +666,8 @@ if (favourite === 23) { // it should not log
 
  // so far we can also add else if block like this
 
+ /*
+
  const favourite = Number(prompt("What your favourite number?")); // here string is converted to a number, so right now favourite gonna be a number, and then it should be back at working with triple === operator
  console.log(favourite);
  console.log(typeof favourite);
@@ -696,6 +707,8 @@ if (favourite === 23) { // it should not log
  // so sometimes we need the different operator and sometimes we need the equality operator just choose whatever we need to solve the particluar problem
 
  // both case we make sure to use the stric version of the operator
+
+ */
 
 
 
