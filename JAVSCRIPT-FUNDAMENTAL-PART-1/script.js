@@ -711,6 +711,83 @@ if (favourite === 23) { // it should not log
  */
 
 
+ /******************  BOOLEAN LOGIC IN JAVASCRIPT ******************/
+
+ // we also learn about logic that is boolean logic, basicaly boolean logic is abranch of computer science which uses true or false values to solve complex logical problems.
+
+ // And in order to do that it uses several logical operator,to combine true or false values. So much like we use arithmetic operator to combine numeric values
+
+ // Most basic logical operator which are the AND, OR and NOT operators.
+
+ // Note: Boolean logic is not specific to JavaScript, this is all true to all programming.
+
+
+/*   // AND OPERATOR
+
+-  The AND operator is true if all of the variables is true
+-  No matter how many variables
+
+Let see how this AND operator work with example 
+
+A: Sakshi has a driver's license
+B. Sakshi has good vision
+
+// Both of these are of course conditions, thst can be true or false because sarah could have no driving license and she could have no good vision. or on the other hand, she could have a driver's license and could have good vision
+// Boolean variables that can be either TRUE or FALSE
+
+
+Combine A AND B 
+"Sakshi has a driver's license AND good vision"
+
+but now what will be the result of this operation? Well for that we use so-called truth table, here we have two possible value for each of the variables A and B, which gives us four  possible combination of result
+
+So what we can see from this table is that only if only if both A and B are true the result of the operation will be true as well, and that makes sense after all it's caleed the AND operator. So again what the AND operator does is to return true only if both A and B are true. In all other situation if eiter A or B are false then A and B will also be false. And we can also generalize this to more operands, so to more than just two values. We can do A AND B AND C and result would be true only if all of them are true, and if one of them is false, then the result is immediately false as well.
+*/
+
+/*  // OR OPERATOR
+
+- which kind of works in opposite way
+- The OR operator is true if just one of the variables is true
+- if both variable is false then the operand is false
+- It enough to one to be true to make the whole operation    became true as well
+
+*/
+
+
+/*  // NOT OPERATOR
+
+- It does'nt combine multiple values
+- Instead the NOT operator acts on only one boolean value
+- Basically just inverts it
+- So if A is true it will became false and if it's false then NOT A will become true
+- Inverts true/ false value
+
+*/
+
+// And that's basically how these three most important logical operators work nut instead the best way to learn it to use a practical example
+
+let age = 16;
+// then our two boolean variables
+/* A: Age is greater or equal 20   // false
+   B: Age is less than 30          // true
+
+   so let's determine te value of each of them, so if age is 16 then age is greater or equal to any must be false and age is less than 30 is true, because 16 obviously is less than 30, so that's the baseline, now we will start to combine these variables A and B using some logical operators
+   
+   So the first exercise is the NOT operator so 
+
+   - !A , (And we know right now that A is false, right so the result of !A as we just learned is true, because all it does is to invert the logical values of the variable)
+
+   - A AND B , (And we already know that A is false and B is true, we have basically have false and true, so from a look from truth table, we can easily determine tha the result of this must be false. So when we have AND operator so it's enough from one of the operands to be false, to make the result of the operation also false )
+
+   - A OR B , (so let's check the truth table in this case, so in this case, we actually get true, And so this shows that it is enough for one variable to be true, for the whole expression to be true as well)
+
+   - !A AND B , (And we already know that NOT A is true and B is true, so at this time for the first time, we are combining multiple operatos here, and we already know that true and true will of course be true as well )
+
+   - A AND !B , ( and just as side not, the !NOT operator actually has procedings over the OR and AND operators, so basically the values are inverted first and onky they are combined using AND or OR, so we know that A is false and B is true so !B must be false, right and then false OR false is also false, and actually that's the only way in which the OR operator can be false, if al of them is false basically.  )
+*/
+
+
+
 
 
 

@@ -235,18 +235,19 @@ console.log(typeConversion5); // output is 1143
 
 // EQUALITY OPERATOR ASSIGNMENTS
 
-const numNeighbours = Number(prompt("How many neighbour countries does your country have?"));
+// const numNeighbours = Number(prompt("How many neighbour countries does your country have?"));
 
-console.log(numNeighbours);
-console.log(typeof numNeighbours);
+// console.log(numNeighbours);
+// console.log(typeof numNeighbours);
 
-if (numNeighbours === 1) { // loose equality operator
-  console.log("Only 1 border!");
-} else if (numNeighbours > 1) {
-  console.log("More than 1 borders");
-} else {
-  console.log("No borders");
-}
+// if (numNeighbours === 1) { // loose equality operator
+//   console.log("Only 1 border!");
+// } else if (numNeighbours > 1) {
+//   console.log("More than 1 borders");
+// } else {
+//   console.log("No borders");
+// }
+
 
 
 
