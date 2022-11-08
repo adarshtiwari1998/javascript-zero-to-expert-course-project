@@ -249,6 +249,21 @@ console.log(typeConversion5); // output is 1143
 // }
 
 
+// LOGICAL OPERATORS ASSIGNMENTS CHALLENGE
+
+const country = "India";
+const language = "hindi";
+const population = "130";
+const isIsland = false;
+
+if (language === "hindi" && population < 140 && !isIsland) {
+  console.log(`You should live in ${country} `)
+} else {
+  console.log(`${country} does not meet your criteria`)
+};
+
+   
+
 
 
 

@@ -789,6 +789,7 @@ So what we can see from this table is that only if only if both A and B are true
 
  /****************** LOGICAL OPERATORS IN JAVASCRIPT ******************/
 
+
  // AND OPERATOR EXAMPLE 
 
 /* 
@@ -797,75 +798,76 @@ So what we can see from this table is that only if only if both A and B are true
 - false and false is false
 
 */
- const hasDriversLicense = true;  // A
- const hasGoodVision = true; // B
+//  const hasDriversLicense = true;  // A
+//  const hasGoodVision = true; // B
 
- // now let's get started with the AND or OR operators
+//  // now let's get started with the AND or OR operators
 
- /* AND operator in javascript is this one &&, So it is we can combine two logical value */
+//  /* AND operator in javascript is this one &&, So it is we can combine two logical value */
 
- console.log(hasDriversLicense && hasGoodVision) // so let see what the result will be, so result of true and true is true 
+//  console.log(hasDriversLicense && hasGoodVision) // so let see what the result will be, so result of true and true is true 
 
- // It's enough to be one variable to be false for the result of the operation to be false
+//  // It's enough to be one variable to be false for the result of the operation to be false
 
 
- // OR OPERATOR EXAMPLE
+//  // OR OPERATOR EXAMPLE
  
- /* OR operator in javascript is this one ||, So it is we can combine two logical value */
+//  /* OR operator in javascript is this one ||, So it is we can combine two logical value */
 
- console.log(hasDriversLicense || hasGoodVision);
+//  console.log(hasDriversLicense || hasGoodVision);
 
- // so it enough for one of the variable to be true for the whole operation to become true.
+//  // so it enough for one of the variable to be true for the whole operation to become true.
 
- // NOT OPERATOR EXAMPLE
+//  // NOT OPERATOR EXAMPLE
 
- /* NOT operator in javascript is this one !, So it is we can combine two logical value */
+//  /* NOT operator in javascript is this one !, So it is we can combine two logical value */
 
- console.log(!hasDriversLicense); // variable are inverted true become false, and false become true
+//  console.log(!hasDriversLicense); // variable are inverted true become false, and false become true
 
- // Now since we know how all of this works, we can use these variables to take a decision
+//  // Now since we know how all of this works, we can use these variables to take a decision
 
- // so we want to determine whether sakshi should drive or not. so lets create a new boolean variable and use the others to determine that.
+//  // so we want to determine whether sakshi should drive or not. so lets create a new boolean variable and use the others to determine that.
 
- // Sakshi should drive if she has a driver's license and has a same time has good vision. We can now use this boolean logic to modal complex situation
+//  // Sakshi should drive if she has a driver's license and has a same time has good vision. We can now use this boolean logic to modal complex situation
 
-//  const shouldDrive = hasDriversLicense && hasGoodVision;
+// //  const shouldDrive = hasDriversLicense && hasGoodVision;
 
-//  // now we can use these variable to finally take decision
+// //  // now we can use these variable to finally take decision
  
-//  if (shouldDrive) {
-//   console.log("Sakshi 😊 has able to drive!");
-//  } else {
-//   console.log("Sorry, 😔 someone else should drive...");
-//  }
+// //  if (shouldDrive) {
+// //   console.log("Sakshi 😊 has able to drive!");
+// //  } else {
+// //   console.log("Sorry, 😔 someone else should drive...");
+// //  }
 
-// we can write this condition directly in if statements
+// // we can write this condition directly in if statements
 
-//  if (hasDriversLicense && hasGoodVision) {
+// //  if (hasDriversLicense && hasGoodVision) {
+// //    console.log("Sakshi 😊 has able to drive!");
+// //  } else { // else block here is executed because hasGoodVision is false, so our condition hasDriverLicense and hasGoodVision is not true, because it's only true in case that both of them are true.
+// //    console.log("Sorry, 😔 someone else should drive...");
+// //  } 
+ 
+//  // this one is working perfectly let take to another level and add another boolean variable here
+
+//  const isFreezy = false; // variable c
+
+//  // so to use more than two variable for example hasDriverLicense or hasGoodVision or hasFreezy all you have is to do add another OR operator here just like other plus and minus operator, and the result of this is should of course true, because two operand are two
+
+//  console.log(hasDriversLicense || hasGoodVision ||isFreezy ); // return true because it's enough to one of the operand is true
+
+// //  console.log(hasDriversLicense && hasGoodVision && hasFreezy ); // return false because it's enough to one of the operand is false
+
+//  if (hasDriversLicense && hasGoodVision && !isFreezy) { // well it's true, when isFreezy is false becuase !not operator is inverted the variable, now to fixed this we need to set isFreezy to false, so then this coniditon is true
 //    console.log("Sakshi 😊 has able to drive!");
-//  } else { // else block here is executed because hasGoodVision is false, so our condition hasDriverLicense and hasGoodVision is not true, because it's only true in case that both of them are true.
+//  } else {
+//    // else block here is executed because hasGoodVision is false, so our condition hasDriverLicense and hasGoodVision is not true, because it's only true in case that both of them are true.
 //    console.log("Sorry, 😔 someone else should drive...");
 //  } 
  
- // this one is working perfectly let take to another level and add another boolean variable here
 
- const isFreezy = false; // variable c
+//  // So as you see with these three boolean operators, we can modal all kinds of complex decisions like this one
 
- // so to use more than two variable for example hasDriverLicense or hasGoodVision or hasFreezy all you have is to do add another OR operator here just like other plus and minus operator, and the result of this is should of course true, because two operand are two
-
- console.log(hasDriversLicense || hasGoodVision ||isFreezy ); // return true because it's enough to one of the operand is true
-
-//  console.log(hasDriversLicense && hasGoodVision && hasFreezy ); // return false because it's enough to one of the operand is false
-
- if (hasDriversLicense && hasGoodVision && !isFreezy) { // well it's true, when isFreezy is false becuase !not operator is inverted the variable, now to fixed this we need to set isFreezy to false, so then this coniditon is true
-   console.log("Sakshi 😊 has able to drive!");
- } else {
-   // else block here is executed because hasGoodVision is false, so our condition hasDriverLicense and hasGoodVision is not true, because it's only true in case that both of them are true.
-   console.log("Sorry, 😔 someone else should drive...");
- } 
- 
-
- // So as you see with these three boolean operators, we can modal all kinds of complex decisions like this one
 
 
 
