@@ -351,28 +351,32 @@ console.log("No one win")
 
 //////////////// SWITCH STATEMENT ASSIGNMENTS 
 
-const language = "arabic";
+// const language = "arabic";
 
-switch(language) {
-  case "chinese" :
-  case "mandarine" :
-  console.log(`${language} language is the most number of native speakers!`);
-  break;
-  case "spanish" :
-  console.log(`${language} language is the 2nd place in number of native speakers`);
-  break;
-  case "english" :
-  console.log(`${language} language is the 3rd place in number of native speaker`);
-  break;
-  case "hindi" :
-  console.log(`${language} language is the Number 4 in the list of native speaker`);
-  break;
-  case "arabic" :
-  console.log(`${language} language is the 5th most spoken language`);
-  break;
-  default :
-  console.log("Great language too :D")
-}
+// switch(language) {
+//   case "chinese" :
+//   case "mandarine" :
+//   console.log(`${language} language is the most number of native speakers!`);
+//   break;
+//   case "spanish" :
+//   console.log(`${language} language is the 2nd place in number of native speakers`);
+//   break;
+//   case "english" :
+//   console.log(`${language} language is the 3rd place in number of native speaker`);
+//   break;
+//   case "hindi" :
+//   console.log(`${language} language is the Number 4 in the list of native speaker`);
+//   break;
+//   case "arabic" :
+//   console.log(`${language} language is the 5th most spoken language`);
+//   break;
+//   default :
+//   console.log("Great language too :D")
+// }
+
+
+
+
 
 
 

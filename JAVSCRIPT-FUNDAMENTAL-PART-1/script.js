@@ -962,6 +962,61 @@ if (weekDay === "monday") {   // remember we can use the strict comparision ===
 
 
 
+ /****************** STATEMENTS AND EXPRESSIONS IN JAVASCRIPT ******************/
+
+// An expression is the piece of code thst produces a value
+
+// for example 3 + 4 is an expression, that gonna produce a value
+
+3 + 4 // this is an expression because it does produce a value
+
+1991 // is an expression too even though it's just a simple value, But it's still also an expression, because it again will produce a value in javaScript
+
+true && false &!false // so all of these here is an expression, because this will in the end produce some boolean value
+
+
+// And the other hand , we have statements and the statements is like a bigger piece of code that is executed and which does not produce a value on itself
+
+// Declaration is like the complete sentences and expressions are like the words that make up the sentences
+
+// Basically we write our whole program as a sequence of actions and these actions are statements.
+
+// Let's take as an example the, if else, statement
+
+if (23 > 10) { // so this statement here does'nt produce a value
+  const str = "23 is bigger than 10"; // the string itself is an expression and then this whole line of code is a statement, because this again does not produce a value, so basically whenever something ends with a semicolon, that's then a statement, is like a complete sentence
+
+}// the code itself does'nt really matter here, so this if else statement is in fact a statement. So that's we have called the if else statement all the time.
+
+// And the same is true for the switch statement, 
+
+
+// the statement and expression exist, and the expression produce values, and the statements are like full sentences, that translate our actions, so the actions that we want the program to perform
+
+
+// Now this difference between expressions and statements is important to know because javaScript expects statements and expressions in different places
+
+// For example, in a template literal, we can only insert expression but not statements
+
+
+console.log(`I'm ${/* In here we need to put an expression, something that produces a value which can then be put into the string that we're building here using a template literal */ 2024 - 1998 } years old.`);  // this one will work
+
+// However, we can not insert this if statement in here
+
+/* 
+console.log(`I'm ${2024 - 1998} years old. ${if ( 23 > 10) {
+  const str = "23 is bigger than 10"
+}}`) // it wouldn't make any sense at all and we get an error in console, Unexpected token if and that's because javaScript knows that this is a statement and statements don't make any sense where javascript expects an expression.
+
+*/
+const me = "Adarsh"; // if we had a variable for example
+console.log(`I'm ${2022 - 1998} years old ${me}`); // then if we used variable that here, then this would actually also be an expression, because this variable will essentially just be replaced with this string, and so this produces a value and so of course this is completely acceptable.
+
+
+
+
+
+
 
 
 
