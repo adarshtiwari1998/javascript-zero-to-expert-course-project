@@ -249,20 +249,104 @@ console.log(typeConversion5); // output is 1143
 // }
 
 
-// LOGICAL OPERATORS ASSIGNMENTS CHALLENGE
+/////////////// LOGICAL OPERATORS ASSIGNMENTS CHALLENGE
 
-const country = "India";
-const language = "hindi";
-const population = "130";
-const isIsland = false;
+// const country = "India";
+// const language = "hindi";
+// const population = "130";
+// const isIsland = false;
 
-if (language === "hindi" && population < 140 && !isIsland) {
-  console.log(`You should live in ${country} `)
+// if (language === "hindi" && population < 140 && !isIsland) {
+//   console.log(`You should live in ${country} `)
+// } else {
+//   console.log(`${country} does not meet your criteria`)
+// };
+
+
+//////////////// LOGICAL OPERATORS CODING CHALLENGE #3
+
+/* Coding Challenge #3
+There are two gymnastics teams, Dolphins and Koalas. They compete against each
+other 3 times. The winner with the highest average score wins a trophy!
+Your tasks:
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition,
+and print it to the console. Don't forget that there can be a draw, so test for that
+as well (draw means they have the same average score)
+3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
+team only wins if it has a higher score than the other team, and the same time a
+score of at least 100 points. Hint: Use a logical operator to test for minimum
+score, as well as multiple else-if blocks �
+4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when
+both teams have the same score and both have a score greater or equal 100
+points. Otherwise, no team wins the trophy
+Test data:
+§ Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+§ Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+§ Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+GOOD LUCK �
+ */
+
+
+// const scoreDolphins = (96 + 108 + 89) / 3; // to calculate the average we simply add up all the score and then divided by three
+// const scoreKoalas = (88 + 91 + 110) / 3; // grouping has higher precedence so we group all this for first calculation
+
+// // const scoreAverage = scoreDolphins + scoreKoalas;
+
+// console.log(scoreDolphins, scoreKoalas); // they are pretty close but dolphins has little bit higher of an average so that's what we're working on in the point 2
+
+// // compare the team's average score
+
+// if (scoreDolphins > scoreKoalas) {
+//   console.log("Dolphins win the trophy 🥇");
+// } // as of now first condition is get's true right away, so this block of code is executed
+// else if (scoreDolphins < scoreKoalas) {
+//   console.log("Koalas win the trophy 🥇")
+// } else if (scoreDolphins === scoreKoalas) {
+//   console.log("Both win the trophy!")
+// }  // we can also use else block here but no matter this is also okay
+
+
+// // BONUS 1
+
+// const scoreDolphins1 = (97 + 112 + 86) / 3; // to calculate the average we simply add up all the score and then divided by three
+// const scoreKoalas1 = (109 + 95 + 86) / 3; // grouping has higher precedence so we group all this for first calculation
+// console.log(scoreDolphins1, scoreKoalas1);
+
+// if (scoreDolphins1 > scoreKoalas1 && scoreDolphins1 >= 100) { // in this case dolphins wins, but in this case we also ensure that the dolphins have a score higher or equal 100
+//   console.log("Bonus 1: Dolphins win the trophy 🥇");
+// } // as of now first condition is get's true right away, so this block of code is executed
+// else if (scoreKoalas1 > scoreDolphins1 && scoreKoalas1 >= 100) { // once more we use the logical operator here to modal the situation essentially
+//   console.log("Bonus1: Koalas win the trophy 🥇")
+// } else if (scoreDolphins1 === scoreKoalas1 && scoreDolphins1 >= 100 && scoreKoalas1 >= 100) {
+//   console.log("Bonus 1: Both win the trophy!")
+// }  // we can also use else block here but no matter this is also okay
+// else {
+//   console.log("No one wins the trophy 😟")
+// }
+
+
+// draw only happens if both teams have the same score and both score greater or equal to 100 points
+
+
+const scoreDolphins = (96 + 108 + 126) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+
+console.log(scoreDolphins, scoreKoalas);
+
+// compare the team's average score
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+  console.log("Dolphins win the trophy")
+} else if (scoreDolphins < scoreKoalas && scoreKoalas >= 100) {
+  console.log("Koalas win the trophy")
+} else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+  console.log("Both team is win!")
 } else {
-  console.log(`${country} does not meet your criteria`)
-};
+console.log("No one win")  
+}
 
-   
+
 
 
 
