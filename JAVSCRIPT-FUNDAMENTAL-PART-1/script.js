@@ -875,7 +875,7 @@ So what we can see from this table is that only if only if both A and B are true
 
  /// Example 1, basically we have a week day, and we gonna map one activity to each day
 
-
+/*
 
  const day = "monday";
 // may be you wondering why I'm basically hard coding all these variables and how this would work in the real world. Well in the real application, that used by the user in a browsers, usually most of the data comes from user input, so then we would'nt be hard coding all of this stuff. But right now we are just learning how to code
@@ -955,6 +955,10 @@ if (weekDay === "monday") {   // remember we can use the strict comparision ===
 // In if/else block here, we have a lot of repetitive code and lot of logical operators and all of these curly braces and it just looks a little bit weider
 
 // Now the switch statement actually become less and less used but you should still know about it because there is definitely still a place for it sometimes
+
+
+
+*/
 
 
 
