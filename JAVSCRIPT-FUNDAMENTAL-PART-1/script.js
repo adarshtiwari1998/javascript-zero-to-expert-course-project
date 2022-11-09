@@ -869,7 +869,92 @@ So what we can see from this table is that only if only if both A and B are true
 //  // So as you see with these three boolean operators, we can modal all kinds of complex decisions like this one
 
 
+ /****************** SWITCH STATEMENT IN JAVASCRIPT ******************/
 
+ // which is an alternative way of writing a complicated if/ else statement when all we want to do is to compare one value to multiple different options, 
+
+ /// Example 1, basically we have a week day, and we gonna map one activity to each day
+
+
+
+ const day = "monday";
+// may be you wondering why I'm basically hard coding all these variables and how this would work in the real world. Well in the real application, that used by the user in a browsers, usually most of the data comes from user input, so then we would'nt be hard coding all of this stuff. But right now we are just learning how to code
+
+// let's now essentially map each activity to each day
+// And for that we use if else statement with multiple if/else block nut we can also use the easier to use switch statement.
+
+switch (day) {
+  // we are switching a day and then we need a curly braces to assign a block and then we define a cases
+  case "monday": // writing day equal monday, and if it is true then here will be executed.
+    console.log("Plan to start to learn new course"); // here we can execute multiple lines of code, we don't need curely braces for that, after the case and colon all the lines are executed
+    console.log("Plan to apply for a full stack developer job");
+    // and the syntax of switch statement is little bit unusual unlike anything else in javaScript
+
+    // anyway we can execute two console.logs here
+    // basically what dis will do is it will compare day to monday here in a strict equality way === like this, so this here is basically writing day equal monday
+
+    // now after this we actually need this break statement and you will see why in a second
+
+    break; // terminate the second block
+  case "tuesday":
+    console.log("Revise the notes");
+    break;
+  case "wednesday":
+    console.log("Started working in new project.");
+    break;
+  case "thursday":
+    console.log("Go for a meeting.");
+    break;
+  case "friday":
+    console.log("Schedule a call with teammates");
+    break;
+  // actually we can do a nice little trick, which is to run same code for two different values, so all we have to do is specify the case and then we can specify another case right after it, so whatever we write here is executed for both saturday and sunday, so without needing any logical operator as we would need with an if/ else statement
+  case "saturday":
+  case "sunday":
+    console.log("Go for a long trip with family :D");
+    break;
+  // to finish we can also set a default, and so the default is gonna be executed, if all the other cases fail
+  default:
+    console.log("Not a valid day;"); // basically we can use this for invalid weekdays, it basically like an else block at the end of an long if else statement
+    
+    // without the break the code simply executing until it find the break, so after each block we need to tell it to stop essentially
+
+    // Remember it is just like a strict comparison lile this day === "monday", if day is equal to monday then the code block is executed, and so on and so forth
+
+    // so this was really designed for equality and not for like comparing stuff
+
+    // it is technically possible to do that with some workrounds but that't not the goal of the switch statement.
+}
+
+
+// EXAMPLE 1 with if else statement
+
+const weekDay = "friday";
+
+if (weekDay === "monday") {   // remember we can use the strict comparision ===
+  console.log("Plan to start to learn new course");
+  console.log("Plan to apply for a full stack developer job");
+} else if (weekDay === "tuesday") {
+  console.log("Revise the notes");
+} else if (weekDay ===  "wednesday") {
+  console.log("Started working in new project.");
+} else if (weekDay === "thursday") {
+   console.log("Go for a meeting.");
+} else if (weekDay === "friday") {
+    console.log("Schedule a call with teammates");
+} else if (weekDay === "saturday" || weekDay === "sunday") { // we can use the OR operator here
+   console.log("Go for a long trip with family :D");
+} else {
+   console.log("Not a valid day;");
+}
+
+// not that in that case we of course don't need the break, because javaScript will only execute one of these blocks
+
+// so in switch statement we have to write a little bit more code, but in my opinion, it's also a lot more readable, which means that this one is easier to understand, if you just read the code. 
+
+// In if/else block here, we have a lot of repetitive code and lot of logical operators and all of these curly braces and it just looks a little bit weider
+
+// Now the switch statement actually become less and less used but you should still know about it because there is definitely still a place for it sometimes
 
 
 

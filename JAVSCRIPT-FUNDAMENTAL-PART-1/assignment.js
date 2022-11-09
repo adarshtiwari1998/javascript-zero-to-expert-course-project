@@ -328,7 +328,7 @@ GOOD LUCK �
 
 // draw only happens if both teams have the same score and both score greater or equal to 100 points
 
-
+/* 
 const scoreDolphins = (96 + 108 + 126) / 3;
 const scoreKoalas = (88 + 91 + 110) / 3;
 
@@ -346,6 +346,7 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
 console.log("No one win")  
 }
 
+*/
 
 
 
