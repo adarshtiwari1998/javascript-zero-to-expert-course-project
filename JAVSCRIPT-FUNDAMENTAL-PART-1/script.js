@@ -968,6 +968,8 @@ if (weekDay === "monday") {   // remember we can use the strict comparision ===
 
 // for example 3 + 4 is an expression, that gonna produce a value
 
+/*
+
 3 + 4 // this is an expression because it does produce a value
 
 1991 // is an expression too even though it's just a simple value, But it's still also an expression, because it again will produce a value in javaScript
@@ -998,34 +1000,106 @@ if (23 > 10) { // so this statement here does'nt produce a value
 
 // For example, in a template literal, we can only insert expression but not statements
 
-
-console.log(`I'm ${/* In here we need to put an expression, something that produces a value which can then be put into the string that we're building here using a template literal */ 2024 - 1998 } years old.`);  // this one will work
+console.log(`I'm ${2024 - 1998 } years old.`); // In here we need to put an expression in placeholders, something that produces a value which can then be put into the string that we're building here using a template literal and so this one will work
 
 // However, we can not insert this if statement in here
 
-/* 
-console.log(`I'm ${2024 - 1998} years old. ${if ( 23 > 10) {
-  const str = "23 is bigger than 10"
-}}`) // it wouldn't make any sense at all and we get an error in console, Unexpected token if and that's because javaScript knows that this is a statement and statements don't make any sense where javascript expects an expression.
 
-*/
+// console.log(`I'm ${2024 - 1998} years old. ${if ( 23 > 10) {
+//   const str = "23 is bigger than 10"
+// }}`) // it wouldn't make any sense at all and we get an error in console, Unexpected token if and that's because javaScript knows that this is a statement and statements don't make any sense where javascript expects an expression.
+
+
 const me = "Adarsh"; // if we had a variable for example
 console.log(`I'm ${2022 - 1998} years old ${me}`); // then if we used variable that here, then this would actually also be an expression, because this variable will essentially just be replaced with this string, and so this produces a value and so of course this is completely acceptable.
 
+*/
 
 
 
+ /****************** THE CONDITIONAL (TERNARY) OPERATOR IN JAVASCRIPT ******************/
 
 
+ // we alreasy saw twoways of writing conditionals, the regular if/else statements and the switch statements, But there is another one, and that is the conditional operator. And this one is actually really nice.
+
+ // so the conditional operator allows us to write something similar to an if/else statement but all in one line.
+
+ // so let's again start by defining an age variable
+
+ const age = 23;
+
+ //age >= 18 ;// this is to check whether the age is atleast 18, so basically if the person is of full age and then after this condition we use a question mark 
+
+// So that's essentially writing an if /else statement all in one line
+
+ age >= 18 ? console.log("I'm eligible to take a driver license... 📃") : console.log("I am not eligible to take a driver license. ❌"); // or here write essentially or if block, so that's the code that we want to executed in case that this condition is true
+
+ // so in this if block, so to say we can only have essentialy one line of code, so only one thing can be done if this condition is true. Then we also need basically a mandatory else block.
+
+ // But instead of using a statement we use this conditional operator. And the conditional operator is also called the ternary operator because it has three parts unlike other operators
+
+ // For example the plus operator has only two parts for example 1 + 2, but this one has three parts, i.e. the condition >=, then the if part and then the else part
+
+ // Now the conditional operaotr is in fact an operator just as the name says, and remember that the operator always produces a value, So in other words an operator is an expression right.
+
+ // So what does means is that if we have a value then we ca assign that value to a variable So with this we can make a ternary operator really useful to basically conditionally declare variables
+ 
+ // So what we did here is not so much used indeed, instead we do it more like this, so would still test for this condition
+
+ age >= 18 ? "Eligible for driver license" : "Not eligible for driver license"; // again this while operator here is now an expression and an expression produces a value and now we can go ahead and store that value into a variable
+
+ const drivingLicense =
+   age >= 18
+     ? "✅ Eligible for driver license..."
+     : "❌ Not eligible for driver license.";
+  // and then we can log the string to the console
+  console.log(drivingLicense);
+
+  // so drivingLicense is now really defined conditionally based on this condition age >= 18, and all in one simple line. So without the conditional operator we would have to use if/else statements and with that this wouldn't be so easy.
+
+  // Remember when we want to declare a variable inside of an if or else block we need to first declare that variable outside, so let's actually do that below
+  const age1 = 23;
+  let drivingLicense1; // define a variable here 
+
+  if (age1 >= 18) {
+    drivingLicense1 = "You are eligible for driving license";
+  } else {
+    drivingLicense1 = "You are not eligible for driving license";
+    }
+console.log(drivingLicense1);
+
+// again we need to define an variable outside of an if and else block because any variable that we define inside of an block is not available outside. so we define a variable outside and then reassign it inside of the blocks
+
+// we really just did this for the sake of comparison so we can see the tremendous difference that the ternary operator introduces here in our code.
+
+// so the ternary operator is lot easier to understand and lot easier to write
+
+// so using the ternary operator is lot easier to transform the big block of code all into one small operation
 
 
+// since the ternary operator is really an expression, we can now use a template literal unlike a normal if/else statement. 
 
+// we are tried to insert the if statement in template literal and of course if did'nt work
 
+//  console.log(`I'm ${2024 - 1998} years old. ${if ( 23 > 10) ;
 
+// but using the ternary operator which produce a value, we can actually have conditionals inside of a template literal.
 
+console.log(`You are ${age >= 18
+     ? "✅ Eligible for driver license..."
+     : "❌ Not eligible for driver license."}`);
 
+// always keep in mind the concept of operator, and of expression which is something that produces a value and we can put this value in this placeholder in the template literal.
 
+// The ternary operator is not thought as a replacement of if/else statement, we still need if/else all the time. For example, when we have bigger blocks of code that we need to execute based on a condition. In that case the ternary operator is not gonna work. But the ternary operator is perfect when we just need to take a quick decision for example like this one 
 
+/* 
+age >= 18
+     ? "✅ Eligible for driver license..."
+     : "❌ Not eligible for driver license."
+*/
+
+// And that's especially true in places where javaScript expects an expression just like here in the template literal, so here we could not use an if/else statement, so the ternary operator really comes to our rescue here. So I think you can understand that ternary operator is really really important.
 
 
 
