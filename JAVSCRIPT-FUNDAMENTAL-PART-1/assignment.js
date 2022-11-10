@@ -375,6 +375,21 @@ console.log("No one win")
 // }
 
 
+//////////////// CONDITIONAL OR TERNARY OPERATOR ASSIGNMENTS
+
+const country = "India";
+const population = 23;
+
+// first way to use ternary operator with expression and template literals to get the result on console log
+console.log(population >= 33 ? `${country} population is above average` : `${country} population is below average...`);
+
+// second way to use ternary operator with expression and template literals to get the result on console log
+console.log(`${country}'s population is ${population >= 33 ? "above" : "below"} average`);
+
+
+
+
+
 
 
 

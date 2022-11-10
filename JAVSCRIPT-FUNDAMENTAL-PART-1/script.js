@@ -1019,6 +1019,7 @@ console.log(`I'm ${2022 - 1998} years old ${me}`); // then if we used variable t
 
  /****************** THE CONDITIONAL (TERNARY) OPERATOR IN JAVASCRIPT ******************/
 
+ /* 
 
  // we alreasy saw twoways of writing conditionals, the regular if/else statements and the switch statements, But there is another one, and that is the conditional operator. And this one is actually really nice.
 
@@ -1092,6 +1093,9 @@ console.log(`You are ${age >= 18
 // always keep in mind the concept of operator, and of expression which is something that produces a value and we can put this value in this placeholder in the template literal.
 
 // The ternary operator is not thought as a replacement of if/else statement, we still need if/else all the time. For example, when we have bigger blocks of code that we need to execute based on a condition. In that case the ternary operator is not gonna work. But the ternary operator is perfect when we just need to take a quick decision for example like this one 
+
+
+/*
 
 /* 
 age >= 18
