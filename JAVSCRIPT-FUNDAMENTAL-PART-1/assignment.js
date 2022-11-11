@@ -416,6 +416,8 @@ Hints:
  */
 
 
+/*
+
 const bill = 430;
 
 // number 1
@@ -424,6 +426,12 @@ const tip = bill <= 300 && bill >= 50  ? bill * 0.15 : bill * 0.2;  // condition
 console.log(`The bill was ${bill}, the tip was ${tip} and the total value is ${bill + tip}`); // template literal
 
 // true and false gives false
+
+*/
+
+
+
+
 
 
 

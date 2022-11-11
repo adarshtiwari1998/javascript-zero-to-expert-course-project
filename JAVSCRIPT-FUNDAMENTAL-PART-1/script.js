@@ -1106,6 +1106,159 @@ age >= 18
 // And that's especially true in places where javaScript expects an expression just like here in the template literal, so here we could not use an if/else statement, so the ternary operator really comes to our rescue here. So I think you can understand that ternary operator is really really important.
 
 
+ /****************** JAVASCRIPT RELEASES: ES6, ES6+ AND ESNEXT IN JAVASCRIPT ******************/
+
+
+ /* 
+    A BRIEF HISTORY OF JAVASCRIPT
+     
+    1. 
+    - 1995: Brendan eich creates the very first version of javaScript in just 10 days. It was called Mocha, but already had many fundamental features of modern javaScrip!
+
+    2. 
+    - 1996: Mocha changes to liveScript and then to javaScript, in order to attract Java developers. However, javaScript almost nothing to do with java. javaScript and java are two completely different languages.
+
+    - Microsoft launches IE, copying JavaScript from Netscape and called it JScript for legal reasons because we cannot just go around and copying other people's programming languages. It means now we have two very similar but competing languages, which of course a never a good idea in the long run. And so the internet growing crazy around this time, people realized they needed to standarize JavaScript. 
+
+    3.
+    - 1997: So the language was submitted to an independend standard organization called ECMA which in 1997 released ECMAScript 1 or ES1. This was the very first official standards for the javaScript language. And with this every browsers could now implement same standard javaScript. And the real world we usually use the term ECMAScript to refer to the standard, while javaScript is used when we talk about the language in practice as it's implemented in browers.
+
+    4.
+    - 2009: Now fast forward to 2009 after a lot of complications and disagreements about where the language should be headed, ES5 was released with a lot of great new features.
+
+    5. 
+    -2015: And then finally, another six years later the much awaited new version ES6 was launched in june, 2015, and this was the single biggest update to the language ever. It contain a ton of new exciting features, which we will explore throughout the entire course
+
+    - This was, and still as a very big deal for javaScript and for the whole web developer community.
+    
+    - Now, you wll also see ES6 being called ES2015, which is actually the official name, but most people just call it ES6.
+    
+    - Actually the reason for ES6 being called ES2015 officially is that in 2015, ECMAScript changes to an annual release cycle.
+
+    - So right now there's going be a new release every single year.
+
+    - Reason for that is that they prefer to add a small number of new features per year, instead of shipping a huge new version, every couple of years, like it happened with ES6. 
+
+    - So this way, it's gonna be much easier to everyone to keep up to date.
+
+    - Release of ES2016/ ES2017 / ES2018 / ES2019/ ES2020/ ES2021/ ES2022 /.../ ES2089 and like this it will continue until the end of time.
+
+ */
+
+
+  /*
+   BACKWARDS COMPATIBILITY: DONT'T BREAK THE WEB
+
+   - There is one particularity about javaScript realeses which is pretty unique for any programming language that is backward compatibility all the way to ES1, so what does this actually mean
+
+   - Basically it means that if you were to take some javaScript written back in 1997 and put it in a modern browser with a modern javaScript engine today, it would still work just the same.
+
+   - So agin the javaScript engine that's in our browser today is able to understand old code written 25 years ago, without having to rely on version numbers or anything like that. It just works
+
+   - And it works this way because of the fundamental principle that baked into javaScript language and its development, which is to not break the web. This means thhat there is almost never anything removed from the language, but only added in new version. Actually we cannot called him new version even because they do not contain breaking changes like when other languages moved to a new version. Instead new version are always just incremental updates which add new stuff. So i like to call them releases and not versions. 
+
+   - The ECMAScript committee who works on updating the language does all this so the old websites basically keep working forever.
+
+   - Just imagine they removed some important feature that made a website from 2008 work just fine. If you then want it to visit that page, it will be broken. And that's why we fortunately have to don't break the web principle.
+
+   - And of course this comes with problems because there are tons of old bugs and weired things and the language.
+
+   - Remember that Brendan Eich made the very first version in just 10 days and no one back then could even imagine, what javaScript would be used for one day.
+
+   - The initial goal of javaScript was just to add some simple dynamics to pages, not to write whold applications in the browsers like we do today.
+
+   - But anyway these bugs and weired quirks in the language have been giving the language a bad reputation among many programmers who can really take JavaScript serious because of this.
+   
+   - But here's the thing, ww can actually go around many of the weired stuff by simply learning the modern javaScript that matters today and just ignore most the old weired stuff.
+
+   - So next time your friends start hating on javaScript and believe me it actually happens, then just tell them about the amazing things that you can build with it.
+  
+  */
+
+  /* 
+   FORWARDS COMPATIBILITY
+
+   - so what do you think would happen, if we took this totally made of code
+
+   // ES1 CODE  (1997)
+   
+   function add(n) {
+    var x = 5 + add. arguments(0);
+    return x; 
+   }
+
+   // ES2089 CODE 😂
+   c int add n <==> int 5 + n
+
+
+   from the year 2089 and try to run it in today browsers?
+
+   - well you probably right, it would not work at all. There would be errors left and right, and nothing would work. That's why we could say that javaScript is not forward compatible because current browsers do not understand code from the future.
+
+   - And this actually brings us to our next topic, which is how we use modern javaScript today?
+   
+  */
+
+  /*
+   HOW TO USE MODERN JAVASCRIPT TODAY
+  
+  - Because browsers that users are using today might be old, there is not forward compatibility right?
+
+  - So the answer the question how we can use modern javaScript today we need to consider two distinct scenerios
+
+    * Development
+    * Production
+  
+  - So the development face is simply when you're building the site or application on your computer, to ensure you can use the latest javaScript features in this face. All you have to do is to use the most uptodate version of the any browsers. This will ensure that all the features show in this course will work for you as well.
+
+  - The second scenerios is production, which is when your web application is finished, you deploy it on the internet and it's then running in your user's browsers. And this is where problem might appear because this is the part that we actually can't control. We cannot control which browsers the user uses and we also can't assume that all ur users always use the latest browsers right?
+
+  - Now the solution to this problem is to basically convert these modern javaScript versions back to ES5 using a process called 
+
+  ^ transpiling and also
+  ^ polyfilling
+
+  - we will use a toll called Babel to transpile our code, but for now, during this course, we won't need that because we are using the most uptodate browsers during development, transpiling back to ES5 is only necessary when your app is developed and you want to ship it to your users.
+
+  - Now let a look how different javaScript releases can be used today.
+
+  - so first off ES5 is fully supported in all browsers today, all the way to internet explorer 9 from 2011, so we can assume that ES5 is safe to be used at this point, which is the reason why we use a target for transpiling.
+
+  - Now about the new released, ES6, ES7 and all the way to ES2020, as of mid 2020, they are actualy quite well supported already in all modern browsers.
+
+  - And we usually call all the current version together ES6+. So right now that't from ES6 to ES2020, and basically all together they are the modern javaScript.
+
+  - Now in the modern javaScript basically in this ES6+ where transpiling comes in as i mentioned eariler, because it's not safe to assume that all our users are using these modern browsers and we don't want to break our app for them, right?
+
+  - And by the way if you want to stay up to date with what features are currently supported in which browser, we can check out the ES6 compatibility table
+
+  - https://kangax.github.io/compat-table
+
+  - Now there are also future releases of the language ES2021, ES2022 and so on and these future releases together are many times called ESNext. 
+
+  - Well, because most browsers actually start implementing new features even before they enter the official ECMAScript specification. That's possible because as new features are proposed they have to go through four stages.
+
+  - Starting with stage 1, when they are first submitted all the way to stage 4, at which point they enter the language offically, But when a feature is at stage three, browsers can be pretty sure, it will eventualy pass to stage four. And so they're gonna start implementing that features while still in stage 3.
+
+  - With the annual release cycle, this is now very easier to do, because there will be no drastic changes to the language like ES6 was.
+  */
+
+  /* 
+   MODERN JAVASCIPT FROM THE BEGINNING
+
+   - Learn modern javaScript from the beginning.
+   - But also learn how something things used to be done    before modern javaScript (eg const & let vs var and function constructor vs ES6 class).
+
+   - Why butter with ES5 at all? You might ask?
+     * You will better understand how some features in javaScript actually works behind the scenes. For example ES6 classes which hide the all the implementation details of object oriented programming in javaScript.
+
+   - Many courses and tutorial that you find online are still written in ES5 today.
+   
+   - As a developer, in many job, you will actually have to work on older code bases. And it's totally possible that the code base might still contain a lot of ES5 code.
+  */
+
+
+ 
 
 
 
