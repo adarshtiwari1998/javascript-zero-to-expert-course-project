@@ -27,3 +27,37 @@ console.log(descIndia, descAmerica, descUnitedKindom);
 
 
 */
+
+
+/****************** FUNCTION DECLARATIONS VS. FUNCTION EXPRESSIONS ASSIGNMENTS EXAMPLE #1 ******************/
+
+function percentageOfWorld1(population) { // generic function
+// const calculatePopulation = population / 7830000000;
+const calculatePercentage1 = (population / 7830000000) * 100;
+return calculatePercentage1;
+}
+
+const percIndia = percentageOfWorld1(1400000000);
+// const popuIndia = percentageOfWorld1();
+const percAmerica = percentageOfWorld1(1313);
+const percItaly = percentageOfWorld1(313);
+
+const result = `India has 14 million people, and its about ${percIndia} of the world population`;
+console.log(result);
+
+console.log(percIndia, percAmerica, percItaly);
+
+// function expression
+
+const percentageOfWorld2 = function (population) {
+    return (population / 7830000000) * 100;
+};
+
+const percIndia1 = percentageOfWorld2(1400000000);
+const percAmerica1 = percentageOfWorld2(331900000);
+const percItaly1 = percentageOfWorld2(313);
+
+const result1 = `America has 34 million people, and its about ${percAmerica1} of the world population.`
+
+console.log(result1);
+

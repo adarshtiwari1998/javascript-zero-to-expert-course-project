@@ -545,10 +545,9 @@ Ans: And well, the answer is that oftentimes is really just a matter of personal
 
 ** However even if you prefer one over the other, you still need to know about both the "function expression" and "function declarations". So you can not just pick one and then forget the other one, because both have their place in javaScrpt. So it's really important that you know how to use and how's to distinguish both function declarations and expressions.
 
-
-
-
 */
+
+
 
 
 
