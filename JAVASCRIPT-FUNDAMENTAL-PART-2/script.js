@@ -161,6 +161,8 @@ function kurtas ()  { // so all the code within this block of braces is called a
 
 // Lets say we need to execute a log many times somewhere in out program
 
+/*
+
 
 function kurtas1 () {
   console.log("My name is Adarsh..."); // somewhere in our program we need to reuse this line of code multiple times, so that's why we put it in a function. So we can created a function and now we can use it as many times as we want.
@@ -175,6 +177,9 @@ kurtas1(); // we can run or use this function as many times as we want and each 
 kurtas1();
 
 // we just wrote our very first function and its already working
+
+
+*/
 
 
 /* SOME MORE FUNCTIONALITIES OF FUNCTION */
@@ -208,7 +213,7 @@ kurtas1();
 
 */
 
-
+/*
 
 // And this will make even more sense and this kind of function the way more usual
 function fruitProcessor(mango, banana) { // these mango and banana parameters will be a number once we call this, 
@@ -231,6 +236,8 @@ function fruitProcessor(mango, banana) { // these mango and banana parameters wi
 // let's call run or invoke this function now
 
 fruitProcessor(4, 5);// now we're gonna specify the actual values for the parameters "mango" and "banana" so let's say for example 4 mangoand 5 banana, so these now will be the inputs of the fruitProcessor function.
+
+*/
 
 /*  so you can think of these parameters here:
 
@@ -255,6 +262,9 @@ fruitProcessor(4, 5);
 
 */
 
+/*
+
+
 const mangoJuice = fruitProcessor (4, 5); // we called fruit processor function here with two arguments 4 and 5 and these arguments are the specific, So the actual values of the functions parameters which are "mango" and "banana". And So when the function is running now, "mango" will become 4 and "banana" will be 5. So then we use these values to build this juice string and then we return that value from the function and what that means is that basically the result of calling this function will be the juice value that was just returned. And then we need to save the value somewhere, we need to capturing it, and we do that by basically saving it into this mango juice variable and then we can simply log that value to the console, ofcourse we could have also directly logged it to the console.
 console.log(mangoJuice); // now we get juice with 4 mango and 5 banana.
 
@@ -269,6 +279,9 @@ const mangoBananaJuice = fruitProcessor(2, 4); // we are defining specific value
 console.log(mangoBananaJuice);
 
 // Essentially what we did here was to create a very generic function 
+
+
+*/
 
 /*
 
@@ -300,6 +313,9 @@ noParameterFunction(); // here we not specify any arguments
 
 // So in this function we do not specify any parameters, we could do that,
 
+/*
+
+
 function noParameterFunction ()  {
   // not specify any parameters
  console.log("No parameter function example..");
@@ -322,6 +338,9 @@ const result = noParameterFunction();
 console.log(result); // OUTPUT: undefined
 
 // we don't capture that undefined value
+
+
+*/
 
 
 /* Review this lecture throughly and understand of how all of this work together
@@ -365,6 +384,175 @@ return juice;
     console.log(); is also just a function, but it actually a built-in-function that we do not have to write ourselves
 
 */
+
+
+/****************** FUNCTION DECLARATIONS VS. EXPRESSIONS ******************/
+
+/*
+
+- In javaScript there are different ways of writing functions and each type of function works in a slightly different way. But they are still are very similar.
+
+*/
+
+// So the function that are showed you in the last lecture are called function declarations becuase we simply use the function keywords to declare a function a bit like we declare a variable.
+
+/*  EXAMPLE 1
+
+- So let's now write another function declarations and this time a function to calculate an based on a given berth year
+
+- so we want a person's birth year as an input to this function.
+
+- And whats ia a input, well it's just a parameter in this function
+
+- And parameter remember it's a bit like a local variable and only available inside of this function
+
+*/
+
+/*
+
+function calculateAge1(birthYear) {
+  // how do we calculate the age
+
+   const age = 2024 - birthYear; 
+
+  // and then remember to take this value now out of the function, we return it using the return keyword
+
+  // so we calculated the age first and then we return that value
+
+  // actually we can simplify this and basically return all in one go, So there's actually no need to store this value here in a variable, if all we do is then later return that value
+
+  return age;
+
+  // to get rid our of this we can do this 
+  
+}
+
+*/
+
+// FUNCTION DECLARATION 
+
+function calculateAge1 (birthYear) {
+  return 2032 - birthYear; // simply return the result of this expression here
+
+  // This is a generic function, which is then gonna work for any birth year that we give it
+}
+
+
+// NOTE: Parameter is a kind of placeholder in the function, and the Argument is then the actual value that we used to fill in that placeholder that is the parameter.
+
+// calling the function, invoking the function, execute the function
+
+calculateAge1(1998); // This will now create a value, and value that this will create is the value that returned from the calculateAge1 function basically this returned value (2030 - birthYear), once again we need to capture this value into a variable
+
+const descCalculateAge1 = calculateAge1(1998); // we can pass the actual value of parameter which is called the argument
+console.log(descCalculateAge1);
+
+// we can rid of this and do this way
+
+console.log(calculateAge1(1998));
+
+// So that is the function declaration
+
+
+/* FUNCTION EXPRESSION */
+
+/* 
+- That's the other type of function that exist, and it look like this.
+
+- Instead of writing a function with the calculateAge1 name, we simply write function basically without a name and then we still define a parameter and we still define a function body, and we write a function like this and then what we have to do is to store all of this here into a variable and that variable will then be a function
+
+*/
+
+const calculateAge2 = function (birthYear) {
+  // we did write a function in a very similar way but we did'nt give it a name here. So it's a function withour a name basically, which is also called a anonymous function.
+  return 2032 - birthYear;
+}   // so all of this is basically an expression, and rememeber that an expression produces a value, so we use that value and store it into calculateAge2, so this will then be the function. 
+
+// So calculateAge2 is now a function, so now to call this function we actually do it in a same way
+
+const descCalculateAge2 = calculateAge2(1988);
+
+console.log(descCalculateAge1, descCalculateAge2);
+
+/*
+- So the function expression is work same way as a function declaration, so we call it in the same way we capture, the return value in the same way and of course the result in the same way because the function body is the same.
+
+- But it's very important to know that we have these two types of function in javaScript, because in some places we will actually to write them like this as you will see as we go through the course.
+
+- So this function is an expression, 
+
+  const calculateAge2 = // this variable hold the function value basically 
+  function (birthYear) {   // so this function is an expression and remember the expression produce values, so we just assign this whole value here then to a variable, and this variable will then hold the function value basically.
+
+  return 2030 - birthYear;
+  }
+
+  - Function are just values in javaScript, just as a number or a string or a boolean value, so function is not a type, is not like a string type or number type, but it's also a value. And so if it's a value, we can store it in a variable
+
+  - So just Keep this in mind, because it will become very important later when we really dig deep into a functions.
+
+*/
+
+/* 
+Ques: So what the big difference between function declaration and function expressions?
+
+Ans: The main practical differences that we can actually call function declarations before they are defined in the code. Now we ae calling it first and then defining it later. And it still works. 
+*/
+
+// calling the function
+
+const descCalculateAge3  = calculateAge3(1998);
+console.log(descCalculateAge3);
+
+// function declaration
+
+function calculateAge3 (birthYear) {
+  return 2032 - birthYear;
+}
+
+
+/*
+- But if we attempt to do the same with the expression then it should not work, let me show you the example. 
+
+Error: cannot access before initialization.
+
+- It happens because of a process called hoisting but more about that in a future section.
+
+
+- But keep in mind that, we can called a function declaration before we define it, even though that might not be such a good idea in many cases. But you can do it if necessary.
+
+
+*/
+
+// const descCalculateAge4 =calculateAge4(1998);
+// console.log(descCalculateAge4);
+
+// const calculateAge4 = function(birthYear) {
+//   return 2030 - birthYear;
+// }
+
+
+/*
+Ques: But another question you might have in your mind is which of the two types of functions should I use when I write my own function?
+
+Ans: And well, the answer is that oftentimes is really just a matter of personal preference. So different developers prefer different formats. 
+
+* But mostly developers use function expression, because this then forces me into a nice structure where I have to defined all the functions first at the top of the code and only then I can call them. So this makes the code a little bit nicer and more structured.
+
+* Most developers also like to have everything stored in variables, both values and functions, but again that is depend on own personal preference. 
+
+* And many other developers don't agree with this and prefer to use function declarations. If you prefer function declaration so that's fine. 👍Just use function declaration then.
+
+** However even if you prefer one over the other, you still need to know about both the "function expression" and "function declarations". So you can not just pick one and then forget the other one, because both have their place in javaScrpt. So it's really important that you know how to use and how's to distinguish both function declarations and expressions.
+
+
+
+
+*/
+
+
+
+
 
 
 

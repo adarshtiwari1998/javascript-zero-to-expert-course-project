@@ -1,5 +1,8 @@
 /****************** FUNCTIONS ASSIGNMENTS EXAMPLE #1 ******************/
 
+
+/*
+
 function describeCountry(country, population, capitalCity) {
   // console.log(country, population, capitalCity);
 
@@ -21,3 +24,6 @@ const descUnitedKindom = describeCountry(
 );
 
 console.log(descIndia, descAmerica, descUnitedKindom);
+
+
+*/
