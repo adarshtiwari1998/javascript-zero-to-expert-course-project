@@ -736,6 +736,82 @@ Ans: Well the answer is no, but it's also complicated. That's because there is a
 */
 
 
+/****************** FUNCTIONS CALING OTHER FUNCTIONS IN JAVASCRIPT ******************/
+
+
+/* Let's now take functions even one step further and calling one function from inside another function. And this is something that we do all the time in javaScript. But many developer has struggle to understand the logic behind this */
+
+// function fruitProcessor(mango, banana) {
+// const juice = `Juice with ${mango} mango and ${banana} banana.`;
+// return juice;
+// }
+
+// Remember that we had the function, which was like a fruit processor, which received a certain number of mango, and certain number of banana. And then based on that it basically produced and returned juice to us.
+
+// But now in this example let's consider that the fruit processor can only make juice with smaller fruit pieces.
+
+// And so before making the juice, the fruit processor now needs another machine that first cuts the fruits that we give it to multiple smaller piece.
+
+function cutFruitPieces (fruit) { // then function receive a fruit
+// and all this function will do, is to return the fruit cutin four pieces
+
+return fruit * 4; // if we get 4 apples then it will return a 8 pieces to us.
+
+// So that's our machine that cuts the frruits in pieces
+}
+
+// And now in the fruitProcessor itself, we received the mango and banana, and then we're gonna use our newly created machine to cut the receive mango and banana in two pieces. So let's do that
+function fruitProcessor(mango, banana) {
+
+  // first time we called one function inside of another function
+
+  const mangoPieces = cutFruitPieces(mango); // and the result of calling this function, we will capture into a variable 
+  // Now let do the same for the banana that we recive
+  const bananaPieces = cutFruitPieces(banana);
+
+
+  const juice = `Juice with ${mangoPieces} pieces of mango and ${bananaPieces} pieces of banana.`;
+  return juice;
+}
+
+
+// now we call fruitProcessor with two and three
+const result2 = fruitProcessor(2,3);  // the result of calling this function will become the string above that we return from the function.
+console.log(result2); // log the result to the console.
+
+
+
+/* 
+This is a very good example to illustrate the machanics of one function calling the other, but now again you might askthe following quation. 
+
+Q: Why not simply multiply both of the input values by four and call it.?
+Ans: And we can do that of course, we can say
+
+mangoPieces = mango * 4;
+bananaPieces = banana * 4;
+
+But we not did it this way for well, multiple reasons, First the point I'm making here is that
+- it's very common for one function call another function
+- This is a very good example to illustrate that don't repeat yourself principle that mentioned earlier. So the dry principle
+- Imagine the cutting machine would cut in three pieces and not in 4 pieces, then if did'nt have to separate cutFruitPieces function, we would have to change the code in multiple places. And this is not a problem of course with two lines of code, but we needed to cut like 20 fruits into pieces then we would have to change that in all the places and that would simply be annoying and it could also be a source of bugs/ coding mistake
+- So it lots better to put that functionality into its own function, So if the fruit was not cut in three pieces all you have to do is to change it here,
+
+function cutFruitPieces (fruit) { 
+return fruit * 3; 
+}
+
+and that's it.. and this changes to 6, 9
+
+
+- With time and practice you should know when you should create your own functions and when to have multiple function one calling another. So function is very important topic so keep practicing and initializing the code.
+
+*/
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,4 @@
-/****************** FUNCTIONS ASSIGNMENTS EXAMPLE #1 ******************/
-
+/* ############ FUNCTIONS ASSIGNMENTS EXAMPLE #1 ############*/
 
 /*
 
@@ -28,8 +27,7 @@ console.log(descIndia, descAmerica, descUnitedKindom);
 
 */
 
-
-/****************** FUNCTION DECLARATIONS VS. FUNCTION EXPRESSIONS ASSIGNMENTS EXAMPLE #1 ******************/
+/* ############  FUNCTION DECLARATIONS VS. FUNCTION EXPRESSIONS ASSIGNMENTS EXAMPLE #1 ############*/
 
 /*
 
@@ -65,8 +63,9 @@ console.log(result1);
 
 */
 
+/* ############  ARROW FUNCTION EXAMPLE #1 ############  */
 
-/* ARROW FUNCTION EXAMPLE #1  */
+/*
 
 const percentageOfWorld3 = (population) => (population / 7830000000) * 100;
 
@@ -79,3 +78,5 @@ const result1 = percentageOfWorld3(1400000000);
 
 const descpercOfWorld3 = `India has 14 million people and its about ${result1} of the world populaiton..`;
 console.log(descpercOfWorld3);
+
+*/
