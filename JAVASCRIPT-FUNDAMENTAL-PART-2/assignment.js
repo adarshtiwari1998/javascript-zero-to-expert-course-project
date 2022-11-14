@@ -80,3 +80,18 @@ const descpercOfWorld3 = `India has 14 million people and its about ${result1} o
 console.log(descpercOfWorld3);
 
 */
+
+/* ############ FUNCTIONS CALLING OTHER FUNCTIONS EXAMPLE #1 ############  */
+
+function percentageOfWorld1(population) { // generic function
+// const calculatePopulation = population / 7830000000;
+const calculatePercentage1 = (population / 7830000000) * 100;
+return calculatePercentage1;
+}
+
+const describePopulation = function (country, population) {
+  const calcPopulation = percentageOfWorld1(population);
+  return `${country} has ${population} million people and is about ${calcPopulation} of the world population.`;
+}
+
+console.log(describePopulation("India", 1400000000))
