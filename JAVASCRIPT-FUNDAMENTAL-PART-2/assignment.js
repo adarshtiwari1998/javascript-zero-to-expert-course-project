@@ -65,3 +65,17 @@ console.log(result1);
 
 */
 
+
+/* ARROW FUNCTION EXAMPLE #1  */
+
+const percentageOfWorld3 = (population) => (population / 7830000000) * 100;
+
+// console.log(percentageOfWorld3(10031313));
+
+// const descpercOfWorld3 = percentageOfWorld3(1400000000);
+// console.log(descpercOfWorld3);
+
+const result1 = percentageOfWorld3(1400000000);
+
+const descpercOfWorld3 = `India has 14 million people and its about ${result1} of the world populaiton..`;
+console.log(descpercOfWorld3);

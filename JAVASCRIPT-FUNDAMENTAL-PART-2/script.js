@@ -586,7 +586,13 @@ Ans: And well, the answer is that oftentimes is really just a matter of personal
 /* simply write the birthYear, because we want to calculate the age again and then we write an arrow and that's the reason why this function called the arrow function. And then we simply write what we want to return so in this case that's 2032 - birthYear and that's it. Now to finish we actually want to be able to use this function. So let's again sotr it in a variable, just like we did above in function expression
 
 */
+
+/* 
+
+
 const calculateAge5 = birthYear => 2032 - birthYear; // set the variable to this function here, as I said this is a special form of function expression, because it still a function expression actually.
+
+*/
 
 /* (birth => 2032 - birthYear), so it's a value all of this that we assign to this variable (const calculateAge5) */
 
@@ -604,12 +610,17 @@ REASON FOR THAT
 - Now to use this function it of course, works the exact same way as using all the other functions. Example below
 */
 
+/*
+
 // it works same as other function
 const descCalculateAge5 = calculateAge5(1998); // again we save the returned value here to a variable
 console.log(descCalculateAge5);
 
 
 // so indeed the value that we calculated was returned automatically without us having to write the return keyword.
+
+
+/*
 
 /* No we see that here we also did'nt need any parenthesis or anything like that 
 
@@ -636,6 +647,8 @@ birthYear // it is the parameter
 
 // so first we need to calculate the age, and then from there, we need to calculate the retirement age minus the current age
 
+/*
+
 const yearsUntilRetirement = birthYear =>  {
 
 const age = 2022 - birthYear; // calculate the age based on birth year
@@ -646,6 +659,8 @@ return retirementAge; // now to return this retirement we actually need to write
 
 }  // we need more lines of code and so we are back to actually needing the curly braces in order to define code block
 
+*/
+
 /* so we can only omit the return, in case we have one liner function like this,
 
 (birthYear => 2032 - birthYear; )
@@ -655,6 +670,10 @@ but if we have more then we eed to do the return still
 return;
 
 */
+
+
+/*
+
 
 // So let's run the function, invoke and call the function
 
@@ -669,6 +688,9 @@ console.log(`${result} year's left for the retirement...`); //log the value to t
 // And remember in that situation we need the return statement 
 
 
+*/
+
+
 /* But now, what if we have multiple parameters? 
   - Then we need to wrap the parameters into parenthesis 
 */
@@ -677,11 +699,13 @@ console.log(`${result} year's left for the retirement...`); //log the value to t
 
 /* Let's say we want the (birthYear) and also the (firstName)*/
 
+/*
+
 const yearsUntilRetirement1 = (birthYear, firstName) => {
 const age1 = 2022 - birthYear;
 const retirementAge1 = 65 - age1;
 // return retirementAge1;
-/* we can return like a sentence, so instead let's return a string */
+// we can return like a sentence, so instead let's return a string 
 
 return `${firstName} retires in ${retirementAge1} year's... 🧓`  // we can using a template string to build that string
 }
@@ -693,6 +717,8 @@ console.log(yearsUntilRetirement1(1992, "Shubh"));
 
 // that's essentially how arrow function works, you just need to keep in mind that couple of different scenerios that theere are regarding to the number of lines of code that you need and the number of parameters. So as you add more code and more parameters, it gets a little bit more complex and we kind the lose the advantage of using the arrow function
 
+
+*/
 
 /* So you might be ask the question 
 
@@ -708,6 +734,7 @@ Ans: Well the answer is no, but it's also complicated. That's because there is a
 - Sometimes you don't have write regular functions at all, but again, you cannot yet understand all the implications of using arrow functions. So for now again, we will keep using probably the function expressions the most.
 
 */
+
 
 
 
