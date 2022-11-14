@@ -431,6 +431,8 @@ function calculateAge1(birthYear) {
 
 // FUNCTION DECLARATION 
 
+/*
+
 function calculateAge1 (birthYear) {
   return 2032 - birthYear; // simply return the result of this expression here
 
@@ -453,6 +455,8 @@ console.log(calculateAge1(1998));
 
 // So that is the function declaration
 
+*/
+
 
 /* FUNCTION EXPRESSION */
 
@@ -462,6 +466,9 @@ console.log(calculateAge1(1998));
 - Instead of writing a function with the calculateAge1 name, we simply write function basically without a name and then we still define a parameter and we still define a function body, and we write a function like this and then what we have to do is to store all of this here into a variable and that variable will then be a function
 
 */
+
+/*
+
 
 const calculateAge2 = function (birthYear) {
   // we did write a function in a very similar way but we did'nt give it a name here. So it's a function withour a name basically, which is also called a anonymous function.
@@ -473,6 +480,8 @@ const calculateAge2 = function (birthYear) {
 const descCalculateAge2 = calculateAge2(1988);
 
 console.log(descCalculateAge1, descCalculateAge2);
+
+*/
 
 /*
 - So the function expression is work same way as a function declaration, so we call it in the same way we capture, the return value in the same way and of course the result in the same way because the function body is the same.
@@ -499,6 +508,9 @@ Ques: So what the big difference between function declaration and function expre
 Ans: The main practical differences that we can actually call function declarations before they are defined in the code. Now we ae calling it first and then defining it later. And it still works. 
 */
 
+
+/*
+
 // calling the function
 
 const descCalculateAge3  = calculateAge3(1998);
@@ -509,6 +521,10 @@ console.log(descCalculateAge3);
 function calculateAge3 (birthYear) {
   return 2032 - birthYear;
 }
+
+
+*/
+
 
 
 /*
@@ -524,7 +540,7 @@ Error: cannot access before initialization.
 
 */
 
-// const descCalculateAge4 =calculateAge4(1998);
+// const descCalculateAge4 = calculateAge4(1998);
 // console.log(descCalculateAge4);
 
 // const calculateAge4 = function(birthYear) {
@@ -546,6 +562,177 @@ Ans: And well, the answer is that oftentimes is really just a matter of personal
 ** However even if you prefer one over the other, you still need to know about both the "function expression" and "function declarations". So you can not just pick one and then forget the other one, because both have their place in javaScrpt. So it's really important that you know how to use and how's to distinguish both function declarations and expressions.
 
 */
+
+
+/****************** ARROW FUNCTION IN JAVASCRIPT ******************/
+
+/*
+ - There is actually a third type of function that was added to javaScript in ES6 and that's the arrow function
+
+ - An arrow function is simply a special form of function expression that is shorter and faster to write.
+
+ - Comparison between the funtion expression and arrow function below
+
+*/
+
+
+// const calculateAge4 = function(birthYear) {
+//   return 2030 - birthYear;
+// }
+
+
+// let's write the Arrow Function
+
+/* simply write the birthYear, because we want to calculate the age again and then we write an arrow and that's the reason why this function called the arrow function. And then we simply write what we want to return so in this case that's 2032 - birthYear and that's it. Now to finish we actually want to be able to use this function. So let's again sotr it in a variable, just like we did above in function expression
+
+*/
+const calculateAge5 = birthYear => 2032 - birthYear; // set the variable to this function here, as I said this is a special form of function expression, because it still a function expression actually.
+
+/* (birth => 2032 - birthYear), so it's a value all of this that we assign to this variable (const calculateAge5) */
+
+// so just like this function expression up here
+
+/*
+- Arrow function is lot easier and faster to write
+
+REASON FOR THAT
+
+- we don't need a curly braces like we have in function expression to define a code block
+
+- And second is that the return actually happens implicitly, so the value here  (2032 - birthYear) automatically be returned, without us having to explicitly write the return keyword. So this is excellent for simple one-liner functions.And this is gonna be extremely helpful in certain situations.
+
+- Now to use this function it of course, works the exact same way as using all the other functions. Example below
+*/
+
+// it works same as other function
+const descCalculateAge5 = calculateAge5(1998); // again we save the returned value here to a variable
+console.log(descCalculateAge5);
+
+
+// so indeed the value that we calculated was returned automatically without us having to write the return keyword.
+
+/* No we see that here we also did'nt need any parenthesis or anything like that 
+
+const calculateAge5 = birthYear => 2032 - birthYear; // just this here is the function.
+
+*/
+
+/* Now, this is actually jus tthe simplest form, which is when we only have exactly one parameter and only basically one line of code, in which we want to return something.
+
+birthYear // it is the parameter
+2032 - birthYear // one line of code
+
+*/
+
+// But it gets a little more complex when we add more parameters and more code
+
+
+// EXAMPLE 2 
+
+/* Ques: Calculate how many years a person has left until retirement */
+
+
+// because to calculate the numbers of years until the retirement based on the birth year alone, 
+
+// so first we need to calculate the age, and then from there, we need to calculate the retirement age minus the current age
+
+const yearsUntilRetirement = birthYear =>  {
+
+const age = 2022 - birthYear; // calculate the age based on birth year
+const retirementAge = 65  - age;
+// now lets calculate the retirement age, so lets say retirement age is 65 years, so (65 - current age), so that will then give us how many years we have left 
+
+return retirementAge; // now to return this retirement we actually need to write the return keyword explicitly.
+
+}  // we need more lines of code and so we are back to actually needing the curly braces in order to define code block
+
+/* so we can only omit the return, in case we have one liner function like this,
+
+(birthYear => 2032 - birthYear; )
+
+but if we have more then we eed to do the return still
+
+return;
+
+*/
+
+// So let's run the function, invoke and call the function
+
+const result = yearsUntilRetirement(1998); // we could capture the return value and store into a variable and also we can log the value to the console directly
+console.log(result);  
+
+console.log(`${result} year's left for the retirement...`); //log the value to the console directly
+
+
+// That's the scenerio, when we have one parameters and more then one line of code basically
+
+// And remember in that situation we need the return statement 
+
+
+/* But now, what if we have multiple parameters? 
+  - Then we need to wrap the parameters into parenthesis 
+*/
+
+// EXAMPLE 2.1 
+
+/* Let's say we want the (birthYear) and also the (firstName)*/
+
+const yearsUntilRetirement1 = (birthYear, firstName) => {
+const age1 = 2022 - birthYear;
+const retirementAge1 = 65 - age1;
+// return retirementAge1;
+/* we can return like a sentence, so instead let's return a string */
+
+return `${firstName} retires in ${retirementAge1} year's... 🧓`  // we can using a template string to build that string
+}
+
+console.log(yearsUntilRetirement1(1998, "Adarsh")); // add two argument here and log the value to the console directly.
+
+console.log(yearsUntilRetirement1(1992, "Shubh"));
+
+
+// that's essentially how arrow function works, you just need to keep in mind that couple of different scenerios that theere are regarding to the number of lines of code that you need and the number of parameters. So as you add more code and more parameters, it gets a little bit more complex and we kind the lose the advantage of using the arrow function
+
+
+/* So you might be ask the question 
+
+  what type of function should I use? 
+
+1. Should I use arrow function for everything? Since they're so easy to write?
+Ans: Well the answer is no, but it's also complicated. That's because there is another fundamental difference between the arrow function and more traditional functions which include "function declaration" and "function expressions".
+
+- It's a fact that arrow function do not get a so-called "this" keyword, and "this" is once more is a topic for much later.
+
+- Remember learning is not at all a linear process
+
+- Sometimes you don't have write regular functions at all, but again, you cannot yet understand all the implications of using arrow functions. So for now again, we will keep using probably the function expressions the most.
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
