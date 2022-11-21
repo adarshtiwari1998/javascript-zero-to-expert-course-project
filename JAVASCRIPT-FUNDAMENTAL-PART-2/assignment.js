@@ -83,6 +83,8 @@ console.log(descpercOfWorld3);
 
 /* ############ FUNCTIONS CALLING OTHER FUNCTIONS EXAMPLE #1 ############  */
 
+/*
+
 function percentageOfWorld1(population) { // generic function
 // const calculatePopulation = population / 7830000000;
 const calculatePercentage1 = (population / 7830000000) * 100;
@@ -95,3 +97,5 @@ const describePopulation = function (country, population) {
 }
 
 console.log(describePopulation("India", 1400000000))
+
+*/

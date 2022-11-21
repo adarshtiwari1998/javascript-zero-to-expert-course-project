@@ -752,6 +752,9 @@ Ans: Well the answer is no, but it's also complicated. That's because there is a
 
 // And so before making the juice, the fruit processor now needs another machine that first cuts the fruits that we give it to multiple smaller piece.
 
+
+/*
+
 function cutFruitPieces (fruit) { // then function receive a fruit
 // and all this function will do, is to return the fruit cutin four pieces
 
@@ -779,7 +782,7 @@ function fruitProcessor(mango, banana) {
 const result2 = fruitProcessor(2,3);  // the result of calling this function will become the string above that we return from the function.
 console.log(result2); // log the result to the console.
 
-
+*/
 
 /* 
 This is a very good example to illustrate the machanics of one function calling the other, but now again you might askthe following quation. 
@@ -808,6 +811,76 @@ and that's it.. and this changes to 6, 9
 */
 
 
+
+
+/* ##################### REVIEWING FUNCTION #####################*/
+
+
+
+// const yearsUntilRetirement1 = (birthYear, firstName) => {
+//   const age1 = 2022 - birthYear;
+//   const retirementAge1 = 65 - age1;
+//   return `${firstName} retires in ${retirementAge1} year's... 🧓`; 
+// };
+
+
+// In that case we simply get rid of the arrow function and write the normal function expression here
+
+const calculateAge6 = function(year)  {  // this parameter is the local variable of each function
+  return 2022 - year;
+} 
+
+// we could even hava a different variables outside of any of the functions which could also be the same parameter
+
+// Variables names in these two different functions they do not have anything to do with one another
+
+const yearsUntilRetirement1 = function(birthYear, firstName) {
+  const age1 = calculateAge6(birthYear); // / call one function inside of another function
+  // const age1 = 2022 - birthYear; // now export this functionality into another function
+  const retirementAge1 = 65 - age1;
+
+   // take the decision here based on the retirement value
+   if (retirementAge1 > 0 ) { // if there are more or zero years left until retirement so we log this
+    console.log(`${firstName} retires in ${retirementAge1} year's...`); // the console.log is executed before the value has returned.
+    return retirementAge1; // the return statements immediately exit or immediately returns the function so there is no change this console.log code here even reached. So if we want here to execute we need to put before the return statement
+   } else {
+     console.log(`${firstName} has already retired. 🥳`);
+     return -1;
+   }
+
+  // return `${firstName} retires in ${retirementAge1} year's...`; 
+  // we can using a template string to build that string
+}
+
+
+console.log(yearsUntilRetirement1(1998, "Adarsh"));
+console.log(yearsUntilRetirement1(1940, "Shubh")); // output will be the negative number, which means they are already retired.
+
+
+
+/* THE THREE DIFFERENT WAY OF WRITING THE FUNCTIONS,
+   1. FUNCTION DECLARATION: Function that can be used before it's declared
+
+   2. FUNCTION EXPRESSION: Essentially a function value store in a variable.
+
+   3. ARROW FUNCTION: Great for a quick one-line function. Has no this keyword.
+
+   but they all work in a similar way: receive input data, transform data, and then output data. It's all optional.
+
+
+   Firstly, usually
+   1. A function needs a function name.
+   2. Then a function also has parameter and these parameters are essentially placeholders that receive input values. These are little bit like local variable of a function. Variables are defined only inside of this very function
+   3. We use function to reuse pieces of code and these peaces of code are inside the funciton body. Here the function input data, it usually processed and then returned. 
+   4. And by the end of the function, we usually have a return statement which is use to output a value from the function.
+   5. A return statements also immediately terminates the function execution. We also say function returns
+   6. And now we after calling the function, we do that using parenthesis. So we write the name of the function and with the parenthesis we call the function, because without the parenthesis a function is really just a value, but then with the parenthesis, we actually called the function. We can also say that we can run the function, invoke the function, or execute the function. All these terms are the same meaning.
+   7. If the function actually has parameters, we then call this function with arguments and these arguments are the actual value of function parameters. So we use thses to the input the actual data into the function. And we can also imagine this as a replacing the placeholders that are the parameters.
+   8. Then once the function has finally done its job, then all this expression will basically be replaced with the returned value
+
+
+
+*/
 
 
 
