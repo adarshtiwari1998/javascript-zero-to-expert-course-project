@@ -824,6 +824,10 @@ and that's it.. and this changes to 6, 9
 // };
 
 
+/*
+
+
+
 // In that case we simply get rid of the arrow function and write the normal function expression here
 
 const calculateAge6 = function(year)  {  // this parameter is the local variable of each function
@@ -858,6 +862,8 @@ console.log(yearsUntilRetirement1(1940, "Shubh")); // output will be the negativ
 
 
 
+*/
+
 /* THE THREE DIFFERENT WAY OF WRITING THE FUNCTIONS,
    1. FUNCTION DECLARATION: Function that can be used before it's declared
 
@@ -877,8 +883,6 @@ console.log(yearsUntilRetirement1(1940, "Shubh")); // output will be the negativ
    6. And now we after calling the function, we do that using parenthesis. So we write the name of the function and with the parenthesis we call the function, because without the parenthesis a function is really just a value, but then with the parenthesis, we actually called the function. We can also say that we can run the function, invoke the function, or execute the function. All these terms are the same meaning.
    7. If the function actually has parameters, we then call this function with arguments and these arguments are the actual value of function parameters. So we use thses to the input the actual data into the function. And we can also imagine this as a replacing the placeholders that are the parameters.
    8. Then once the function has finally done its job, then all this expression will basically be replaced with the returned value
-
-
 
 */
 
