@@ -193,7 +193,10 @@ checkWinner(scoreDolphins, scoreKoalas);
 
 
 
-/* ############  BASIC ARRAY OPERATIONS (METHODS) EXERCISE #1 ############  */
+/* ############  INTRODUCTION TO ARRAY EXERCISE #1 ############  */
+
+
+/*  COMMENT START
 
 const country = ["India", "US", "Italy", "Japan"];
 const populations = [14, 10, 12, 7];
@@ -219,3 +222,32 @@ console.log(`${country[1]} has ${percentages[1]} of the world population`);
 console.log(`${country[2]} has ${percentages[2]} of the world population`);
 console.log(`${country[3]} has ${percentages[3]} of the world population`);
 
+
+
+COMMENT END */
+
+
+
+/* ############  BASIC ARRAY OPERATIONS (METHODS) EXERCISE #1 ############  */
+
+
+const neighbours = ["India", "Pakistan", "China"];
+
+console.log(neighbours);
+console.log(neighbours.length === 3);
+
+neighbours.push("Nepal");
+console.log(neighbours);
+
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes("SriLanka")) {
+  console.log(`SriLnka, Probably not a cental european country :D`);
+}
+
+const changNeighbConty = neighbours[neighbours.indexOf("Pakistan")] = "Afghanistan";
+
+
+console.log(`This country ${changNeighbConty} has changed from this Pakistan`);
+console.log(neighbours);
