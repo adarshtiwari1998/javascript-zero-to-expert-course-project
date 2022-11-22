@@ -231,6 +231,9 @@ COMMENT END */
 /* ############  BASIC ARRAY OPERATIONS (METHODS) EXERCISE #1 ############  */
 
 
+/* COMMENT START
+
+
 const neighbours = ["India", "Pakistan", "China"];
 
 console.log(neighbours);
@@ -251,3 +254,80 @@ const changNeighbConty = neighbours[neighbours.indexOf("Pakistan")] = "Afghanist
 
 console.log(`This country ${changNeighbConty} has changed from this Pakistan`);
 console.log(neighbours);
+
+
+
+COMMENT END */
+
+
+
+/* ############ CODING CHALLENGE #2 ############  */
+
+
+/*
+Steven is still building his tip calculator, using the same rules as before: Tip 15% of
+the bill if the bill value is between 50 and 300, and if the value is different, the tip is
+20%.
+Your tasks:
+1. Write a function 'calcTip' that takes any bill value as an input and returns
+the corresponding tip, calculated based on the rules above (you can check out
+the code from first tip calculator challenge if you need to). Use the function
+type you like the most. Test the function using a bill value of 100
+2. And now let's use arrays! So create an array 'bills' containing the test data
+below
+3. Create an array 'tips' containing the tip value for each bill, calculated from
+the function you created before
+4. Bonus: Create an array 'total' containing the total values, so the bill + tip
+Test data: 125, 555 and 44
+Hint: Remember that an array needs a value in each position, and that value can
+actually be the returned value of a function! So you can just call a function as array
+values (so don't store the tip values in separate variables first, but right in the new
+array) �
+GOOD LUCK �
+
+*/
+
+
+// No: 1
+const calcTip = function(bill) {
+return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2; 
+ 
+// 0.15 is 15% and 0.2 is 20%
+
+// the result of these ternary operator is one of these values. So either bill times 15 or times 20. So that's gonna be the result of this operator and that's what the function will be return
+
+}
+
+// we can use the arrow function also
+// const calcTip1 = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+
+// No: 2
+const billName = ["Adarsh", "Aditya", "Nitesh"];
+const bills = [125, 555, 44];
+
+
+// No: 3
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(bills, tips);
+
+// No: 4
+
+// const totalBills = bills + tips // simply not work, because we cannot do any operations on arrays like this
+
+const totalBills = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(totalBills);
+
+// we can show the result in the string using asterisk
+
+console.log(`${billName[0]} bill was ${bills[0]}, the tip was ${tips[0]} and the total value is ${totalBills[0]}`)
+console.log(
+  `${billName[1]} bill was ${bills[1]}, the tip was ${tips[1]} and the total value is ${totalBills[1]}`
+);
+console.log(
+  `${billName[2]} bill was ${bills[2]}, the tip was ${tips[2]} and the total value is ${totalBills[2]}`
+);
+
+
+// usually in an array I like to give a plural names bills, tips
+
