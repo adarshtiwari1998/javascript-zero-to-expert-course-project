@@ -1187,6 +1187,78 @@ COMMENT END */
 
 
 
+/****************** INTRODUCTION TO OBJECTS IN JAVASCRIPT ******************/
+
+
+// So after arrays it's time to learn another data structure in javaScript, which is objects. So up util this point we have been using arrays as a data structure to basically store multiple related values in the same variable
+
+const adarshBio = [ // we can see that I'm writing this in multiple line now. And that is perfectly acceptable. So sometimes it is easier to give you an overview of a data structure. And as long as we remember that , commas here after each elements, we're gonna be fine. 
+"Adarsh",
+"Tripathi",
+2022 - 1998,
+"Coder",
+"Self-Employed",
+["Avinash", "Nitesh", "Amit", "Tushar"] // array inside of an array
+
+] // so this is basically a data structure which combines multiple values which all belong to adarshBio entity.
+
+// No we know intuitively that this first element of an array "Adarsh" should be called the first name, "Tripathi" and this one is the last name, 2022 - 1998 this one could be called age, "Coder" this one could be called job, and so on.
+
+// But in arrays there is no way of giving these elements a name, And so we can't reference them by name but only by their order number in which they appear in the array. And so to solve that problem, we have another data structure in javaScript which is objects
+
+// So in objects, we actually define key values pairs, so then we can give each of these values here, a name. So let's see how we can do it
+
+const adarsh = {} // so now instead of square brackets [] that we use for arrays, we use {} curly brackets or curly braces. So this is the second time we're seeing the curly braces. First we saw them to define a code block, for example, in an if-else statement or if a switch statement or even to define a function body. But this is different, okay?
+
+// So these curly braces here are to define a new object.
+
+// So let's now fill up this object with key value pairs
+
+// So the key is basically a variable name
+
+
+const adarsh1 = {
+
+  firstName: "Adarsh", // the value can be any type that we want here. Then to define another key values pair, we just separate them with commas , just like in the array.
+  lastName: "Tripathi",
+  age: 2022 - 1998, // we can put any expression here, so this will be calcuated adn then will be assigned to age
+  designation: "Coder",
+  employment: "Self-Employed",
+  friends: ["Tushar", "Nikil", "Avinash", "Nitesh"]
+
+} // and so with this we have now an object here, which contain five key value pairs. So again these are the five keys like: firstName, lastName, job, and then each key has a value like: "Adarsh", "Tripathi", 2022 - 1998. 
+
+// And so essentialy with this, we were able to assign a name to each of these values that we had. So that's something that was impossible in arrays but now it is possible
+
+// And now each of these keys is also called a property, So we can say that this object, which is called __adarsh1__ has 6 properties. So property __firstName__ with the value of "Adarsh" property __lastName__ with the value of "Tripathi" and so on and so forth.
+
+// Now, objects are probably the most fundamental concept in the whole javaScript language. So there are many ways of creating objects.
+
+// And simply writing an object in the code like this: const adarsh1 = {}, is probably the simplest way of creating an object. So here with the curly braces
+
+// So there are multiple ways of creating objects but using the curly braces like this: const adarsh1 = {}, is the easiest one, and it's called a object literal syntax. Because we are literally writing down the entire object content.
+
+// So to recap just like array, we use objects to essentialy group together different variables that really belong together such as the properties of, const = adarsh1 = {}, that we've been working with.
+
+/* 
+
+Note:
+
+- Now the big difference between objects and arrays is that in objects, the order of these values does not matter at all when we want to retrieve them.And that's important to keep in mind.
+
+- But in arrays the order in which we specify the elements matters a lot. Because that's how we access these elements, right?
+
+- So we can only access arrays elements using their order number.
+
+- These means that we should use Arrays for more order data and,
+
+- Object for more unstructured data. And data that we actually want to name and then retrive from the object based on that name.
+
+- But how do we actually do that? Discuss in the next section
+
+*/
+
+// So how we get data from an object? we discuss this in the next section
 
 
 

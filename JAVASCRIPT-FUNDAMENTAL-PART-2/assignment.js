@@ -287,6 +287,9 @@ GOOD LUCK �
 
 */
 
+/*  COMMENT START
+
+
 
 // No: 1
 const calcTip = function(bill) {
@@ -318,7 +321,7 @@ console.log(bills, tips);
 const totalBills = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(totalBills);
 
-// we can show the result in the string using asterisk
+// we can show the result in the string using backticks or template literals by using expression
 
 console.log(`${billName[0]} bill was ${bills[0]}, the tip was ${tips[0]} and the total value is ${totalBills[0]}`)
 console.log(
@@ -330,4 +333,9 @@ console.log(
 
 
 // usually in an array I like to give a plural names bills, tips
+
+
+
+COMMENT END */
+
 
