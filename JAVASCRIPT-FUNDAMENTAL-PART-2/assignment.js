@@ -63,7 +63,10 @@ console.log(result1);
 
 */
 
+
 /* ############  ARROW FUNCTION EXAMPLE #1 ############  */
+
+
 
 /*
 
@@ -102,6 +105,7 @@ console.log(describePopulation("India", 1400000000))
 
 
 /* ############ CODING CHALLENGE #1 ############  */
+
 
 /* 
 Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new
@@ -185,3 +189,33 @@ checkWinner(scoreDolphins, scoreKoalas);
 
 
 */
+
+
+
+
+/* ############  BASIC ARRAY OPERATIONS (METHODS) EXERCISE #1 ############  */
+
+const country = ["India", "US", "Italy", "Japan"];
+const populations = [14, 10, 12, 7];
+console.log(populations.length === 4);
+console.log(populations);
+
+
+const percentageOfWorld1 = function(populations) { // generic function
+ return (populations / 7200) * 100; 
+}
+
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3]),
+];
+
+
+console.log(percentages);
+console.log(`${country[0]} has ${percentages[0]}% of the world population`)
+console.log(`${country[1]} has ${percentages[1]} of the world population`);
+console.log(`${country[2]} has ${percentages[2]} of the world population`);
+console.log(`${country[3]} has ${percentages[3]} of the world population`);
+

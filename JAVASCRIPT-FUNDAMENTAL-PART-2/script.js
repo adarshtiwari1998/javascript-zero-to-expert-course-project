@@ -1079,7 +1079,9 @@ COMMENT END */
 /****************** BASIC ARRAY OPERATIONS (METHODS) IN JAVASCRIPT ******************/
 
 
-/*
+/* COMMENT START 
+
+
 
 - JavaScript has some build in functions that we can basically apply directly on arrays.
 - And these are called Methods, we can think of methods as array operations basically. So let's now learn some useful operations array methods.
@@ -1087,6 +1089,9 @@ COMMENT END */
 
 
 */
+
+
+/*
 
 const friendsName = ["Shubhrans", "Kartik", "Anurag"]; // this actually changed, so it mutated the original array, but that's no problem at all
 
@@ -1174,6 +1179,11 @@ console.log(`You have a friend called ${friendsName[0]}`);
 
 
 // So that's probably the most use case of the includes method
+
+
+
+
+COMMENT END */
 
 
 
