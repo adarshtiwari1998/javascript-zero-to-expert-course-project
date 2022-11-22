@@ -891,13 +891,14 @@ console.log(yearsUntilRetirement1(1940, "Shubh")); // output will be the negativ
 
 /****************** INTRODUCTION TO ARRAYS IN JAVASCRIPT ******************/
 
+
+
 // Let's now talk about our first data structure and that's gonna be arrays.
 
 /* QUES: Let's say i want to store my friend name in a variable so that i could use them later in my program.
 
 So with the knowledge that we have so far, this is how we would do it.
 */
-
 
 
 // const friendName1 = "Tushar";
@@ -920,6 +921,12 @@ So with the knowledge that we have so far, this is how we would do it.
 2. OBJECTS 
 
 */
+
+
+
+/* COMMENT START
+
+
 
 // And now let's learn all about arrays
 
@@ -946,7 +953,7 @@ const months = new Array("Jan", "Feb", "March", "April");
 
 // But anyway, it's way more usual to just use the brackets [] like I did up here, which is called the literal syntax.
 
-/*  So now we know how to create Arrays, so basically how to put elements into an array, but of course we need to have a way to get them out and for that, we use the square brackets syntax again. */
+// So now we know how to create Arrays, so basically how to put elements into an array, but of course we need to have a way to get them out and for that, we use the square brackets syntax again. 
 
 console.log(months[0]); // Arrays are zero-based, which means the first element is the element number zero. So if we want the element at position zero, then we write variable name square bracket[0], in this case months[0].
 
@@ -984,9 +991,9 @@ console.log(friendsName); // now log friendName array to the console and we shou
 // console.log(friendsName);   // error coming in console
 
 
+// Array can actually hold values with different types all at the same time 
 
 
-/* Array can actually hold values with different types all at the same time */
 
 const adarsh = ["Adarsh", "Tripathi", 2022 - 1998 , "Employed", ] ; // here we can actually calculate the age from other values, And that works because in each position, javaScript simply expects an expression. And if you do this, [2022 - 1998 ], so this is perfectly fine. So this will here produce a value, And so that's the value that will then be stored at position number 2 of the new array. And that also work for variables. Like this
 
@@ -1002,7 +1009,16 @@ console.log(adarshT);
 console.log(adarshT.length);
 
 
+
+COMMENT END  */ 
+
+
 // ******************* EXERCISE **************************
+
+
+/* COMMENT START
+
+
 
 const calcAge7 = function(birthYear) {
   return 2022 - birthYear
@@ -1035,12 +1051,13 @@ console.log(ageCalculate1, ageCalculate2, ageCalculate3);
 
 // Since we started with an array, it usually a good idea, to also end up with a new array. So let's create a new array agesCalculate and now what should I put in here? Well remember how I said up here well any position of the array is an simply needs to be an expression. So something that produces a value. And as we already know this here produces a value as well
 
-/* 
-= calcAge7(ageCalcArray[0]); // this here produces a value as well. It is an expression. So I can take this and simply put it as a position of an array element
-= calcAge7(ageCalcArray[1]);
-= calcAge7(ageCalcArray[ageCalcArray.length - 1]);
 
-*/
+
+// = calcAge7(ageCalcArray[0]); // this here produces a value as well. It is an expression. So I can take this and simply put it as a position of an array element
+// = calcAge7(ageCalcArray[1]);
+// = calcAge7(ageCalcArray[ageCalcArray.length - 1]);
+
+
 
 // And javaScript will then go ahead compute this value = calcAge7(ageCalcArray[0]); and place it in teh array
 
@@ -1051,6 +1068,112 @@ const agesCalculate = [
   2022 - 1970 // add one more expression for your reference
 ];
 console.log(agesCalculate); // and indeed we get the three same values, then we had up here separately. No all nicely placed into this array. And this of course works, because javaScript will start by running this function calls and then placed all the results in an array afterwards.
+
+ 
+
+COMMENT END */
+
+
+
+
+/****************** BASIC ARRAY OPERATIONS (METHODS) IN JAVASCRIPT ******************/
+
+
+/*
+
+- JavaScript has some build in functions that we can basically apply directly on arrays.
+- And these are called Methods, we can think of methods as array operations basically. So let's now learn some useful operations array methods.
+- There are actually countless array methods in javaScipt and they are very important in javaScript
+
+
+*/
+
+const friendsName = ["Shubhrans", "Kartik", "Anurag"]; // this actually changed, so it mutated the original array, but that's no problem at all
+
+
+// now let's start the method called __ push, so the push method adds elements to the end of an array.
+
+
+// friendsName.push("Nikita"); // then the element that we want to add to the end of the array. 
+
+
+// So __ push essentially a function and we can see that by these parenthesis. So it's a function that we call these function really attached to the friendsName [] array itself. And that's what the dot . here stands for
+
+// So again push is a method which technically is a function, and we call that function directly on the friendsName [] array. So the push function is kind of attached to the friends array and if you're wondering why that is we will once more learn that a little bit later.
+
+// But there is a good reason why this works and it's actually a pretty fascinating stuff .
+
+// Since push is a functiom here, so it can also return something. So we already know that we can pass arguments into function and we did that here with "Nikita". Then the function can do some work and in this case the work that the push function does is to add the element to the array and actually the push function does return a value and that the value that it returns is the lenght of the new array in this case.
+
+// And if want the capture the data and value so we can create a new variable for that.
+
+const addDataEnd = friendsName.push("Nikita");
+console.log(friendsName);
+console.log(addDataEnd); // Indeed it is the four, so most of the time we actually don't do this, so we just push an element and call it, becuase usually we don't immediately need the length of the new array. But in case we need it, we don't need to then calculated separately, we can simply take the result of this function here and store it in a variable and then use that.
+
+
+
+// Besides the push method, which can add element to the end of the array, ther's also method the add element to the beginning of the array, So that is the __unshift method
+
+const addDataBeg = friendsName.unshift("Neha"); // add data to the beginning of the array element, just like the push method the unshift method also return the length of an new array.
+console.log(friendsName);
+console.log(addDataBeg);
+
+
+
+// Besided the push method, and unshift menthod, we also have a methods to remove elements from arrays using pop method. Basically it is the opposite of the push method. So this means the pop will remove the last element of the array.
+
+friendsName.pop(); // this time we don't need to passin any argument and that's because there is no information needed really to just take out the last element.
+
+// And if we did it twice for example, which of coursewe can also do then "anurag" should also be gone
+
+
+friendsName.pop();
+
+// The pop method also return something, but this one doesn't return the length of the new array but instead, it returns the remove element. And so that can sometimes be useful.
+
+const remArrData = friendsName.pop();
+console.log(friendsName, remArrData);
+
+
+// And finally, let's also remove the first element from the array using shift methods
+
+const remFirstData = friendsName.shift(); // we didn't need any argument and once again this method will return the element that was removed
+console.log(remFirstData,friendsName);
+
+
+// Next up, there is very useful method that tells us in which position a certain element is in the array.
+
+const indxArrData = friendsName.indexOf("Nikita");
+console.log(indxArrData, friendsName);
+
+
+
+// Now finally to finish this section, there is very similar method to the indexOf but which is a bit more modern and also very useful. So this one is an ES6 method and it's called __includes. So __included, instead of returning the index of the element will simply return true if the element is in the array and false if it's not.
+
+friendsName.push(23); //remember add the value to the end of the array element
+
+// This method actually use strict equality for this check
+
+const inclArrData = friendsName.includes("Shubhrans");
+const inclArrData1 = friendsName.includes("Kartik"); 
+let inclArrData2 = friendsName.includes("23");  //Output: false,  it return false, because it is testing with strict equality, which means that it does not do type coercion. And since 23 to string is different from 23 to number it gives us false
+inclArrData2 = friendsName.includes(23); // Output: true, but if I test directly to the number then it should be true
+console.log(inclArrData);
+console.log(inclArrData1);
+console.log(inclArrData2);
+console.log(friendsName);
+
+
+
+// So we can use the __includes method to write the conditionals. So that's one of the very useful applications of this method. For example
+
+if (friendsName.includes("Shubhrans")) { // this here returns a boolean and also you already know how the if statement works. So only if this is true, So if the array does include a string with "Shivani" only then this code is executed
+console.log(`You have a friend called ${friendsName[0]}`);
+}
+
+
+// So that's probably the most use case of the includes method
 
 
 
