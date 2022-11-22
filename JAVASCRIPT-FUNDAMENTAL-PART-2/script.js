@@ -889,6 +889,180 @@ console.log(yearsUntilRetirement1(1940, "Shubh")); // output will be the negativ
 
 
 
+/****************** INTRODUCTION TO ARRAYS IN JAVASCRIPT ******************/
+
+// Let's now talk about our first data structure and that's gonna be arrays.
+
+/* QUES: Let's say i want to store my friend name in a variable so that i could use them later in my program.
+
+So with the knowledge that we have so far, this is how we would do it.
+*/
+
+
+
+// const friendName1 = "Tushar";
+// const friendName2 = "Aditya";
+// const friendName3 = "Avinash";
+
+
+
+// Now this isn't really fun to do right, because imagine that we wanted to represent 10 friends and then we would have to create 10 variables, so that doesn't sound like fun.
+
+// Instead, wouldn't it be great to essentially bundle all these values together into some bigger container? Well, that's why we have data structure in javaScript. And arrays are such a data structure.
+
+// So an array is like a big container into which we can throw variables and then later reference them.
+
+// And that's super important because programming is most of the time all about data. So we get data from somewhere, we store and process data and then we five some data back. And that data it has to go somewhere, So it has to be stored in some place, And for that we use data structure, just like arrays. So in case we have more, than just a single value.
+
+/* TWO MOST IMPORTANT DATA STRUCTURE AT LEAST IN JAVASCRIPT ARE
+
+1. ARRAYS
+2. OBJECTS 
+
+*/
+
+// And now let's learn all about arrays
+
+// Istead of doing this,
+const friendName1 = "Tushar";
+const friendName2 = "Aditya";
+const friendName3 = "Avinash";
+
+// Lets create a variable
+
+const friendsName = ["Tushar", "Aditya", "Avinash"] ;// we use the brackets to create a new array and in there, we can put different value separated by commas ,. and make sure these comma here is outside of the string
+
+// And that is the absolute basics about arrays, so that's how we create one and at least that's way we use the most but there's actually another way.
+
+console.log(friendsName);
+
+// different way of creating an array which was using this array function.
+
+// So you see that it's a function because we called it here basically using this parenthesis (). And we also needed to use the new keyword because otherwise it's not gonna work.
+
+const months = new Array("Jan", "Feb", "March", "April"); 
+// An array can hold as many values as we want and also values of any type that we'd like.
+
+
+// But anyway, it's way more usual to just use the brackets [] like I did up here, which is called the literal syntax.
+
+/*  So now we know how to create Arrays, so basically how to put elements into an array, but of course we need to have a way to get them out and for that, we use the square brackets syntax again. */
+
+console.log(months[0]); // Arrays are zero-based, which means the first element is the element number zero. So if we want the element at position zero, then we write variable name square bracket[0], in this case months[0].
+
+console.log(months[3]);
+
+// We can also get the actual number of elements that is in the array.
+
+console.log(months.length); //Output: 4, so this.length is something called a property. This section is coming when we talk about objects later. Anyway what matters, is that this is gonna be the exact amount of elements that is in the array. And it's not zero-based. It actually gives the number of element in the array. So we can use this to automatically get the last element of any array. And that is useful so that we don't have to count how many elements are in the array.
+
+console.log(months[months.length - 1]); // and that's because months.length is not zero-based. And so we always need to subtract one from this number here.
+
+// so what does also means inside of these brackets [months.lenth - 1], we can put any expression. It doesn't just have to be a number. So here we have this expression, and remember that an expression is something that produce a value. And so this one here [months.length - 1] is gonna calculated first. So it will compute [months.length] which is 4 and 4 - 1 is 3, And then it will get friends at position 3.
+
+// And that's also one of the reasons why it's important that you know what is an expression and what is a statement. Because once again, we could not put a statement in here. So inside of these [] square brackets, javaScript expects an expression, not a statement.
+
+// Anyway we got the correct element from the array, which is the element number 3. And so that means that this automatic retrieval of the last element work just fine
+
+// And moving on, there is more stuff that we can do. So this square bracket syntax [], that we used here not only for retrieving elements from the array, but we can also change it to add elements to the array. So let's say that for some reason, I'm not longer friends with "Tushar" and that I want to replace him with some other friends. So now we can change and mutate the array in the same way
+
+friendsName[0] = "Akash"; // I'm doing manually here again
+console.log(friendsName); // now log friendName array to the console and we should already see the new array. So the element no 1 is now replaced with "Akash"
+
+// But wait didn't I said in the function reviewing coding challenge #1, that the variables declared with const, cannot be changed. And we did declare the friendsName variable here with const, right? But I still able to change one element of the array here from "Tushar" to "Akash", right? So isn't that a contradiction.
+
+//Well what I did'nt tell you at that time, is that only primitive values, are immutable. But an array is not a primitive value. And so we can actually always change it so we can mutate it. 
+
+// And it works this way because of the way that javaScript stores things in memory. And we can discuss in details in other lecture or section about HOW JAVASCRIPT WORKS BEHIND THE SCENE.
+
+// So what you need to know for now is that we can actually mutate arrays even though they were declared with const
+
+// Now what we cannot do is to actually replace the entire Array. So we cannot do this, that would be illegal.
+
+
+// friendsName = ["Shivani", "Mohan", "Shubhra"];
+// console.log(friendsName);   // error coming in console
+
+
+
+
+/* Array can actually hold values with different types all at the same time */
+
+const adarsh = ["Adarsh", "Tripathi", 2022 - 1998 , "Employed", ] ; // here we can actually calculate the age from other values, And that works because in each position, javaScript simply expects an expression. And if you do this, [2022 - 1998 ], so this is perfectly fine. So this will here produce a value, And so that's the value that will then be stored at position number 2 of the new array. And that also work for variables. Like this
+
+const firstName = "Adarsh";
+let adarshT = [firstName, "Tripathi", 2022 - 1998, "Coder", "Self-Employed"]; // here instead of literally writing "Adarsh" that we could use this variable name. So this would then be replaced with the actual string. 
+
+//And actually we could even put other arrays inside of an array. So lets put the friendsName[] array here in the adarshT array[]. And then with these we have all the relevant data about adarshT in one handy data structure.
+
+// And that's really convenient because then we don't have to create one variable for each of the data points.
+
+adarshT = [firstName, "Tripathi", 2022 - 1998, "Coder", "Self-Employed", friendsName];
+console.log(adarshT);
+console.log(adarshT.length);
+
+
+// ******************* EXERCISE **************************
+
+const calcAge7 = function(birthYear) {
+  return 2022 - birthYear
+}
+
+// And now let's say that we have an array of birth Years and hen we wan to calculate the ages for some of them
+
+const ageCalcArray = [1998, 1992, 1993, 1996, 2010];
+
+// and now we will be avle to use the calcAge7 function and then store the result of calculating the ages for some of the years into a new array. So let's see how
+
+// Now let's see first how we could not do it.
+
+// For example, if we wanted to use the calcAge7 function for all the elements in this array, we could not do this
+
+const result = calcAge7(ageCalcArray); // this would be not legal and it's not gonna work because this (ageCalcArray) is an array. And if we pass this (ageCalcArry) array as an argument to the calcAge7 function it doesn't know what to do with it. Because this operation here (2022 - birthYear) expects a single values and we cannot do a number - and array.
+
+console.log(result); // Output: NaN (Not a Number)
+
+// So that's the result of attempting to subtract a whole array from a number
+
+// We cannot do operations with array, but we can still use the calcAge7 function on individual elements of the array.
+
+// So let's assume I want to calculate the ages for the first, second and last array element
+
+const ageCalculate1 = calcAge7(ageCalcArray[0]);
+const ageCalculate2 = calcAge7(ageCalcArray[1]);
+const ageCalculate3 = calcAge7(ageCalcArray[ageCalcArray.length - 1]); // but I dont want to count the number of elements in the array. So used the trick, which is to first compute the length of the array and then -1 to account for the fact that the index of the array is zero based.
+console.log(ageCalculate1, ageCalculate2, ageCalculate3);
+
+// Since we started with an array, it usually a good idea, to also end up with a new array. So let's create a new array agesCalculate and now what should I put in here? Well remember how I said up here well any position of the array is an simply needs to be an expression. So something that produces a value. And as we already know this here produces a value as well
+
+/* 
+= calcAge7(ageCalcArray[0]); // this here produces a value as well. It is an expression. So I can take this and simply put it as a position of an array element
+= calcAge7(ageCalcArray[1]);
+= calcAge7(ageCalcArray[ageCalcArray.length - 1]);
+
+*/
+
+// And javaScript will then go ahead compute this value = calcAge7(ageCalcArray[0]); and place it in teh array
+
+const agesCalculate = [
+  calcAge7(ageCalcArray[0]), // here we simply put a expression value as a position of an array element. Basically we can place function calls into an array just fine, because they will produce a value.
+  calcAge7(ageCalcArray[1]),
+  calcAge7(ageCalcArray[ageCalcArray.length - 1]),
+  2022 - 1970 // add one more expression for your reference
+];
+console.log(agesCalculate); // and indeed we get the three same values, then we had up here separately. No all nicely placed into this array. And this of course works, because javaScript will start by running this function calls and then placed all the results in an array afterwards.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

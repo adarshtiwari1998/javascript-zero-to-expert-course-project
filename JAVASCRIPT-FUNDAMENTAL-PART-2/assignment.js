@@ -131,6 +131,8 @@ GOOD LUCK �
 
 */
 
+/*
+
 const calcAverage = (a, b, c) => (a + b + c) / 3; // this is basically a generic function just to calculate the values of any three numbers;
 console.log(calcAverage(3,4,5));
 
@@ -162,10 +164,15 @@ checkWinner(scoreDolphins, scoreKoalas);
 
 // checkWinner(444, 888);
 
+
+*/
+
 /* 
 It is important to keep in mind, that these function are all independent from others. It is not mandatory to call the value we just calculated before in checkWinner function. Any other values will work just as well.
 */
 
+
+/*
 
 // TEST 2
 
@@ -175,3 +182,6 @@ scoreKoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins, scoreKoalas);
 
 checkWinner(scoreDolphins, scoreKoalas);
+
+
+*/
