@@ -1192,6 +1192,9 @@ COMMENT END */
 
 // So after arrays it's time to learn another data structure in javaScript, which is objects. So up util this point we have been using arrays as a data structure to basically store multiple related values in the same variable
 
+
+/* COMMENT START
+
 const adarshBio = [ // we can see that I'm writing this in multiple line now. And that is perfectly acceptable. So sometimes it is easier to give you an overview of a data structure. And as long as we remember that , commas here after each elements, we're gonna be fine. 
 "Adarsh",
 "Tripathi",
@@ -1240,9 +1243,13 @@ const adarsh1 = {
 
 // So to recap just like array, we use objects to essentialy group together different variables that really belong together such as the properties of, const = adarsh1 = {}, that we've been working with.
 
+
+COMMENT END */
+
+
 /* 
 
-Note:
+Note: DIFFERENCE BETWEEN OBJECTS AND ARRAYS
 
 - Now the big difference between objects and arrays is that in objects, the order of these values does not matter at all when we want to retrieve them.And that's important to keep in mind.
 
@@ -1259,6 +1266,187 @@ Note:
 */
 
 // So how we get data from an object? we discuss this in the next section
+
+
+
+
+/****************** DOT VS. BRACKET NOTATION IN JAVASCRIPT ******************/
+
+
+/* 
+
+In this section we gonna learn,
+
+- how to retrieve data from objects
+
+- how to change dara in objects using both dot and the bracket notation.
+
+*/
+
+const adarsh1 = {
+  firstName: "Adarsh", // the value can be any type that we want here. Then to define another key values pair, we just separate them with commas , just like in the array.
+  lastName: "Tripathi",
+  age: 2022 - 1998, // we can put any expression here, so this will be calcuated adn then will be assigned to age
+  designation: "Coder",
+  employment: "Self-Employed",
+  friends: ["Tushar", "Nikil", "Avinash", "Nitesh"]
+};
+
+console.log(adarsh1); // Output: here we're actually not gonna see a big surprise, so all it shows us it's really the same object that we just wrote in code. So it looks the same, so essentially just as it is here in the code, the only thing is different is that the properties here are order alphabetically. So that's what I mean when I said in the introduction to objects section that the order of properties in object does not matter. And that's because we simply get the properties from the object using the property name itself.
+
+
+// So the first way of getting a property from an object is by using the dot notation and that is very straight forward
+
+
+console.log(adarsh1.lastName); // Output: tripathi,  so lets say that we want to get the last name. So all you have to to is to write object name in this case (adarsh1.lastName) and that's it. So this . dot here is actually an operator which will go this object and then retrieve to property with the name that we specified here.
+
+
+// Now we can do this exact same thing using the brackets notation. 
+
+console.log(adarsh1["age"]); // we use brackets, in a similar way in which we retrieve data from an array. But here we need to specify a string with the property name, so with the key
+
+// console.log(typeof adarsh1["age"]);
+
+/* 
+
+Now the big difference between these two here is that,
+
+- in the bracket notations here, console.log(adarsh1["age"]); we can actually put any expression that we'd like. 
+
+- So we don't have to explicitly write the string here, but instead we can compute it from some operation because remember that an operation is basically an expression. So something that produces a value and so we can put that here inside the [] brackets.
+
+*/
+
+
+// Imagine that we had a variable in which we store the repeating part in firstName and lastName. So let's store just that inside of an variable
+
+const nameKey = "Name";
+
+// now we can use the variable for first and the last name
+
+console.log(adarsh1["first" + nameKey]); // here we can build this string using a template literal, but in this case it it's not really necessary.
+
+console.log(adarsh1["last" + nameKey]); // last name
+
+// So what will happens here is that as javaScript see this line of code, it will start by executing the plus operation so it will create a string first name, and then it will go to the adarsh1 object and retrieve that property. And the same for the last name. And so how we get Adarsh and Tripathi
+
+// And doing something like this is more common then you might think and so that't why it's important that we understand that in the square brackets, we could put any expression here.
+
+// Now the same think would not work with the dot operator or the dot notation.
+
+// So we cannot write this
+
+// console.log(adarsh1.last" + nameKey); // this would not work at all, error coming unexpected string
+
+// So that's the reason why we need the brackets notation and dot notations, and in dot notations we have to use the real final property name and not a computed property name
+
+// For example this one, 
+
+// (adarsh.lastName); // here lastName is real property name and it appears in the object so that's why it works in this case.
+
+
+
+/*
+QUES:  IN WHAT SITUATION SHOULD WE USE THE DOT NOTATION AND WHEN DO HAVE TO USE DEEP BRACKETS NOTATION?
+
+- So when we need to first compute the property name like we did here with first and the last name like this;
+
+// console.log(adarsh1.["first" + nameKey]);
+// console.log(adarsh1.["last" + nameKey]);
+
+- Then of course we have to use the bracket notation [].
+
+- In any other case, just use the dot notation which looks a lot cleaner and it's also easier to use.
+
+*/
+
+
+// Another example: Let's say we don't know yet which property we want to show and instead we get this information from some user interface. So that we can use the prompt function
+
+// prompt(); //prompt is another built-in function that is built in javaScript and that we can use in any script.
+
+// prompt("What do you want to know About Adarsh? Choose between firstName, lastName, age, designation, employment and friends");  // so here we can write a string and then this will create a popup window with a input field.
+
+// And remember this function will return a string and this string, we just need to store into some variable.
+
+const mentorInterested = prompt(
+  "What do you want to know About Adarsh? Choose between firstName, lastName, age, designation, employment and friends"
+);
+
+console.log(mentorInterested); // so if you enter designation, so what we want to do now is to basically display the job here in the console, because that't what the user choose. So how will we do that?
+
+// Can we use the dot notation?
+
+// console.log(adarsh1.mentorInterested); // output: undefined
+
+// undefined is what we get when we try to access a property or an object that does not exist.
+
+// So adarsh1 is not a property called mentorInterested right?
+
+// So therefore the result of trying to access "mentorInterested" on adarsh1 is undefined.
+
+// So what we need to do here, instead of dot notation . , use the bracket notation [], because then we can put any expression here, which in this case will be interested in.
+
+console.log(adarsh1[mentorInterested]); // so javaScript will now come here and replace "mentorInterested" with the actual value of the variable, and then that't the one that will be looked up on the adarsh1 object
+
+// And now when we say designation, we get the correct result. Great
+
+// And now we can understand, the big difference between the dot notaion and the bracket notation. And why the bracket notation gives us the correct result that we are looking for.
+
+/* So again, it's because: 
+
+console.log(adarsh1[mentorInterested]); // basically this expression that we put here between the brackets will get evaluated,
+
+
+const mentorInterested = prompt(
+  "What do you want to know About Adarsh? Choose between firstName, lastName, age, designation, employment and friends"
+);   // then this one here is designation, and what the othere option we choose.
+
+
+*/
+
+// So we know that undefined is a falsy value, so we can use that to our advantage now, and create some logic that we'll print a custom string whenever a user tries to access a property within the object that doesn't exist. So let's do that
+
+if(adarsh1[mentorInterested]) { // if the value exist that it is a truthy value because it is not undefined. So any string that is not empty or any number that is not zero will then trigger the code block here to be executed
+  console.log(adarsh1[mentorInterested])
+} else { // now, if one of these properties are actually empty or zero or not exist, then we would go to the else block here
+  console.log(
+    "Wrong Property Request!❌. You can choose between firstName, lastName, age, designation, employment and friends"
+  );
+}
+
+
+// And Now you will learn how to retrieve elements from an objects, let's also learn how to use both the dots and the brackets notation to add new properties to the object. And that's a very straight forward. So all you have to do
+
+adarsh1.location = "Delhi";
+adarsh1["linkedin"] = "@adarshtripathi";
+console.log(adarsh1); // now, we have the location and twitter here as well in the object and of course we can put any expression in between the brackets []. Just like before it works in just the same way.
+
+
+
+// CHALLENGE
+
+// "Adarsh has 4 friends, and his best friends is called Avinash."
+
+// Now, do you remember how to get the number of elements in an array? It is by writing the array dot . length. right?
+
+// Here, basically you can see here that length is also a property that is available on all arrays. So it's a property that we don't define ourselves, but it's automatically available.
+
+// But now that you know about the dot notation, you can also start to understand that the dot length is just a property that is available on all the arrays
+
+// Here (adarsh1.friends ) is an array, and on there, we can simply then request dot.length
+
+// So in the sense on the array, we also have the brackets notation.
+
+  console.log(
+    `${adarsh1.firstName} has ${adarsh1.friends.length} friends, and his best friend is called ${adarsh1.friends[2]}.`
+  );
+
+  // Now, in terms of operator preceedings, let's quickly check out why it actually works this way.
+
+
+
+
 
 
 
