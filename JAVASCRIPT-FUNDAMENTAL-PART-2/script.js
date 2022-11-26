@@ -1283,6 +1283,11 @@ In this section we gonna learn,
 
 */
 
+
+/* COMMENT START
+
+
+
 const adarsh1 = {
   firstName: "Adarsh", // the value can be any type that we want here. Then to define another key values pair, we just separate them with commas , just like in the array.
   lastName: "Tripathi",
@@ -1307,6 +1312,12 @@ console.log(adarsh1["age"]); // we use brackets, in a similar way in which we re
 
 // console.log(typeof adarsh1["age"]);
 
+
+
+continue.....  */
+
+
+
 /* 
 
 Now the big difference between these two here is that,
@@ -1316,6 +1327,11 @@ Now the big difference between these two here is that,
 - So we don't have to explicitly write the string here, but instead we can compute it from some operation because remember that an operation is basically an expression. So something that produces a value and so we can put that here inside the [] brackets.
 
 */
+
+
+
+/*  continue... 
+
 
 
 // Imagine that we had a variable in which we store the repeating part in firstName and lastName. So let's store just that inside of an variable
@@ -1346,6 +1362,10 @@ console.log(adarsh1["last" + nameKey]); // last name
 
 
 
+continue....  */
+
+
+
 /*
 QUES:  IN WHAT SITUATION SHOULD WE USE THE DOT NOTATION AND WHEN DO HAVE TO USE DEEP BRACKETS NOTATION?
 
@@ -1359,6 +1379,11 @@ QUES:  IN WHAT SITUATION SHOULD WE USE THE DOT NOTATION AND WHEN DO HAVE TO USE 
 - In any other case, just use the dot notation which looks a lot cleaner and it's also easier to use.
 
 */
+
+
+
+/*  continue.... 
+
 
 
 // Another example: Let's say we don't know yet which property we want to show and instead we get this information from some user interface. So that we can use the prompt function
@@ -1393,6 +1418,12 @@ console.log(adarsh1[mentorInterested]); // so javaScript will now come here and 
 
 // And now we can understand, the big difference between the dot notaion and the bracket notation. And why the bracket notation gives us the correct result that we are looking for.
 
+
+
+continue.....  */
+
+
+
 /* So again, it's because: 
 
 console.log(adarsh1[mentorInterested]); // basically this expression that we put here between the brackets will get evaluated,
@@ -1404,6 +1435,12 @@ const mentorInterested = prompt(
 
 
 */
+
+
+
+/* continue.... 
+
+
 
 // So we know that undefined is a falsy value, so we can use that to our advantage now, and create some logic that we'll print a custom string whenever a user tries to access a property within the object that doesn't exist. So let's do that
 
@@ -1443,6 +1480,308 @@ console.log(adarsh1); // now, we have the location and twitter here as well in t
   );
 
   // Now, in terms of operator preceedings, let's quickly check out why it actually works this way.
+
+
+
+COMMEND END */
+
+
+
+
+/****************** OBJECTS METHODS IN JAVASCRIPT ******************/
+
+
+/* 
+
+- So we learn object just like array, can hold different types of data. And they can hold even an array and in fact, they could even hold objects inside objects.
+
+- But now we can take it even further, and for that, remember how I said, that function are really just another type of value. And if a function is just a value then that means that we can create a key value pair in which the value is a function.
+
+- And that then means that we can in fact, add functions to objects. So let's now see how
+
+*/
+
+
+
+/* 
+
+
+
+const adarsh1 = {
+  firstName: "Adarsh", // the value can be any type that we want here. Then to define another key values pair, we just separate them with commas , just like in the array.
+  lastName: "Tripathi",
+  birthYear: 1998, // we can put any expression here, so this will be calcuated adn then will be assigned to age
+  designation: "Coder",
+  employment: "Self-Employed",
+  friends: ["Tushar", "Nikil", "Avinash", "Nitesh"],
+  hasDriversLicense: true, // also add a boolean value here, just to show you we can hold all kinds of different data types in one object.
+
+  // But now let's also add a function as a key value pair. So to do that, all we have to do is to add another key here and the function that we want to add it again here is calcAge function.
+
+  // So to that, let's simply add the name basically a function name here as a key. So as a property.
+
+  // calcAge: function (birthYear) {
+  //   return 2022 - birthYear;
+  // }, // and here, we can simply specify a function as an expression. And that works because an expression produces a value.
+
+  // this is very similar like this we use to do it before
+  // const calcAge = function(birthYear) { return 2022 - birthyear }
+  // you see this is preety similar, the difference is just in the syntax because now calcAge is not a regular variable like here.  // const calcAge = function(birthYear) { return 2022 - birthyear };  but it's a property of the adarsh1 object. So therefor we use the colon here, calcAge: function(birthYear) {return 2022 - birthyear}, but rest here is exactly the same
+
+  // So that's why it was very important that you understood what a function expression actually is. Because here we need the function expression to create this method. And that's what the function is called.
+
+  // "So any function that is attached to an object is called a method"
+
+  // So of course we could not use a function declaration here like this,
+
+  // function CalcAge (birthYear) {} // that would not work, we certainly get an error here. Because this is declaration and so it doesn't work here. Here we need an expression. So this will work indeed
+
+  // calcAge: function (birthYear) {return 2022 - birthYear}
+
+  // So if you can think of functions as simply being values, then you can see that a method is actually also a property. It just happens to be a property, that holds a function value. So here we
+
+  // lastName: "Tripathi",       // STRING VALUE
+  // friends: friends: ["Tushar", "Nikil", "Avinash", "Nitesh"],                    // ARRAY VALUE
+  // hasDriversLicense: true,    // BOOLEAN VALUE
+  // calcAge: function(birthYear) {return 2022 - birthYear}    // FUNCTION VALUE
+
+  calcAge: function (birthYear) {
+    // console.log(birthYear);
+    return 2022 - birthYear;
+  },
+};
+
+
+
+// And now just like we can access any other property, we can also access the calcAge property or method.
+
+// console.log(adarsh1.calcAge(prompt("What your age"))); // here calcAge is a function value, and just like any other function in order to call it, we use the parenthesis. And now we can pass the argument or year here and so that should then calculate our ages
+
+
+console.log(adarsh1.calcAge(1998));
+
+// So the operator proceedings table the first things that happens here is the adarsh1["calcAge"] is computed, so this here will become the function value, and then with the parenthesis, we call this function value here and passed (1998)
+
+
+// You could also get the value from the user using the prompt function like this, 
+
+
+
+// const dummy = adarsh1["calcAge"](prompt("What's your Birth of Year!"));
+
+// console.log(`You are ${dummy} year's old.`);
+
+
+
+// And you could also access this method using the bracket notation
+
+// Because again, it's just as if it was a normal property
+
+console.log(adarsh1["calcAge"](1998));  // so this here (adarsh1["calcAge"]) is a function and we call this function using the parenthesis.
+
+// So the operator proceedings table, the same thing here, so here we access the property "calcAge" using the brackets ["calcAge"] and then here, adarsh1["calcAge"], basically be replaced with the function and then we call the function right here, and passed value, (1998) just like before
+
+
+// So alright, you might have noticed that the birth year (1998), that we passed here as an argument to the method is actually already defined in the, adarsh1 object itself up here, right?
+
+
+// const adarsh1 = {birthYear: 1998};
+
+
+*/
+
+
+// so we already have this information in the adarsh1 object. So writing this same number here, const adarsh1 = {birthYear: 1998}; and here, console.log(adarsh1.calcAge(1998)); is not ideal because we might make a mistake and pass in the wrong year in one of them accidentally, and then it would be wrong. And even if we do not make any mistake this is still not ideal because we are not keeping our code dry. So we're violating the don't repeat yourself principle. So if we know the birthYear of adarsh, so it would only be written in one place, not in multiple places, because for some reason if that might be change, then we have to change it everywhere. So keep in mind, that's alwayse a philosphy that don't repeat yourself.
+
+// So what if we could actually aceess this birthYear property  const adarsh1 = {birthYear: 1998} directly from the adarsh1 object instead of having to pass it in here, console.log(adarsh1.calcAge(1998));
+
+// Well it turns our that we actually can, because that's because in every method javaScript gives us access to a special variable called "this".
+
+// So what can we do now in this calcAge function,
+
+
+const adarsh1 = {
+  firstName: "Adarsh",
+  lastName: "Tripathi",
+  birthYear: 1998,
+  designation: "Coder",
+  employment: "Self-Employed",
+  friends: ["Tushar", "Nikil", "Avinash", "Nitesh"],
+  hasDriversLicense: true,
+
+  calcAge: function () {
+    // console.log(this); // we can see in the console the whole adarsh1 object, because the adarsh1 object is the one who is calling this method or this function
+
+    // 1:  we can read the birthYear directly from this object without having to pass it in as a parameter here into this function. So now we no longer need this parameter birthYear, and we will read the birthYear directly from the object. And for that again, we will use "this" keyword.
+
+    // 2:  So the "this" keyword or this variable is basically equal to the object on which the method is called, or in other words, it is equal to the object calling the method. So let's see who is calling the method
+
+    // 4: So let just write this.birthYear here, so then we don't need to pass the birthyear as an argument in the call method down
+    return 2022 - this.birthYear;
+  },
+};
+
+console.log(adarsh1.calcAge()); // 3: so down here, here is calcAge and the object that is calling the method is adarsh1 because that's where the dot is. So again the object is calling the calcAge method here is adarsh1. So that measn that inside this method the "this" variable or "this" keyword will point to adarsh1. 
+
+
+// so whatever appears before the dot . is the one who is calling the method. So therefore in this method "this" point to adarsh1 now, So if this point to adarsh1 then this.birthYear is of course this value that we pass right here, "const adarsh1 = {birthYear: 1998};". 
+
+// So we see the "this" keyword is really, really useful and we will learn even more about this keyword in greater detail in later section
+
+
+// So you might be argue that maybe we don't even need this confusing "this" keywords, why not just we do adarsh1.birthYear in the function expression, here instead?
+
+// const adarsh1 = {--, --, --, birthYear: 1998, --, --, calcAge: function () {return 2022 - adarsh1.birthYear}};
+
+// Well, because that would actually still violate the don't repeat yourself principle. It would work the same but let's say we need to change the name of the object, 
+
+// const adarsh2 = {--, --, --, birthYear: 1998, --, --, calcAge: function() {return 2022 - adarsh1.birthYear}};
+
+// And we call adarsh2 down here, console.log(adarsh2.calcAge()); then the code will no longer automatically work because now adarsh is not defined
+
+
+
+/* 
+
+
+const adarsh2 = {
+ birthYear: 1998,
+
+calcAge1: function() {
+
+ return 2022 - adarsh.birthYear; // 2: so we would have to keep that in mind then come here and manally change this as well to adarsh2
+
+}
+};
+
+
+console.log(adarsh2.calcAge1()); // 2. error coming adarsh is not defined
+
+*/
+
+
+// while if we had "this keyword, then everything will keep workin fine"
+
+
+/* 
+
+
+const adarsh2 = {
+  birthYear: 1998,
+
+  calcAge2: function() {
+    return 2022 - this.birthYear; // everthing keep working fine without us having to change it here as well, because now "this" will simply point to adarsh2 because that is the object calling the method. 
+
+    // So therefore it's alwayse a good idea to reference the object itself and not hard code the name of the object
+
+  }
+};
+
+console.log(adarsh2.calcAge2()); // Output: 24
+
+
+*/
+
+
+
+// However, we can actally even take this a little bit further. Let's say that we need to access the age multiple times throughtout our program.
+
+// So that would be like calling this method multiple times, console.log(adarsh1.calcAge()); console.log(adarsh1.calcAge()); console.log(adarsh1.calcAge()); console.log(adarsh1.calcAge());
+
+console.log(adarsh1.calcAge());
+console.log(adarsh1.calcAge());
+console.log(adarsh1.calcAge());
+console.log(adarsh1.calcAge());
+
+
+// So what it happens here, is that a function will get called a total of four times, so this computation here, {return 2022 - this.birthYear}; will be done four times.
+
+//  And so in case that's not a big deal, but it might be like a heavier computation that actually takes some more time. So it would be a bad practice to do this multiple times, Instead what we can do is to just calculate the age once, and store it in the object and then when we need it at a later point, we can just retrieve the age as a property from the object.
+
+
+const adarsh2 = {
+  birthYear: 1998,
+
+  // so what I trying to say is that, we can now use the "this" keyword also to store a new property.
+  calcAge2: function () {
+    this.age = 2022 - this.birthYear; // so here, age is equal to this here 2022 - this.birthYear
+
+    // So we calculate the age, then we can create a new property in the current object in this case on the adarsh2 object.
+
+    // And remember we can use the dot . notation like this, "this.age" to create a new properties in the object.
+
+    // So here we are essentially creating adarsh2.age and setting it to this age "2022- this.birthYear" that we just calculated.
+
+    // And we can simply return this age, and of course we don't even need to return anything if we didn't want to. We could make this methis only calculate the age but not even return it. But I thing it's a good practice to actually also return it.
+
+    return this.age;
+  },
+
+  getSummary: function () {
+    const summaryReturn = `${
+      adarsh1.firstName
+    } is a ${this.calcAge2()}-year's old ${adarsh1.designation}, and he has ${
+      adarsh1.hasDriversLicense ? "a" : "no"
+    } driver's license.`;
+    return summaryReturn;
+  },
+
+  // Now should we use age property or should we use calcAge 2 property, well we should use calcAge2 property because we cannot assume that calcAge2 was already called before. And if we don't call calcAge2 before we call getSummary then the age property would not exist.
+
+  // And so it's better to actually do calcAge2 here
+
+  // In template string we can easily do a function call that's not a problem at all.
+
+  // So "this.calcAge2" will call other method and then this one,  calcAge2: function () {this.age = 2022 - this.birthYear; return this.age}; will then return the age
+
+  // so "this.calcAge2()" will become the age
+
+  // And we can use the ternary operator for hasDriversLicense boolean value. So again, here we want either a or no, depending on the state of hasDriversLicense property.
+};
+
+
+console.log(adarsh2.calcAge2()); 
+console.log(adarsh2.age);  // And so now we can simply replace the function call with simply request for the age property. But we only needed to calculate the age once then from here we simply retrieve the property that we had already calculated before. And this is the most efficient solutions 
+
+
+
+// CHALLENGE 2
+
+// "Adarsh is a 24-year's old  coder, and he has a/no driver's license"
+
+console.log(adarsh2.getSummary());
+
+
+
+// Important Point: Array's are actualy also objects, they are jusr a special kind of object. And so they have function or in other words they have methods, that we can use to manipulate them like push(), pop(), shift() and unshift() and many more
+
+
+// In this section, we created our own method on our own objects
+
+
+// But here we basically used built in methods on arrays. Once again that means arrays are actually also objects. That's why they can have methods as well.
+
+
+// const adarshFriends = ["Manish", "Mohan", "Kishan"];
+// console.log(adarshFriends);
+
+// adarshFriends.pop(); // remove element from last
+// console.log(adarshFriends);
+
+// adarshFriends.push("Kishan"); // add element on last
+// console.log(adarshFriends);
+
+// adarshFriends.shift();   // shift first element
+// console.log(adarshFriends);
+
+// adarshFriends.unshift("Manish");  
+// console.log(adarshFriends);
+
+
+
+
+
+
 
 
 
