@@ -351,6 +351,11 @@ properties 'country', 'capital', 'language', 'population' and
 */
 
 
+
+/* COMMENT START
+
+
+
 const myCountry = {
   country: "India",
   capital: "Delhi",
@@ -360,6 +365,10 @@ const myCountry = {
 };
 
 console.log(`${myCountry.country} is a country, ${myCountry.capital} is the capital of ${myCountry.country}. In ${myCountry.country} there are many language spoken like ${myCountry.language}. ${myCountry.country} population is ${myCountry.population}. ${myCountry.country} is sorrounded by ${myCountry.neighbours.length} neighbour countries such as ${myCountry.neighbours}.`);
+
+
+
+COMMENT END */
 
 
 
@@ -374,6 +383,10 @@ and a capital called your state.'
 decrease it by two million using brackets notation.
 
 */
+
+
+/* COMMENT START
+
 
 console.log(
   `${myCountry.country} has ${myCountry.population} million population, ${myCountry.language[0]}- speaking people, ${myCountry.neighbours.length} neighbouring countries, and a capital called ${myCountry.capital}.`
@@ -395,3 +408,33 @@ console.log(
 );
 
 
+
+COMMENT END */
+
+
+
+/* ############  OBJECT METHODS EXERCISE #1 ############  */
+
+
+
+const myCountry = {
+  country: "India",
+  capital: "Delhi",
+  language: ["Hindi"],
+  population: 1400000000,
+  neighbours: ["china", "pakistan", "srilanka", "nepal"],
+
+  describe: function() {
+  return `${this.country} has ${this.population} million population, ${this.language[0]}- speaking people, ${this.neighbours.length} neighbouring countries, and a capital called ${this.capital}.`;
+  },
+
+  checkIsland: function() {
+    this.isIsland = this.neighbours.length === 0 ? true : false
+  }
+
+};
+
+
+console.log(myCountry.describe());
+myCountry.checkIsland();
+console.log(myCountry);

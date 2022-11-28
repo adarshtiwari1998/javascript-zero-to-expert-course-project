@@ -1588,6 +1588,8 @@ console.log(adarsh1["calcAge"](1998));  // so this here (adarsh1["calcAge"]) is 
 // const adarsh1 = {birthYear: 1998};
 
 
+
+
 */
 
 
@@ -1598,6 +1600,10 @@ console.log(adarsh1["calcAge"](1998));  // so this here (adarsh1["calcAge"]) is 
 // Well it turns our that we actually can, because that's because in every method javaScript gives us access to a special variable called "this".
 
 // So what can we do now in this calcAge function,
+
+
+/*
+
 
 
 const adarsh1 = {
@@ -1638,6 +1644,11 @@ console.log(adarsh1.calcAge()); // 3: so down here, here is calcAge and the obje
 // const adarsh2 = {--, --, --, birthYear: 1998, --, --, calcAge: function() {return 2022 - adarsh1.birthYear}};
 
 // And we call adarsh2 down here, console.log(adarsh2.calcAge()); then the code will no longer automatically work because now adarsh is not defined
+
+
+
+
+*/
 
 
 
@@ -1688,15 +1699,22 @@ console.log(adarsh2.calcAge2()); // Output: 24
 
 // So that would be like calling this method multiple times, console.log(adarsh1.calcAge()); console.log(adarsh1.calcAge()); console.log(adarsh1.calcAge()); console.log(adarsh1.calcAge());
 
-console.log(adarsh1.calcAge());
-console.log(adarsh1.calcAge());
-console.log(adarsh1.calcAge());
-console.log(adarsh1.calcAge());
+
+
+
+// console.log(adarsh1.calcAge());
+// console.log(adarsh1.calcAge());
+// console.log(adarsh1.calcAge());
+// console.log(adarsh1.calcAge());
 
 
 // So what it happens here, is that a function will get called a total of four times, so this computation here, {return 2022 - this.birthYear}; will be done four times.
 
 //  And so in case that's not a big deal, but it might be like a heavier computation that actually takes some more time. So it would be a bad practice to do this multiple times, Instead what we can do is to just calculate the age once, and store it in the object and then when we need it at a later point, we can just retrieve the age as a property from the object.
+
+
+/*
+
 
 
 const adarsh2 = {
@@ -1745,6 +1763,14 @@ console.log(adarsh2.age);  // And so now we can simply replace the function call
 
 
 
+*/
+
+
+
+/*
+
+
+
 // CHALLENGE 2
 
 // "Adarsh is a 24-year's old  coder, and he has a/no driver's license"
@@ -1776,6 +1802,10 @@ console.log(adarsh2.getSummary());
 
 // adarshFriends.unshift("Manish");  
 // console.log(adarshFriends);
+
+
+*/
+
 
 
 
