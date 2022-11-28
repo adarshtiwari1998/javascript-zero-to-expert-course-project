@@ -344,6 +344,13 @@ COMMENT END */
 /* ############  INTRODUCTION TO OBJECT ASSIGNMENT EXERCISE #1 ############  */
 
 
+/*
+1. Create an object called 'myCountry' for a country of your choice, containing
+properties 'country', 'capital', 'language', 'population' and
+'neighbours' (an array like we used in previous assignments)
+*/
+
+
 const myCountry = {
   country: "India",
   capital: "Delhi",
@@ -353,4 +360,38 @@ const myCountry = {
 };
 
 console.log(`${myCountry.country} is a country, ${myCountry.capital} is the capital of ${myCountry.country}. In ${myCountry.country} there are many language spoken like ${myCountry.language}. ${myCountry.country} population is ${myCountry.population}. ${myCountry.country} is sorrounded by ${myCountry.neighbours.length} neighbour countries such as ${myCountry.neighbours}.`);
+
+
+
+/* ############  DOT VS BRACKET NOTATION EXERCISE #1 ############  */
+
+
+/* 
+1. Using the object from the previous assignment, log a string like this to the
+console: 'Your country has 6 million finnish-speaking people, 3 neighbouring countries
+and a capital called your state.'
+2. Increase the country's population by two million using dot notation, and then
+decrease it by two million using brackets notation.
+
+*/
+
+console.log(
+  `${myCountry.country} has ${myCountry.population} million population, ${myCountry.language[0]}- speaking people, ${myCountry.neighbours.length} neighbouring countries, and a capital called ${myCountry.capital}.`
+);
+
+myCountry.population += 20000000;
+console.log(myCountry.population);
+
+console.log(
+  `${myCountry.country} has ${myCountry.population} million population, ${myCountry.language[0]}- speaking people, ${myCountry.neighbours.length} neighbouring countries, and a capital called ${myCountry.capital}.`
+);
+
+
+myCountry["population"] -= 20000000;
+console.log(myCountry.population);
+
+console.log(
+  `${myCountry.country} has ${myCountry.population} million population, ${myCountry.language[0]}- speaking people, ${myCountry.neighbours.length} neighbouring countries, and a capital called ${myCountry.capital}.`
+);
+
 
