@@ -479,6 +479,11 @@ tall.
 */
 
 
+
+/* COMMENT START
+
+
+
 const adarsh = {
   fullName: "Adarsh Tripathi",
   mass: 78,
@@ -537,5 +542,8 @@ if(adarsh.bmi > shubh.bmi) {
 }
 
 
+
+
+COMMENT END */
 
 

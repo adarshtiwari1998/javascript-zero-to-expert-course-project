@@ -1810,6 +1810,107 @@ console.log(adarsh2.getSummary());
 
 
 
+/****************** ITERATION: THE FOR LOOP IN JAVASCRIPT ******************/
+
+
+
+// When we talked about the if-else statement, I mentioned that it's a control structure, and also there are more control structures, right?
+
+// Well, one of the other control structures are loop.
+
+// So loops are a fundamental aspect of every programming language, because they basically allow us to automate repetitive tasks. So, tasks that we have to perform over and over again. 
+
+// Here, I like to use the analogy of a gym. So when we go to a gym, you might, for example, life weights, right? And let's say that you do 10 repetitions of a certain weight lifting exercise. So you can represent that, by doing something like this.🔽
+
+
+// console.log("Lifting weight repetition 1 🏋️‍♂️");
+// console.log("Lifting weight repetition 2 🏋️‍♂️");
+// console.log("Lifting weight repetition 3 🏋️‍♂️");
+// console.log("Lifting weight repetition 4 🏋️‍♂️");
+// console.log("Lifting weight repetition 5 🏋️‍♂️");
+// console.log("Lifting weight repetition 6 🏋️‍♂️");
+// console.log("Lifting weight repetition 7 🏋️‍♂️");
+// console.log("Lifting weight repetition 8 🏋️‍♂️");
+// console.log("Lifting weight repetition 9 🏋️‍♂️");
+// console.log("Lifting weight repetition 10 🏋️‍♂️");
+
+
+// But anyway, you can start to guess that this is probably not a best practice, just imagine that we had 30 repetitions instead of just 10. And then of we wanted to, for example change some word here in the string, then we would have to change that in all of them. So, this really violated the don't repeat yourself principle, right? Because we are basically repeating the same code here 10 times, and all we're changing just this number
+
+
+// So instead of doing all this, we can now create a loop, adn then put one of these lines of code in there. And the loop will then run that code over and over again, until we tell it to stop.
+
+// And so let's implement a so called for loop now, and that's a loop, which has a counter. So let's do that.
+
+// It is little bit like a if statement, and this is for statement. And so it looks similar.
+
+// Now, the loop statement has three parts. The first part is the "initial value of a counter". And in the case of this current example, the counter is the value that will start here at number 1 and go all the way to number 10.
+
+// So let's call this counter "rep" which stands for repetition. And so here, we literally create a variable called "rep". And we started at one, because well that's our first repetition.
+
+// Okay, and here, we need to use a let variable because this counter will later be updated by the for loop.
+
+// so here,( let rep = 1) is the first part of for statement and then we use semicolon ; and go to the second part.
+
+// And the second part is the logical condition that is eveluated before each iteration of the loop. So before each time, that the code in the loop is executed.
+
+// So again, this condition (rep <= 10) that we just described here, will be evaluated before each iteration of the loop. Now if the condition is true, then the next loop iteration will run. But as soon as this condition is false, then the loop stops. And so no more code will then be executed. So basically the loop will keep running while this condition stays true.
+
+// So for loop keeps running, while condition is TRUE.
+
+// And now the each iteration of the loop the "rep" counter will get incresed. And so at a certain point it will reach 10, and with 10 just condition is still true. So 10 is still less or equal than 10. But then after that it will be 11, so then repetition is no longer, less or equal 11. And then the loop will stop. And at that point, we will have printed these 10 strings basically.
+
+
+// console.log("Lifting weight repetition 1 🏋️‍♂️");
+// console.log("Lifting weight repetition 2 🏋️‍♂️");
+// console.log("Lifting weight repetition 3 🏋️‍♂️");
+// console.log("Lifting weight repetition 4 🏋️‍♂️");
+// console.log("Lifting weight repetition 5 🏋️‍♂️");
+// console.log("Lifting weight repetition 6 🏋️‍♂️");
+// console.log("Lifting weight repetition 7 🏋️‍♂️");
+// console.log("Lifting weight repetition 8 🏋️‍♂️");
+// console.log("Lifting weight repetition 9 🏋️‍♂️");
+// console.log("Lifting weight repetition 10 🏋️‍♂️");
+
+
+
+// so, speaking of increasing the counter, that is actually the third part of the for statement, So another semicolon ; here. And now here, we actually update the counter after each iteration. So that's necessary, because right now, the counter will just stay at 1 foreever. So this condition here (let rep = 1; rep <= 10) will never be false. So what we do here, is to now increase the counter by one after each iteration. So we can say (rep = rep + 1). But does this lokk familar to you. So basically increasing the value by just one. Remember in the last section, we actually learned about a special operator which does just this, but in a much similar way. Instead of writing (rep = rep + 1) we can simply write (rep++). 
+
+// And so this will (rep++) take the rep value, and increase it by 1. Alright, and now we have to do, is to write the code that we want to be repeated
+ 
+for (let rep = 1; rep <= 10; rep++) {
+console.log("Lifting weight repetition 1 🏋️‍♂️"); // it will print this strings 10 times
+}
+
+
+// So now, let's actually use this counter variable "rep" that we created here, to actually increase the number in the string that we're printing out.
+
+// So how you think we will do that? Well it actually simple, all we have to do is to replace this number here, ("Lifting weight repetition "1" 🏋️‍♂️"); with the current value of he counter. Because this variable (let rep = 1; rep <= 10; rep++) "rep" that we defined here, it's just a normal variable. And it's gonna be available here inside of this code block. So let's transform this to a template string, so that we can then insert that variable, into the string. 
+
+
+// So, we get rid of the the hard coded value. And now we basically dynamically built the string. So here, all we need to do is to put the rep variable.
+
+for(let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weight repetition ${rep}`); // so that's works exactly same, what we wrote here manually in the beginning.
+}
+
+// So here, we start at one, because we wanted to start at repetition number one. But, we could also start of course any number if you want like 4,5,7,8 etc. After each iteration of the loop, we then increase this counter value, by exactly one. And this happens by the end of the iteration. So in the first interation, this strings is locked to the console with the current repetition, which stands at 1. So this here ("Lifting weight repetition ${rep}) will be replaced by one ("Lifting weight repetition 1") and then afterwards, the rep counter will be updated to two. Then in the next iteration, the same string here is printed, but now with ${rep} at number 2. Then "rep" is updaetd from two to three, and so on and so forth. And this looks keep running, whule the rep variable is less or equal 10 in this case. So basically, while this condition (rep <= 10) is true, and that's how we achive exactly 10 repetitions.
+
+// So what the loop does, is to verify before each repetition if all condition here still holds true, and only if it does it will keep running the loop. So it will execute the next iteration. And so it will execute this block of code here. console.log(`Lifting weight repetition ${rep}`) one more time.
+
+// Alright, and in the nutshell, that's how the for loop works in javaScript.
+
+// In the next section, we will see some more useful applications of the for loop. And also talk about another type of for loop that we have in javaScript.
+
+
+
+
+   
+
+
+
+
+
 
 
 
