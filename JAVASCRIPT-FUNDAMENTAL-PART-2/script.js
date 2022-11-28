@@ -1813,6 +1813,10 @@ console.log(adarsh2.getSummary());
 /****************** ITERATION: THE FOR LOOP IN JAVASCRIPT ******************/
 
 
+/* COMMENT START
+
+
+
 
 // When we talked about the if-else statement, I mentioned that it's a control structure, and also there are more control structures, right?
 
@@ -1901,6 +1905,284 @@ for(let rep = 1; rep <= 10; rep++) {
 // Alright, and in the nutshell, that's how the for loop works in javaScript.
 
 // In the next section, we will see some more useful applications of the for loop. And also talk about another type of for loop that we have in javaScript.
+
+
+
+COMMENT END */
+
+
+
+
+/****************** LOOPING ARRAYS, BREAKIGN AND CONTINUING IN JAVASCRIPT ******************/
+
+
+
+// And one of the most used applications of for loops is to loop through arrays.
+
+
+// INTRODUCTION TO OBJECT
+const adarsh = [
+"Adarsh",
+"Tripathi",
+2022 - 1998,
+"coder",
+"self-employed",
+["Mohit", "Avinash", "Sahil"],
+true
+];
+
+console.log(adarsh);
+console.log(adarsh.length);
+
+
+// now we can use a for loop to loop thorugh this array
+
+// Let's say for now that we wanted to individually log every element of the array to the console. So very simple, all we want to do is to log these five element here
+
+// And as always, we start with the counter. So let's now a traditional counter variable name has been "i" for a long time. So let's use that here as well.
+
+// And this time, we start with zero, and that's because the array is zero based. when it comes to reading element out of the array.
+
+// Lets now, actually skip the condition for now. And now updating the counter is gonna work exactly the same as before. Since we want to log all the elements, we need to update the counter variable simply by one, so again we use i++.
+
+
+// So now let's write or loop here itself, and remember all we want to log to the console is each element of the array. And so without the loop, we would write that like this, console.log(adarsh[0]).
+
+// so we would this when we write this element individually in the console.
+
+// console.log(adarsh[0]);
+// console.log(adarsh[1]);
+// console.log(adarsh[2]);
+// ...  and all the way to number 5
+// console.log(adarsh[5]);
+// console.log(adarsh[6]) does not EXIST
+
+
+// so again we want to start at adarsh[0], which is the first element, adarsh[1], adarsh[2], ... ,adarsh[5]. So that's the reason why we started the counter at zero 0. Because that't the first element that we want to get. It's adarsh[0]. And so here instead hard coding to zero, console.log(adarsh[0]), of course, we are going to use or counter variable. So that's i.
+
+
+// for (let i = 0; ; i++) {
+//   console.log(adarsh[i]);
+// }
+
+
+// so now the trickiest part is condition, so that's why we left it for the end. But now we need to actually tackle it. So for how long do we want to keep the loop running? Well it should run when "i is zero", and it should run when it's one, two, three, four, five. Because 5 is the last element. But when it's 6, it's no longer run. And that's because adarsh at six does not exist.
+
+// So that means that "i" counter variable should always stay below 6.
+
+// So as soon as the counter variable is updated to six, then the next iteration of loop will not run anymore.
+
+
+// for (let i = 0; i < 6; i++) {
+//   console.log(adarsh[i]); // we get a log of each of the elements in array. So all of the 5 of them
+// }
+
+
+// But there is actually still one problem with this, which is we hard coded the length of the array. Here with six.
+
+
+// So let's now say we want to add another element in object, let's say just true, so if we try to see in the console now, well, it will not logged. Because of course we are still telling javaScript that "i" should stay below 6. So it will not print the array at position number 6, which is now exist.
+
+// And so the solution to this, is to not hard code the array length value here, but to compute this value. Basically to get it from the javaScript itself.
+
+// And how can we get this number? Well, actually this "6" is actually the length of the array. So 6 is exacly the number that we put here. And so we can simply replace the hard-coded value with the dynamically calculated one. And that (adarsh.length) remember.
+
+
+
+// for (let i = 0; i < adarsh.length; i++) {
+//   console.log(adarsh[i]); // we get a log of each of the elements in array. So all of the 6 of them
+
+//   console.log(adarsh.length);
+// }
+
+
+
+// So if I now go back to the object and adding some more property like boolean value true. Then (adarsh.length) will now be 7. And that happens automatically, and we don't have to manually change any code in that loop.
+
+
+// for (let i = 0; i < adarsh.length; i++) {
+//   console.log(adarsh[i], typeof adarsh[i]); // we are using the counter variable here, to retrieve all the elements of the array.
+
+// }
+
+// So I hope the logic here made sense. And so this is in a nutshell, how we loop arrays using the for loop.
+
+
+// Now what we did here, was only to read values from an array. But now let's also at the same time create a new array which will contain "this" type of each of the elements
+
+// So again, what I want to do now, create a new array which will contain all the types for all these elements. And if that sounds a little bit useless, but these are for your practise but in the real world, we would probably not create an array with types of variable.
+
+
+// So how we create a new array based on value of the original array.
+
+// So let's start by creating a new empty array outside of the loop
+
+const types = []; // simply create an empty array outside of the loop
+
+// and all we have to do is to basicaly create an array with the usual syntax, but without any elements inside of it.
+
+
+
+/* ONE WAY TO FILLING TYPES ARRAY
+
+
+for (let i = 0; i < adarsh.length; i++) {
+
+  // READING FROM ADARSH ARRAY
+  console.log(adarsh[i], typeof adarsh[i]); 
+
+  // This new array types will be based on the adarsh array. So it's gonna have the same lenght. So we can use the exact same loop, that we use to read data from the adarsh loop, also to construct this new types array i.e. types = [].
+
+
+// ONE WAY OF FILLING TYPES ARRAY DYNAMICALLY
+ types[i] = typeof adarsh[i]; 
+
+ // so in iteration zero, we will have types zero equals type of adarsh zero. Then in the next iteration we will have types 1 equals type of adarsh 1, then 2, 3, 4, 5 and so on.
+
+}
+
+// and rememeber this works, types[i] = typeof adarsh[i];  because we can essentially do this, types[0] = "string"; So this would work, right? So of course it also works with the index number here, types[0] dynamically. So that's exactly what we're doing here in the exact same way as we read data from the adarsh array.
+
+
+console.log(types); // that's log to the console, this newly created or to be more accurate, this newly filled array. And indded now we get this array, which has exactly the types that we can see here as well,   console.log(adarsh[i], typeof adarsh[i]); 
+
+
+*/
+
+
+
+// And do you remember how to add elements to an array in another way? Well we could use the push method, right?
+
+for (let i = 0; i < adarsh.length; i++) {
+  // READING AN ARRAY FROM ADARSH ARRAY
+  console.log(adarsh[i], typeof adarsh[i]);
+
+  // ONE WAY TO FILLING TYPES ARRAY
+  // types[i] = typeof adarsh[i]
+
+  // SECOND WAY TO FILLING TYPES ARRAY
+  types.push(typeof adarsh[i]); // remember push, adds a new element to the end of the array. Here we need to pass in the element
+
+  // And it's important that we add the new element to the end of the array and not to the beginning. So we really need to use "push" here and not "unshift".
+
+  // This way of doing it here is actually a little bit cleaner. But if you prefer this first way here, //  types[i] = typeof adarsh[i], then of course you can just use that one as well.
+
+
+  // But what matters here is to really undertand the logic behind of how to construct all the different parts of this for loop in order to loop the array. So it starts the counter being zero (let i = 0;), because that's the first element of the array. And the this condition here, (i < adarsh.length;) which specifies that the current index always need to stay below the length of the array that we are looping through. And in the loop itself, we always get the current element using the current counter, adarsh[i], which is gonna go from zero to the length of the array minus one basically.
+}
+
+console.log(types);
+
+
+
+// EXAMPLE
+
+/* Lets calculate the person multiple age and store it to a new array by using the loop */
+
+
+
+const years = [1998, 2007, 1992, 2000];
+console.log(years);
+
+// now calculated the ages of these four birth years here and we want to store them in a new array
+
+const age = [];
+
+for (let i = 0; i < years.length; i++) { // actually the whole loop always kind of looks the same when we loop over an array
+  
+// 2022 - years[i]; // so we have this calculation now and now we want to add it to this new empty array i.e. age = []. So we say we want to push it to that array. So we use the push method to do that.
+age.push(2022 - years[i]);
+
+}
+
+console.log(age); // and the new array result is show in the console indeed.
+
+
+// we cannot do an operations between simple values and an array. So we cannot do 2022 - years array. That will just give us NaN (not a number)
+
+// So here in this loop we basically did it individually, so we did to calculation one by one in each iteration of the loop. We calculated 2022 - 1998 and then added to the first position of the age = [] array. Then we did 2022 - 2007, and then added to fhe second position of the age = [] array, and so on and so forth.
+
+
+// So that's is very very useful and important application of the for loop.
+
+// And now to finish, let's learn about two important statements for loops, and that's the "continue "and the "break" statement.
+
+
+// Continue and break statement
+
+// so "continue" is the exit the current iteration of the loop and continue to the next one. On the other hand, "break "is used to completely terminate the whole loop. So let's see the example.
+
+
+
+console.log("--- ONLY STRINGS ---");
+for (let i = 0; i < adarsh.length; i++) {
+
+  // And now let's say for some reason, we only wanted to print elements to the array thar are strings and the "continue" statement is the perfect for this. Because again the continue we can exit the current iteration of he loop.
+
+  // So what can we do here, is to say
+  if (typeof adarsh[i] !== "string") continue; // only logs string to the console, which means that everything else should basically be skipped
+
+  // if the type of the current element, so that's this one here (typeof adarsh[i]) is not a string then "continue". Which again means that the current iteration of the loop is exited and then the next one starts immediately.
+
+  // so, the number, the array and the boolean, so they will now not get printed. Because we basically skipped them. For example the age number that is 24 does have to type number here, so it's not a string. So this here, (typeof adarsh[i] !== "string") will be true, because number is not a string, so this is true and so this code "continue;" here will run.
+  
+  // And what continue will do is that it will immediately exit the current iteration so this line of code here, console.log(adarsh[i], typeof adarsh[i]); will not be executed in the current iteration. It will not even be reaced in the case if is not a string element.
+
+  console.log(adarsh[i], typeof adarsh[i]); // so we only get strings now
+
+
+} 
+
+
+// Let finally show you how breaks statement works
+
+// Breaks completely terminate the whole loop. Not just the current iteration.
+
+// So what we want to do now, is to log no other elements after we found a number. So essentially after a number is found which will be 24 here in this case, nothing else should be printed
+
+
+console.log("--- BREAK WITH NUMBER (TERMINATE THE WHOLE LOOP) ---")
+
+for (let i = 0; i < adarsh.length; i++) {
+
+if (typeof adarsh[i] === "number") break; // if the current element is equal to a number then break. So after the first number is found which is 24 in this case nothing else is printed. 
+
+// So in this iteration where the number is found, not even this line of code, console.log(adarsh[i], typeof adarsh[i]); is printed anymore, then the loop is terminated completely
+
+console.log(adarsh[i], typeof adarsh[i]);
+}
+
+
+// All right, this might be not sound very practical example of "continue" and "break" statement, but believe me there are some important use cases for continue and break.
+
+// It's just hard to create some small and isolated code examples to show you just how useful they can be.
+
+// But anyway I wanted to let you know that continue and vreak exist.
+
+
+// But the most important takeways from this section is definitely to understand how we can loop through an array using this kind of logic here. This one is really important to understand this snippet of code below 🔽
+
+
+console.log("----TAKEAWAY FROM THIS SECTION ----")
+const years1 = [1998, 1992, 2000, 1972, 1988];
+console.log(years1);
+
+const ages = []; // empty array
+
+for (let i = 0; i < years1.length; i++) {
+
+console.log(years1[i], typeof years1[i]);
+ages.push(2022 - years1[i]);
+}
+
+console.log(ages);
+
+
+
+
+
+
+
 
 
 
