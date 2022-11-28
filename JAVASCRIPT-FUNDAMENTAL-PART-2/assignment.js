@@ -339,3 +339,18 @@ console.log(
 COMMENT END */
 
 
+
+
+/* ############  INTRODUCTION TO OBJECT ASSIGNMENT EXERCISE #1 ############  */
+
+
+const myCountry = {
+  country: "India",
+  capital: "Delhi",
+  language: ["Hindi", "Marathi",  "Gujarati", "Punjabi", "Bengali"],
+  population: 1400000000,
+  neighbours: ["Pakistan", "China", "Nepal", "SriLanka"]
+};
+
+console.log(`${myCountry.country} is a country, ${myCountry.capital} is the capital of ${myCountry.country}. In ${myCountry.country} there are many language spoken like ${myCountry.language}. ${myCountry.country} population is ${myCountry.population}. ${myCountry.country} is sorrounded by ${myCountry.neighbours.length} neighbour countries such as ${myCountry.neighbours}.`);
+
