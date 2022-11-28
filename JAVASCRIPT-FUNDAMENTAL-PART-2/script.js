@@ -1917,10 +1917,15 @@ COMMENT END */
 
 
 
+/* COMMENT START
+
+
+
 // And one of the most used applications of for loops is to loop through arrays.
 
 
-// INTRODUCTION TO OBJECT
+
+// OBJECT
 const adarsh = [
 "Adarsh",
 "Tripathi",
@@ -2023,6 +2028,12 @@ const types = []; // simply create an empty array outside of the loop
 
 
 
+
+continue..... */
+
+
+
+
 /* ONE WAY TO FILLING TYPES ARRAY
 
 
@@ -2048,6 +2059,9 @@ console.log(types); // that's log to the console, this newly created or to be mo
 
 
 */
+
+
+/* continue....
 
 
 
@@ -2077,7 +2091,7 @@ console.log(types);
 
 // EXAMPLE
 
-/* Lets calculate the person multiple age and store it to a new array by using the loop */
+// Lets calculate the person multiple age and store it to a new array by using the loop 
 
 
 
@@ -2176,6 +2190,18 @@ ages.push(2022 - years1[i]);
 }
 
 console.log(ages);
+
+
+
+
+COMMENT END  */
+
+
+
+
+
+/****************** LOOPING ARRAYS, BREAKIGN AND CONTINUING IN JAVASCRIPT ******************/
+
 
 
 
