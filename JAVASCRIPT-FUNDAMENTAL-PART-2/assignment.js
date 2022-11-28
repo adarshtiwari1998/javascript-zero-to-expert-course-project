@@ -417,6 +417,21 @@ COMMENT END */
 
 
 
+/*
+1. Add a method called 'describe' to the 'myCountry' object. This method
+will log a string to the console, similar to the string logged in the previous
+assignment, but this time using the 'this' keyword.
+2. Call the 'describe' method
+3. Add a method called 'checkIsland' to the 'myCountry' object. This
+method will set a new property on the object, called 'isIsland'.
+'isIsland' will be true if there are no neighbouring countries, and false if
+there are. Use the ternary operator to set the property.
+*/
+
+
+/*  COMMENT START
+
+
 const myCountry = {
   country: "India",
   capital: "Delhi",
@@ -438,3 +453,89 @@ const myCountry = {
 console.log(myCountry.describe());
 myCountry.checkIsland();
 console.log(myCountry);
+
+
+COMMENT END */
+
+
+
+/* ############ CODING CHALLENGE #3 ############  */
+
+
+/*
+Let's go back to Adarsh and Shubh comparing their BMIs! This time, let's use objects to
+implement the calculations! Remember: BMI = mass / height ** 2 = mass
+/ (height * height) (mass in kg and height in meter)
+Your tasks:
+1. For each of them, create an object with properties for their full name, mass, and
+height (Adarsh Tripathi and Shubh Tripathi)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same
+method on both objects). Store the BMI value to a property, and also return it
+from the method
+3. Log to the console who has the higher BMI, together with the full name and the
+respective BMI. Example: "Adarsh's BMI (28.3) is higher than Shubh's (23.9)!"
+Test data: Adarsh weights 78 kg and is 1.69 m tall. Shubh weights 92 kg and is 1.95 m
+tall.
+*/
+
+
+const adarsh = {
+  fullName: "Adarsh Tripathi",
+  mass: 78,
+  height: 1.69,
+
+  // step 1
+
+  calcBMI: function() {
+   this.bmi = this.mass / this.height ** 2;
+   return this.bmi;
+
+  }
+
+}
+
+
+const shubh = {
+  fullName: "Shubh Tripathi",
+  mass: 92,
+  height: 1.95,
+
+  //step 2
+
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height); // same as mass / height ** 2
+    return this.bmi;
+  },
+
+  // Because this method here doesn't call itself we need to explicitly call it
+};
+
+
+// I am first calculation this value then I am doing adarsh.bmi which was added here in this method call.
+
+adarsh.calcBMI();   //  of course without this method call adarsh.bmi value would not available
+
+console.log(adarsh.bmi);  // 27.309968138370508
+
+shubh.calcBMI();
+console.log(shubh.bmi); // 24.194608809993426
+
+
+
+// step 3 
+
+// "Adarsh's BMI (28.3) is higher than Shubh's (23.9)!"
+
+if(adarsh.bmi > shubh.bmi) {
+  console.log(
+    `${adarsh.fullName}'s BMI (${adarsh.bmi}) is higher than ${shubh.fullName}'s BMI (${shubh.bmi})`
+  );
+} else if (shubh.bmi > adarsh.bmi){
+ console.log(
+   `${shubh.fullName}'s BMI (${shubh.bmi}) is higher than ${adarsh.fullName}'s BMI (${adarsh.bmi})`
+ );
+}
+
+
+
+
