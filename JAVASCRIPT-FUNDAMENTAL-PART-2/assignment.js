@@ -557,8 +557,60 @@ Use a for loop to simulate the 50 people voting, by logging a string like this t
 the console (for numbers 1 to 50): 'Voter number 1 is currently voting
 */
 
+/* COMMENT START
+
+
 for (let i = 1; i <= 50; i++ ) {
   
   console.log([i], typeof [i]);
   console.log(`Voter number ${i} is curretly voting.`)
 }
+
+
+COMMENT END */
+
+
+
+/* ############ LOOPING ARRAYS, BREAKING AND CONTINUINGA STATAMENT - ASSIGNMENT EXERCISE #1 ############  */
+
+
+/*
+1. Let's bring back the 'populations' array from a previous assignment
+2. Use a for loop to compute an array called 'percentages2' containing the
+percentages of the world population for the 4 population values. Use the
+function 'percentageOfWorld1' that you created earlier
+3. Confirm that 'percentages2' contains exactly the same values as the
+'percentages' array that we created manually in the previous assignment,
+and reflect on how much better this solution is
+
+*/
+const country = ["india", "us", "china", "pakistan"]
+const population = [1400000000, 1000000000, 1200000000, 700000000];
+const worldPopulation = 7200000000;
+
+const percentage2 = []; // empty array for computing and filling data dynamically
+
+const percentageOfWorld7 = (population) => (population / worldPopulation) * 100;
+
+for (let i = 0; i < population.length && i < country.length; i++) {
+  const perc = percentageOfWorld7(population[i]) 
+  percentage2.push(perc); // computed array
+
+  console.log(
+    `${country[i]}'s population is ${percentage2[i]}% of the world's population i.e. ${worldPopulation}`
+  );
+
+}
+
+console.log(percentage2);
+
+
+
+
+
+
+
+
+
+
+
