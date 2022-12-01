@@ -655,6 +655,8 @@ loop?
 */
 
 
+/* COMMENT START
+
 const country = ["india", "US", "china", "pakistan"];
 const population = [1400000000, 1000000000, 1200000000, 700000000];
 const worldPopulation = 7200000000;
@@ -675,8 +677,142 @@ while (i < population.length && country.length) {
  i++;
 }
 
-
 console.log(percentage2);
+
+
+
+COMMENT END */
+
+
+
+
+
+/* ############ CODING CHALLENGE #4 ############  */
+
+
+/*
+Coding Challenge #4
+Let's improve Steven's tip calculator even more, this time using loops!
+Your tasks:
+1. Create an array 'bills' containing all 10 test bill values
+2. Create empty arrays for the tips and the totals ('tips' and 'totals')
+
+
+3. Use the 'calcTip' function we wrote before (no need to repeat) to calculate
+tips and total values (bill + tip) for every bill value in the bills array. Use a for
+loop to perform the 10 calculations!
+Test data: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+Hints: Call ‘calcTip ‘in the loop and use the push method to add values to the
+tips and totals arrays �
+Bonus:
+
+
+4. Bonus: Write a function 'calcAverage' which takes an array called 'arr' as
+an argument. This function calculates the average of all numbers in the given
+array. This is a difficult challenge (we haven't done this before)! Here is how to
+solve it:
+4.1. First, you will need to add up all values in the array. To do the addition,
+start by creating a variable 'sum' that starts at 0. Then loop over the
+array using a for loop. In each iteration, add the current value to the
+'sum' variable. This way, by the end of the loop, you have all values
+added together
+4.2. To calculate the average, divide the sum you calculated before by the
+length of the array (because that's the number of elements)
+4.3. Call the function with the 'totals' array
+GOOD LUCK �
+
+
+*/
+
+// No 1 and 2
+
+// 22, 295, 176, 440, 37, 105, 10, 1100, 86, 52
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// console.log(bills.length)
+const billName = ["Adarsh", "Shivam", "Mohit", "Akash", "Neha", "Sourabh", "Ankita", "Shivani", "Nitesh", "Tushar"];
+// console.log(bills.length && billName.length === 10);
+const tips = [];
+const totals = [];
+
+// No 3
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
+}
+
+for (let i = 0; i < bills.length && billName.length; i++) {
+  const tip = calcTip(bills[i]); // pass in the bill value
+  // actually in each iteration a new tip variable is gonna be created. So we have not mutating, we are not changing the original tip. In each iteration we are creating new tip variable so that's why we are using const here.
+  tips.push(tip);  // push in the tips 
+  totals.push(tip + bills[i]); // push in the totals
+  console.log(
+    `${billName[i]} bill was ${bills[i]}, the tip was ${tips[i]} and the total value is ${totals[i]}`
+  );
+}
+
+console.log(bills);
+console.log(tips);
+console.log(totals);
+
+
+
+/*
+4. Bonus: Write a function 'calcAverage' which takes an array called 'arr' as
+an argument. 
+
+This function calculates the average of all numbers in the given
+array. 
+
+This is a difficult challenge (we haven't done this before)! Here is how to
+solve it:
+
+4.1. First, you will need to add up all values in the array. To do the addition,
+start by creating a variable 'sum' that starts at 0. Then loop over the
+array using a for loop. In each iteration, add the current value to the
+'sum' variable. This way, by the end of the loop, you have all values
+added together
+4.2. To calculate the average, divide the sum you calculated before by the
+length of the array (because that's the number of elements)
+4.3. Call the function with the 'totals' array
+GOOD LUCK �
+
+*/
+
+// const arr = [];
+
+const calcAverage = function(arr) { // we will receive an array here, any array will.
+// So once again, we are creating generic function, and it's does not care what kind of value he receive. It can receive, bllls, tips, masses, heights, etc. It doesn't care what the values are.
+ let sum = 0;  // this sum will be updated as the loop over a array
+
+ for (let i = 0; i < arr.length; i++) {
+   // so i said, as we loop over the array, we will keep adding the value to the sum
+   // sum = sum + arr[i]; // so what I mean is sum will equal the current value of sum + the array that we received as an input at the current position.
+
+   // sum = sum + arr[i];
+   sum += arr[i]; // this one is just same as upper expression, here we are using the shorthand 
+  console.log(sum);
+ }
+//  console.log(sum);
+ return sum / arr.length;
+//  console.log(sum)
+}
+
+// console.log(calcAverage([2,3,7]));
+console.log("=============Bills");
+console.log(calcAverage(bills));
+console.log("=============Tips");
+console.log(calcAverage(tips));
+console.log("=============Total");
+console.log(calcAverage(totals));
+
+
+
+
+
+
+
+
+
 
 
 
