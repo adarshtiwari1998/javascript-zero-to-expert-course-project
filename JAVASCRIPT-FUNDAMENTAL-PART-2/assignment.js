@@ -627,6 +627,8 @@ worry if it's too difficult for you! But you can still try to figure this out an
 
 */
 
+/* COMMENT START
+
 const listOfIndNeighbours =
  [["China", "Pakistan"], ["Nepal"], ["SriLanka, Afghanistan"],["US", "Russia"]];
 
@@ -635,7 +637,56 @@ for (let i = 0; i < listOfIndNeighbours.length; i++) {
  for (let y = 0; y < listOfIndNeighbours[i].length; y++) {
     console.log(`Neighbour: ${listOfIndNeighbours[i][y]}`);
  }
+};
+
+
+COMMENT END */
+
+
+
+/* ############ THE WHILE LOOP - ASSIGNMENT EXERCISE #1 ############  */
+
+
+/*
+1. Recreate the challenge from the lecture 'Looping Arrays, Breaking and Continuing',
+but this time using a while loop (call the array 'percentages3')
+2. Reflect on what solution you like better for this task: the for loop or the while
+loop?
+*/
+
+
+const country = ["india", "US", "china", "pakistan"];
+const population = [1400000000, 1000000000, 1200000000, 700000000];
+const worldPopulation = 7200000000;
+
+const percentage2 = [];
+
+const percentageOfWorld7 = function(population) {
+return (population / worldPopulation) * 100;
 }
+
+let i = 0;
+while (i < population.length && country.length) {
+ const perce = percentageOfWorld7(population[i]);
+ percentage2.push(perce);
+  console.log(
+    `${country[i]}'s populations is ${percentage2[i]}% of the world population's`
+  );
+ i++;
+}
+
+
+console.log(percentage2);
+
+
+
+
+
+
+
+
+
+
 
 
 
