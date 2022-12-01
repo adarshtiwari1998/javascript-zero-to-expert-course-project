@@ -571,7 +571,7 @@ COMMENT END */
 
 
 
-/* ############ LOOPING ARRAYS, BREAKING AND CONTINUINGA STATAMENT - ASSIGNMENT EXERCISE #1 ############  */
+/* ############ LOOPING ARRAYS, BREAKING AND CONTINUING STATAMENT - ASSIGNMENT EXERCISE #1 ############  */
 
 
 /*
@@ -610,6 +610,35 @@ console.log(percentage2);
 
 
 COMMENT END */
+
+
+
+/* ############ LOOPING BACKWARDS AND LOOPS IN LOOPS - ASSIGNMENT EXERCISE #1 ############  */
+
+
+/*
+
+1. Store this array of arrays into a variable called 'listOfNeighbours'
+[["China", "Pakistan"], ["Nepal"], ["SriLanka, Afghanistan"],["US", "Russia"]];
+2. Log only the neighbouring countries to the console, one by one, not the entire
+arrays. Log a string like 'Neighbour: China' for each country
+3. You will need a loop inside a loop for this. This is actually a bit tricky, so don't
+worry if it's too difficult for you! But you can still try to figure this out anyway �
+
+*/
+
+const listOfIndNeighbours =
+ [["China", "Pakistan"], ["Nepal"], ["SriLanka, Afghanistan"],["US", "Russia"]];
+
+
+for (let i = 0; i < listOfIndNeighbours.length; i++) {
+ for (let y = 0; y < listOfIndNeighbours[i].length; y++) {
+    console.log(`Neighbour: ${listOfIndNeighbours[i][y]}`);
+ }
+}
+
+
+
 
 
 

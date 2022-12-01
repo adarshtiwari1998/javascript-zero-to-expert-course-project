@@ -2302,6 +2302,12 @@ COMMENT END */
 
 // So at the end of the iteration is basically the end of the code block.
 
+
+
+/* COMMENT START
+
+
+
 let rep = 1;
 
 while (rep <= 10) {
@@ -2360,6 +2366,10 @@ while (dice !== 6) { // we check here is that if that dice is different from six
 // So that's exactly what we had here in this case tool, so we had no way of knowing how many times we would roll a dice that's different from six.
 
 // Now on the other hand when we do now how many times the loop will run that means that we're gonna actualy need a counter. For example, when we want to loop over an array. We already know how many elements that array has, so we know how many iterations we will need. And therefore the "for loop" is usually the right choice in loop over an array.
+
+
+
+COMMENT END */
 
 
 
