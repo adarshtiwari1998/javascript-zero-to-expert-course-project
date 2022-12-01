@@ -2199,11 +2199,14 @@ COMMENT END  */
 
 
 
-
-/****************** LOOPING ARRAYS, BREAKIGN AND CONTINUING IN JAVASCRIPT ******************/
+/****************** LOOPING BACKWARDS AND LOOPS IN LOPPS IN JAVASCRIPT ******************/
 
 
 // In this section, we will loop over an array backwards, and then second we will also create a loop inside another loop.
+
+
+/* COMMENT START
+
 
 
 // Let's now loop over this array backwards, so the first element we want to print is this one ["Mohit", "Avinash", "Sahil"], then this "self-employed", then this "coder", then this 2022 - 1998, "Tripathi" then this "Adarsh"
@@ -2258,6 +2261,106 @@ for (let exercise = 1; exercise < 4 ; exercise++) {
 
 
 // I thing even though this was the very funny exercise. And again, even though you might not use this all the time in the real world project. But I still think this was the pretty cool example to show you the some more power loops.
+
+
+
+
+COMMENT END */
+
+
+/****************** LOOPING BACKWARDS AND LOOPS IN LOPPS IN JAVASCRIPT ******************/
+
+
+// COMPARISION BETWEEN FOR LOOP AND WHILE LOOP
+
+// -------------  FOR LOOP -------------------
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep}🏋️‍♂️ times`);
+// }
+
+
+
+// console.log("-------------------WHILE LOOP EXMAPLE-----------------")
+
+// ------------- WHILE LOOP ------------------
+
+
+
+
+// So implementing the same with a while loop, we still need the same components. So we still need a counter so that we can then actually print the current value to the console, we still need a condition so that we know when to stop, and we still need to increase the counter somehow. 
+
+// Now in the while loop, it works a bit differently because for the while loop, we can only specify the condition
+
+// while (rep <= 10) { // only condition that we specify in while loop
+// }  // so we want to keep the loop running while repetition is less or equal 10. And that's exactly why this loop is called while. So again, it's called the while loop because it will run while this condition is true, rep <= 10. 
+
+
+// But now we need to kind of manually, so more explicitly define the other two components of this "for loop". So the repetitions (rep = 1;) and the increasing of the counter (rep++).
+
+// And so we need to do this basically outside, so initialize the value outside, so we start tat the beginning with rep = 1; then we have the condition in the while loop, then let's put the code that we want to execute. Then at the end of the iteration, we will then increase the counter rep++.
+
+// So at the end of the iteration is basically the end of the code block.
+
+let rep = 1;
+
+while (rep <= 10) {
+  // console.log(`Liftting weights repetition ${rep} 🏋️‍♂️ times.`);
+  rep++;
+};
+
+
+// Now we should get the exact same result twice once coming from for loop and once coming from this while loop.
+
+
+// So this all means that the while loop is more versatile than the for loop, which means that it can be used in a larger variety of situations. And that's because it really not need a counter. 
+
+// So we put the counter here because we need it here, let rep = 1; for this specific use case.
+
+// But all the while loop really needs is the condition, which needs to stay true for it to keep running. And that condition can be any condition. It doesn't have to be related to any counter at all. And sometimes that's exactly what we need to solve a certain problem. So problem without any counter. So without a number that is increasing or decreasing.
+
+
+
+// SO LET'S CREATE SUCH A EXAMPLE HERE THAT DOES NOT DEPEND ON A COUNTER BUT INSTEAD DEPEND ON A RANDOM VARIABLE. 
+
+
+// So what we're gonna do is to basically roll a dice and then keep rolling a dice until we roll a six. And then when we roll a six, we stop. So essentially we want to keep running a loop while the rolled a dice is different from six. So in this case we do actually not know before hand how many times the loop should run. And so we don't need a counter variable and that's exactly the use case of a while loop. So let's start creating a random number. 
+
+// So the roll of dice is a number that is between 1 and 6
+
+// let dice = Math.random() * 6; // this will create a number between zero and one, that we multiply that by a six. But this is gonna be a decimal number. But now we need to get rid of this decimal part. So that we do using the "math.trunc()", so this will give us a number between zero and five. 
+
+let dice = Math.trunc(Math.random() * 6) + 1; // then we add 1 and get one to six.
+
+// console.log(dice); // so when we reload he page, we get random number in the console that is different every time
+
+
+// So back to question, we want to keep running a loop until we roll a six. So until the dice variable here holds a six, holds a value of six.
+
+// So the condition of the loop is now goona be like this
+
+while (dice !== 6) { // we check here is that if that dice is different from six. And apparently it was different, and so then we entered the loop, which then logged a string with random values.
+  console.log(`You rolled a ${dice}`);
+  // Then in next line we created a new random number, then the loop run again. So again this condition was tested, while (dice !== 6), so is the dice different from six, and apparently it was, so we entered the loop again.
+  dice = Math.trunc(Math.random() * 6) + 1; 
+  if (dice === 6) {
+  console.log(`Loop is about to end`);
+ }
+}
+
+
+// Oh, and now we got a situation, where the first dice ever, was a six, and so the loop never even started. And this was the situation I was waiting for here. So when dice is six, right away in the beginning, then of course the loop will have exacly zero iterations. It will never start.
+
+// And so the conclusion of this is that the while loop, does really not have to depend on any counter variable.
+
+// So whenever you need a loop without a counter, you can reach for a while loop.
+
+// "So basically that happend whenever you do not know beforehand how many iterations that the loop will have. So in that situation the while loop is the right tool for the job."
+
+// So that's exactly what we had here in this case tool, so we had no way of knowing how many times we would roll a dice that's different from six.
+
+// Now on the other hand when we do now how many times the loop will run that means that we're gonna actualy need a counter. For example, when we want to loop over an array. We already know how many elements that array has, so we know how many iterations we will need. And therefore the "for loop" is usually the right choice in loop over an array.
+
 
 
 
