@@ -2203,6 +2203,62 @@ COMMENT END  */
 /****************** LOOPING ARRAYS, BREAKIGN AND CONTINUING IN JAVASCRIPT ******************/
 
 
+// In this section, we will loop over an array backwards, and then second we will also create a loop inside another loop.
+
+
+// Let's now loop over this array backwards, so the first element we want to print is this one ["Mohit", "Avinash", "Sahil"], then this "self-employed", then this "coder", then this 2022 - 1998, "Tripathi" then this "Adarsh"
+const adarsh = [
+  "Adarsh",
+  "Tripathi",
+  2022 - 1998,
+  "coder",
+  "self-employed",
+  ["Mohit", "Avinash", "Sahil"],
+  true
+];
+
+// Essentially in last lecture we loop from this beginning we started with index zero, then one all way four right? like this
+
+// 0,1,2,...4
+
+// and now we do this way,
+
+// 4,2,3,...0
+
+// Now we need to create a for loop according this new information, and basically according to this new methodology.
+
+// So let's start with the counter, but now what should be the inital value of the counter? And we already replied to that question, so it should be 4. So shouldn't write the 4 here because we already learned that hard coded values like this is not a good idea. So what is four? well four is bacically just a length of the array, which is five - 1, So exactly what we will write here, adarsh.length -1. Then the condition, and when we want to loop to stop? Well it should stop after the zero. So the condition we need to write remember is telling javaScript in which condition the loop should keep running. Ad so basically, the loop should keep running as long as the counter is still above zero. So at number 4, which is the beginning, i is greater equal zero.? Right, so this condition will be true. So the next iteration will run. Then we need to decrease the index or the counter. So let's actually do that as well. So instead of using i++, which is used for incremental, we use  i-- for decrement or to decrease the value by one. So now we move from 4 to 3, 3  to 2, 2 to 1 and then all the way to 0. So zero is still greater or equal zero, then the counter get's updated again and it will be updated to minus one. And now -1 is not greater or equal to zero, so then the condition will be false, and so the loop will stop.
+
+for (let i = adarsh.length - 1; i >= 0; i--) {
+  console.log(i, adarsh[i], typeof adarsh[i]); // log the counter variable for value decremental and log the array object in console to see the result.
+}
+
+// so this example to show you exactly how we define counter, the condition and the connter update in the for loop.
+
+
+
+// CREATE LOOP INSIDE OF A LOOP
+
+// For example: Weightlifting exercise, Let's say thet we have 3 different exercises and we want to repeat each of them 5 times and show them in console. So that means a total of 15 repetition, five for each of the three exercises. So to lock all these exercises, we will need a loop inside a loop.
+
+const exerciseType = [
+  "Stretching",
+  "Climbing mac",
+  "Stepper"
+];
+
+for (let exercise = 1; exercise < 4 ; exercise++) {
+  console.log(`--------------Starting Exercise ${exercise}`);
+
+   // so this exercise variable here is ofcourse available inside of this whole loop. And thus include all the inner code even this inner loop. And that's why we can access this variable here as well.
+  for (let i = 1; i <= 5; i++) {
+    console.log(`Exercise ${exercise}: ${exerciseType[0]} reptition ${i} 💪 times.`);
+  };
+} // exercise iteration finishes here
+
+
+// I thing even though this was the very funny exercise. And again, even though you might not use this all the time in the real world project. But I still think this was the pretty cool example to show you the some more power loops.
+
 
 
 

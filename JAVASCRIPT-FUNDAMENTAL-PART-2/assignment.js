@@ -584,6 +584,10 @@ function 'percentageOfWorld1' that you created earlier
 and reflect on how much better this solution is
 
 */
+
+/* COMMENT START
+
+
 const country = ["india", "us", "china", "pakistan"]
 const population = [1400000000, 1000000000, 1200000000, 700000000];
 const worldPopulation = 7200000000;
@@ -604,6 +608,8 @@ for (let i = 0; i < population.length && i < country.length; i++) {
 
 console.log(percentage2);
 
+
+COMMENT END */
 
 
 
