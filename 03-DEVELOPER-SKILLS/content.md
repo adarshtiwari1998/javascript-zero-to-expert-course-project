@@ -33,6 +33,8 @@
 
 
 ` 
+
+  {
   "todohighlight.isCaseSensitive": true,
    "todohighlight.keywords": [
     {
@@ -61,5 +63,7 @@
       "backgroundColor": "#2ecc71"
     }
  ] 
+
+ }
 
 `
