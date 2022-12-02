@@ -60,6 +60,6 @@
       "color": "#333",
       "backgroundColor": "#2ecc71"
     }
-  ] 
+ ] 
 
 `
