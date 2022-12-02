@@ -32,9 +32,9 @@
 - (OPTIONAL) Install TODO Highlight extension for highlighting your comments in your code, and add the json object below, by going through file - preferences - setting - and click on open setting json icon and paste the object.
 
 
-`
- "todohighlight.isCaseSensitive": true,
-  "todohighlight.keywords": [
+` 
+  "todohighlight.isCaseSensitive": true,
+   "todohighlight.keywords": [
     {
       "text": "VIDEO",
       "color": "#333",
