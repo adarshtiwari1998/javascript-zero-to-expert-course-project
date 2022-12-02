@@ -69,3 +69,31 @@
  }
 
  ~~~
+
+
+- In the real world no professional developers reloads their browsers manually. So everyone uses some kind of toll to do that.
+> So to make our life easier, we wll now install such a development tool which is called live server. And we can use live server in two different ways:
+>> First, we can install a vs code extension called [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) or second 
+>> Second, we can use a bit of a more professional workflow using [Node.js](https://nodejs.org/en/) and so-called npm package.
+
+- So like i said there is more professional way of running live server, which by using something called [Node.js](https://nodejs.org/en/), which is a javaScript runtime that we can install on our computers.
+
+> So first install the node.js and then use the "npm package called live server" there.
+
+- So node.js is a way of running javaScript outside of the browsers, but also it's a way of running development tools, just like the live server that we want to install now.
+> After installing node.js, check the version of the node.js in so-called terminal by using command `node -v`. If you see the number that means you have successfully installed nodejs.
+
+> After this number here, you can now write `npm install live-server -g`. In case if you are using Mac then start with the command with `sudo` then `npm install live-server -g`.
+
+- And `npm` is basically a node package manager, which is basically a program to download tools. And here `-g` means it should be installed globally on your computer.
+
+> After installing this package, you can enter `live-server` and hit enter. 
+
+- so whenever you run the live server in some folder, that folder will then be opened in the browser. And whenever we open a folder in the browsers it will then open the index.html file by default. So that's why we alwayse have an index.html file in any folder.
+
+- So anyfile changes in this folder now or whenever will trigger a reload. 
+
+- So now we established a real world web development environment or workflow.
+
+
+
