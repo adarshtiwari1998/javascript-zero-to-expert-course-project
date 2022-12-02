@@ -10,7 +10,8 @@
 
 - So whenever we have to log something, we have to write "console.log()" and put the code between the parenthesis and do all this work. But in vs code, we can configure snippets, which can take this work away from us. So let me show how you can do this, you can go in vs code menu option - file - preferences - configure user snippet - create New Global Snippets file - give any name you like. And here we can define a couple of snippets, and remember that the snippets that we want to define is simply one in your case that automatically write "console.log()" for us. Here how you define snippets:
 
-`
+~~~
+
  "Print to console": {
      "scope": "javascript,typescript",  // here it is the name of the snippets
      "prefix": "cl", // this is the command that we basically trigger the snippet, and here i like to use "cl". So whenever we write cl in the code, it will then expand that to console.log(). 
@@ -27,14 +28,15 @@
     "description": "Log output to console"
    } 
   
- `
+ ~~~
 
 - (OPTIONAL) Install TODO Highlight extension for highlighting your comments in your code, and add the json object below, by going through file - preferences - setting - and click on open setting json icon and paste the object.
 
 
-` 
 
+ ~~~
   {
+
   "todohighlight.isCaseSensitive": true,
    "todohighlight.keywords": [
     {
@@ -66,4 +68,4 @@
 
  }
 
-`
+ ~~~
